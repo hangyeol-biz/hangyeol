@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한결 컨설팅 - 브랜드 컬러 가이드</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif; }
+
+        :root {
+            /* Primary - Navy Blue (메인 브랜드 컬러) */
+            --color-primary: #1E3A5F;
+            --color-primary-dark: #152B47;
+            --color-primary-light: #2A4A73;
+
+            /* Secondary - Royal Blue (강조/액센트) */
+            --color-secondary: #2563EB;
+            --color-secondary-dark: #1D4ED8;
+            --color-secondary-light: #3B82F6;
+
+            /* Neutral (중립 색상) */
+            --color-neutral-50: #F8FAFC;
+            --color-neutral-100: #F1F5F9;
+            --color-neutral-200: #E2E8F0;
+            --color-neutral-300: #CBD5E1;
+            --color-neutral-400: #94A3B8;
+            --color-neutral-500: #64748B;
+            --color-neutral-600: #475569;
+            --color-neutral-700: #334155;
+            --color-neutral-800: #1E293B;
+            --color-neutral-900: #0F172A;
+
+            /* Functional Colors */
+            --color-success: #10B981;
+            --color-warning: #F59E0B;
+            --color-error: #EF4444;
+            --color-info: #3B82F6;
+
+            /* Gradient */
+            --gradient-primary: linear-gradient(135deg, #1E3A5F 0%, #2563EB 100%);
+            --gradient-dark: linear-gradient(135deg, #152B47 0%, #1E3A5F 100%);
+        }
+
+        .color-box {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .color-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -8px rgba(0,0,0,0.2);
+        }
+        .copy-btn {
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        .color-box:hover .copy-btn {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-[#1E3A5F] text-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center">
+                    <svg class="w-10 h-10" viewBox="0 0 100 100" fill="none">
+                        <path d="M50 5 L85 25 L85 75 L50 95 L15 75 L15 25 Z" stroke="white" stroke-width="3" fill="none"/>
+                        <rect x="35" y="35" width="30" height="40" stroke="white" stroke-width="2" fill="none"/>
+                        <line x1="50" y1="20" x2="50" y2="35" stroke="white" stroke-width="2"/>
+                        <line x1="40" y1="20" x2="40" y2="30" stroke="white" stroke-width="2"/>
+                        <line x1="60" y1="20" x2="60" y2="30" stroke="white" stroke-width="2"/>
+                        <line x1="35" y1="50" x2="65" y2="50" stroke="white" stroke-width="2"/>
+                        <line x1="35" y1="60" x2="65" y2="60" stroke="white" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-3xl font-bold tracking-tight">HANGYEOL</h1>
+                    <p class="text-white/60 text-sm tracking-[0.3em]">CONSULTING</p>
+                </div>
+            </div>
+            <h2 class="text-2xl font-semibold mb-2">Brand Color Guide</h2>
+            <p class="text-white/70">한결 컨설팅 브랜드 컬러 시스템</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+
+        <!-- Primary Colors -->
+        <section class="mb-16">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Primary Colors</h3>
+            <p class="text-gray-500 mb-6">브랜드의 핵심 색상입니다. 주요 UI 요소에 사용됩니다.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Primary Dark -->
+                <div class="color-box bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-32 bg-[#152B47] relative">
+                        <button class="copy-btn absolute top-3 right-3 bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded-full text-xs" onclick="copyColor('#152B47')">
+                            Copy
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-semibold text-gray-800">Primary Dark</h4>
+                        <p class="text-gray-500 text-sm mb-3">진한 네이비 (호버/강조)</p>
+                        <div class="flex gap-4 text-sm">
+                            <span class="font-mono text-gray-600">#152B47</span>
+                            <span class="text-gray-400">rgb(21, 43, 71)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary -->
+                <div class="color-box bg-white rounded-2xl overflow-hidden shadow-lg ring-2 ring-blue-500 ring-offset-2">
+                    <div class="h-32 bg-[#1E3A5F] relative">
+                        <span class="absolute top-3 left-3 bg-white/20 text-white px-2 py-0.5 rounded text-xs">Main</span>
+                        <button class="copy-btn absolute top-3 right-3 bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded-full text-xs" onclick="copyColor('#1E3A5F')">
+                            Copy
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-semibold text-gray-800">Primary</h4>
+                        <p class="text-gray-500 text-sm mb-3">메인 브랜드 컬러</p>
+                        <div class="flex gap-4 text-sm">
+                            <span class="font-mono text-gray-600">#1E3A5F</span>
+                            <span class="text-gray-400">rgb(30, 58, 95)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primary Light -->
+                <div class="color-box bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-32 bg-[#2A4A73] relative">
+                        <button class="copy-btn absolute top-3 right-3 bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded-full text-xs" onclick="copyColor('#2A4A73')">
+                            Copy
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-semibold text-gray-800">Primary Light</h4>
+                        <p class="text-gray-500 text-sm mb-3">밝은 네이비 (배경)</p>
+                        <div class="flex gap-4 text-sm">
+                            <span class="font-mono text-gray-600">#2A4A73</span>
+                            <span class="text-gray-400">rgb(42, 74, 115)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secondary Colors -->
+        <section class="mb-16">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Secondary Colors</h3>
+            <p class="text-gray-500 mb-6">액센트 및 강조에 사용되는 보조 색상입니다.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Secondary Dark -->
+                <div class="color-box bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-32 bg-[#1D4ED8] relative">
+                        <button class="copy-btn absolute top-3 right-3 bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded-full text-xs" onclick="copyColor('#1D4ED8')">
+                            Copy
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-semibold text-gray-800">Secondary Dark</h4>
+                        <p class="text-gray-500 text-sm mb-3">진한 블루</p>
+                        <div class="flex gap-4 text-sm">
+                            <span class="font-mono text-gray-600">#1D4ED8</span>
+                            <span class="text-gray-400">rgb(29, 78, 216)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary -->
+                <div class="color-box bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-32 bg-[#2563EB] relative">
+                        <button class="copy-btn absolute top-3 right-3 bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded-full text-xs" onclick="copyColor('#2563EB')">
+                            Copy
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-semibold text-gray-800">Secondary</h4>
+                        <p class="text-gray-500 text-sm mb-3">로얄 블루 (CTA, 링크)</p>
+                        <div class="flex gap-4 text-sm">
+                            <span class="font-mono text-gray-600">#2563EB</span>
+                            <span class="text-gray-400">rgb(37, 99, 235)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Light -->
+                <div class="color-box bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-32 bg-[#3B82F6] relative">
+                        <button class="copy-btn absolute top-3 right-3 bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded-full text-xs" onclick="copyColor('#3B82F6')">
+                            Copy
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-semibold text-gray-800">Secondary Light</h4>
+                        <p class="text-gray-500 text-sm mb-3">밝은 블루</p>
+                        <div class="flex gap-4 text-sm">
+                            <span class="font-mono text-gray-600">#3B82F6</span>
+                            <span class="text-gray-400">rgb(59, 130, 246)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gradient -->
+        <section class="mb-16">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Gradient</h3>
+            <p class="text-gray-500 mb-6">히어로 섹션, CTA 버튼 등에 사용되는 그라데이션입니다.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Primary Gradient -->
+                <div class="color-box bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-40 relative" style="background: linear-gradient(135deg, #1E3A5F 0%, #2563EB 100%)">
+                        <button class="copy-btn absolute top-3 right-3 bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded-full text-xs" onclick="copyColor('linear-gradient(135deg, #1E3A5F 0%, #2563EB 100%)')">
+                            Copy CSS
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-semibold text-gray-800">Primary Gradient</h4>
+                        <p class="text-gray-500 text-sm mb-3">네이비 - 블루 (135deg)</p>
+                        <code class="block bg-gray-100 p-3 rounded-lg text-xs text-gray-600 font-mono">
+                            linear-gradient(135deg, #1E3A5F 0%, #2563EB 100%)
+                        </code>
+                    </div>
+                </div>
+
+                <!-- Dark Gradient -->
+                <div class="color-box bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-40 relative" style="background: linear-gradient(135deg, #152B47 0%, #1E3A5F 100%)">
+                        <button class="copy-btn absolute top-3 right-3 bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded-full text-xs" onclick="copyColor('linear-gradient(135deg, #152B47 0%, #1E3A5F 100%)')">
+                            Copy CSS
+                        </button>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-semibold text-gray-800">Dark Gradient</h4>
+                        <p class="text-gray-500 text-sm mb-3">딥 네이비 (푸터, 다크 섹션)</p>
+                        <code class="block bg-gray-100 p-3 rounded-lg text-xs text-gray-600 font-mono">
+                            linear-gradient(135deg, #152B47 0%, #1E3A5F 100%)
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Neutral Colors -->
+        <section class="mb-16">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Neutral Colors</h3>
+            <p class="text-gray-500 mb-6">배경, 텍스트, 보더 등에 사용되는 중립 색상입니다.</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div class="color-box bg-white rounded-xl overflow-hidden shadow cursor-pointer" onclick="copyColor('#F8FAFC')">
+                    <div class="h-20 bg-[#F8FAFC] border-b"></div>
+                    <div class="p-3 text-center">
+                        <p class="font-mono text-xs text-gray-600">#F8FAFC</p>
+                        <p class="text-xs text-gray-400">50</p>
+                    </div>
+                </div>
+                <div class="color-box bg-white rounded-xl overflow-hidden shadow cursor-pointer" onclick="copyColor('#F1F5F9')">
+                    <div class="h-20 bg-[#F1F5F9]"></div>
+                    <div class="p-3 text-center">
+                        <p class="font-mono text-xs text-gray-600">#F1F5F9</p>
+                        <p class="text-xs text-gray-400">100</p>
+                    </div>
+                </div>
+                <div class="color-box bg-white rounded-xl overflow-hidden shadow cursor-pointer" onclick="copyColor('#E2E8F0')">
+                    <div class="h-20 bg-[#E2E8F0]"></div>
+                    <div class="p-3 text-center">
+                        <p class="font-mono text-xs text-gray-600">#E2E8F0</p>
+                        <p class="text-xs text-gray-400">200</p>
+                    </div>
+                </div>
+                <div class="color-box bg-white rounded-xl overflow-hidden shadow cursor-pointer" onclick="copyColor('#CBD5E1')">
+                    <div class="h-20 bg-[#CBD5E1]"></div>
+                    <div class="p-3 text-center">
+                        <p class="font-mono text-xs text-gray-600">#CBD5E1</p>
+                        <p class="text-xs text-gray-400">300</p>
+                    </div>
+                </div>
+                <div class="color-box bg-white rounded-xl overflow-hidden shadow cursor-pointer" onclick="copyColor('#94A3B8')">
+                    <div class="h-20 bg-[#94A3B8]"></div>
+                    <div class="p-3 text-center">
+                        <p class="font-mono text-xs text-gray-600">#94A3B8</p>
+                        <p class="text-xs text-gray-400">400</p>
+                    </div>
+                </div>
+                <div class="color-box bg-white rounded-xl overflow-hidden shadow cursor-pointer" onclick="copyColor('#64748B')">
+                    <div class="h-20 bg-[#64748B]"></div>
+                    <div class="p-3 text-center">
+                        <p class="font-mono text-xs text-gray-600">#64748B</p>
+                        <p class="text-xs text-gray-400">500</p>
+                    </div>
+                </div>
+                <div class="color-box bg-white rounded-xl overflow-hidden shadow cursor-pointer" onclick="copyColor('#475569')">
+                    <div class="h-20 bg-[#475569]"></div>
+                    <div class="p-3 text-center">
+                        <p class="font-mono text-xs text-gray-600">#475569</p>
+                        <p class="text-xs text-gray-400">600</p>
+                    </div>
+                </div>
+                <div class="color-box bg-white rounded-xl overflow-hidden shadow cursor-pointer" onclick="copyColor('#334155')">
+                    <div class="h-20 bg-[#334155]"></div>
+                    <div class="p-3 text-center">
+                        <p class="font-mono text-xs text-gray-600">#334155</p>
+                        <p class="text-xs text-gray-400">700</p>
+                    </div>
+                </div>
+                <div class="color-box bg-white rounded-xl overflow-hidden shadow cursor-pointer" onclick="copyColor('#1E293B')">
+                    <div class="h-20 bg-[#1E293B]"></div>
+                    <div class="p-3 text-center">
+                        <p class="font-mono text-xs text-gray-600">#1E293B</p>
+                        <p class="text-xs text-gray-400">800</p>
+                    </div>
+                </div>
+                <div class="color-box bg-white rounded-xl overflow-hidden shadow cursor-pointer" onclick="copyColor('#0F172A')">
+                    <div class="h-20 bg-[#0F172A]"></div>
+                    <div class="p-3 text-center">
+                        <p class="font-mono text-xs text-gray-600">#0F172A</p>
+                        <p class="text-xs text-gray-400">900</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Functional Colors -->
+        <section class="mb-16">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Functional Colors</h3>
+            <p class="text-gray-500 mb-6">상태 표시에 사용되는 기능적 색상입니다.</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="color-box bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer" onclick="copyColor('#10B981')">
+                    <div class="h-24 bg-[#10B981]"></div>
+                    <div class="p-4">
+                        <h4 class="font-semibold text-gray-800">Success</h4>
+                        <p class="font-mono text-sm text-gray-500">#10B981</p>
+                    </div>
+                </div>
+                <div class="color-box bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer" onclick="copyColor('#F59E0B')">
+                    <div class="h-24 bg-[#F59E0B]"></div>
+                    <div class="p-4">
+                        <h4 class="font-semibold text-gray-800">Warning</h4>
+                        <p class="font-mono text-sm text-gray-500">#F59E0B</p>
+                    </div>
+                </div>
+                <div class="color-box bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer" onclick="copyColor('#EF4444')">
+                    <div class="h-24 bg-[#EF4444]"></div>
+                    <div class="p-4">
+                        <h4 class="font-semibold text-gray-800">Error</h4>
+                        <p class="font-mono text-sm text-gray-500">#EF4444</p>
+                    </div>
+                </div>
+                <div class="color-box bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer" onclick="copyColor('#3B82F6')">
+                    <div class="h-24 bg-[#3B82F6]"></div>
+                    <div class="p-4">
+                        <h4 class="font-semibold text-gray-800">Info</h4>
+                        <p class="font-mono text-sm text-gray-500">#3B82F6</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSS Variables -->
+        <section class="mb-16">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">CSS Variables</h3>
+            <p class="text-gray-500 mb-6">프로젝트에서 사용할 CSS 변수입니다. 복사하여 사용하세요.</p>
+
+            <div class="bg-gray-900 rounded-2xl p-6 overflow-x-auto">
+                <pre class="text-sm text-gray-300 font-mono"><code>:root {
+    /* Primary - Navy Blue */
+    --color-primary: #1E3A5F;
+    --color-primary-dark: #152B47;
+    --color-primary-light: #2A4A73;
+
+    /* Secondary - Royal Blue */
+    --color-secondary: #2563EB;
+    --color-secondary-dark: #1D4ED8;
+    --color-secondary-light: #3B82F6;
+
+    /* Gradient */
+    --gradient-primary: linear-gradient(135deg, #1E3A5F 0%, #2563EB 100%);
+    --gradient-dark: linear-gradient(135deg, #152B47 0%, #1E3A5F 100%);
+
+    /* Neutral */
+    --color-neutral-50: #F8FAFC;
+    --color-neutral-100: #F1F5F9;
+    --color-neutral-200: #E2E8F0;
+    --color-neutral-300: #CBD5E1;
+    --color-neutral-400: #94A3B8;
+    --color-neutral-500: #64748B;
+    --color-neutral-600: #475569;
+    --color-neutral-700: #334155;
+    --color-neutral-800: #1E293B;
+    --color-neutral-900: #0F172A;
+
+    /* Functional */
+    --color-success: #10B981;
+    --color-warning: #F59E0B;
+    --color-error: #EF4444;
+    --color-info: #3B82F6;
+
+    /* Text */
+    --color-text-primary: #1E293B;
+    --color-text-secondary: #64748B;
+    --color-text-muted: #94A3B8;
+    --color-text-inverse: #FFFFFF;
+
+    /* Background */
+    --color-bg-primary: #FFFFFF;
+    --color-bg-secondary: #F8FAFC;
+    --color-bg-tertiary: #F1F5F9;
+}</code></pre>
+                <button class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition-colors" onclick="copyCSS()">
+                    Copy All CSS Variables
+                </button>
+            </div>
+        </section>
+
+        <!-- Usage Examples -->
+        <section class="mb-16">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Usage Examples</h3>
+            <p class="text-gray-500 mb-6">실제 UI 컴포넌트에 적용된 예시입니다.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Buttons -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <h4 class="font-semibold text-gray-800 mb-4">Buttons</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <button class="bg-[#1E3A5F] hover:bg-[#152B47] text-white px-6 py-2.5 rounded-lg font-medium transition-colors">
+                            Primary
+                        </button>
+                        <button class="bg-[#2563EB] hover:bg-[#1D4ED8] text-white px-6 py-2.5 rounded-lg font-medium transition-colors">
+                            Secondary
+                        </button>
+                        <button class="border-2 border-[#1E3A5F] text-[#1E3A5F] hover:bg-[#1E3A5F] hover:text-white px-6 py-2.5 rounded-lg font-medium transition-colors">
+                            Outline
+                        </button>
+                        <button class="text-[#2563EB] hover:text-[#1D4ED8] px-6 py-2.5 rounded-lg font-medium transition-colors">
+                            Text
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cards -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <h4 class="font-semibold text-gray-800 mb-4">Card Header</h4>
+                    <div class="rounded-xl overflow-hidden shadow">
+                        <div class="h-24 relative" style="background: linear-gradient(135deg, #1E3A5F 0%, #2563EB 100%)">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-white font-semibold">Hero Section</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4">
+                            <p class="text-gray-600 text-sm">카드 컨텐츠 영역</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Badge -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <h4 class="font-semibold text-gray-800 mb-4">Badges</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-[#1E3A5F] text-white px-3 py-1 rounded-full text-sm">기본</span>
+                        <span class="bg-[#E2E8F0] text-[#1E3A5F] px-3 py-1 rounded-full text-sm">서브</span>
+                        <span class="bg-[#10B981] text-white px-3 py-1 rounded-full text-sm">성공</span>
+                        <span class="bg-[#F59E0B] text-white px-3 py-1 rounded-full text-sm">경고</span>
+                        <span class="bg-[#EF4444] text-white px-3 py-1 rounded-full text-sm">에러</span>
+                    </div>
+                </div>
+
+                <!-- Input -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg">
+                    <h4 class="font-semibold text-gray-800 mb-4">Form Input</h4>
+                    <div class="space-y-3">
+                        <input type="text" placeholder="이름을 입력하세요"
+                            class="w-full px-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1E3A5F] focus:border-transparent transition-all">
+                        <input type="text" placeholder="포커스 상태"
+                            class="w-full px-4 py-2.5 border-2 border-[#1E3A5F] rounded-lg outline-none ring-2 ring-[#1E3A5F]/20">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0F172A] text-white py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-400 text-sm">
+                HANGYEOL CONSULTING Brand Color Guide
+            </p>
+            <p class="text-gray-500 text-xs mt-2">
+                biz-hangyeol.co.kr
+            </p>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-6 py-3 rounded-full shadow-lg opacity-0 transition-opacity pointer-events-none">
+        Copied to clipboard!
+    </div>
+
+    <script>
+        function copyColor(color) {
+            navigator.clipboard.writeText(color).then(() => {
+                showToast();
+            });
+        }
+
+        function copyCSS() {
+            const css = `:root {
+    /* Primary - Navy Blue */
+    --color-primary: #1E3A5F;
+    --color-primary-dark: #152B47;
+    --color-primary-light: #2A4A73;
+
+    /* Secondary - Royal Blue */
+    --color-secondary: #2563EB;
+    --color-secondary-dark: #1D4ED8;
+    --color-secondary-light: #3B82F6;
+
+    /* Gradient */
+    --gradient-primary: linear-gradient(135deg, #1E3A5F 0%, #2563EB 100%);
+    --gradient-dark: linear-gradient(135deg, #152B47 0%, #1E3A5F 100%);
+
+    /* Neutral */
+    --color-neutral-50: #F8FAFC;
+    --color-neutral-100: #F1F5F9;
+    --color-neutral-200: #E2E8F0;
+    --color-neutral-300: #CBD5E1;
+    --color-neutral-400: #94A3B8;
+    --color-neutral-500: #64748B;
+    --color-neutral-600: #475569;
+    --color-neutral-700: #334155;
+    --color-neutral-800: #1E293B;
+    --color-neutral-900: #0F172A;
+
+    /* Functional */
+    --color-success: #10B981;
+    --color-warning: #F59E0B;
+    --color-error: #EF4444;
+    --color-info: #3B82F6;
+
+    /* Text */
+    --color-text-primary: #1E293B;
+    --color-text-secondary: #64748B;
+    --color-text-muted: #94A3B8;
+    --color-text-inverse: #FFFFFF;
+
+    /* Background */
+    --color-bg-primary: #FFFFFF;
+    --color-bg-secondary: #F8FAFC;
+    --color-bg-tertiary: #F1F5F9;
+}`;
+            navigator.clipboard.writeText(css).then(() => {
+                showToast();
+            });
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('opacity-0');
+            toast.classList.add('opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('opacity-100');
+                toast.classList.add('opacity-0');
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

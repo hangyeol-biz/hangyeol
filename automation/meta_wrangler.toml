@@ -1,0 +1,28 @@
+name = "hangyeol-meta"
+main = "meta_worker.js"
+compatibility_date = "2024-01-01"
+account_id = "1886ec3623cea58c2f9df4b57199f86d"
+
+# ================================================
+# 환경변수 설정 방법
+# ================================================
+# 시크릿 설정 (Cloudflare Dashboard 또는 CLI)
+# wrangler secret put RESEND_API_KEY -c meta_wrangler.toml
+# wrangler secret put TELEGRAM_BOT_TOKEN -c meta_wrangler.toml
+# wrangler secret put NCP_ACCESS_KEY -c meta_wrangler.toml
+# wrangler secret put NCP_SECRET_KEY -c meta_wrangler.toml
+
+[vars]
+# 담당자 이메일
+STAFF_EMAIL = "khg471@naver.com"
+STAFF_BCC = "mkt@polarad.co.kr"
+
+# 텔레그램 채팅방 ID (내부 알림용)
+TELEGRAM_CHAT_ID = "-1003699023763"
+
+# 네이버 SENS SMS
+NCP_SERVICE_ID = "ncp:sms:kr:362578528555:hangyeol"
+SMS_FROM = "01045326750"
+
+# Airtable 공유 링크 (텔레그램/이메일에서 바로가기용)
+AIRTABLE_SHARE_URL = "https://airtable.com/appMkaHfMP4ZGxcPw/tblv1hdnYYIeU1V5h"

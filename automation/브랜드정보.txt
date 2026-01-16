@@ -1,0 +1,56 @@
+# ================================================
+# 한국기업심사원 (KEAI) - Meta 리드 연동 설정
+# 작성일: 2025-01-07
+# ================================================
+
+## 브랜드 정보
+- 상호명: 한국기업심사원
+- 영문명: KEAI (Korea Enterprise Audit Institute)
+- 대표: 이강희
+- 연락처: 010-2888-6514
+- 이메일: ceo@k-eai.kr
+
+## Meta 리드용 Airtable (신규)
+- Base ID: appUzIaUBtV7YNlFp
+- Table ID: tbloToXcKfrp2z3Wt
+- Table Name: 고객정보 (또는 테이블명 확인 필요)
+- Share URL: https://airtable.com/appUzIaUBtV7YNlFp/shr6hwUcawFtwdymi
+- 필드:
+  - 접수일 (date)
+  - 지역 (singlelinetext)
+  - 업종 (singlelinetext)
+  - 상호명 (singlelinetext)
+  - 이름 (singlelinetext)
+  - 연락처 (phone number)
+  - 상담희망시간 (singlelinetext)
+
+## 기존 홈페이지 폼용 Airtable
+- Base ID: appxVw5QQ0g4JEjoR
+- Table Name: 한국기업심사원
+- Share URL: https://airtable.com/appxVw5QQ0g4JEjoR/shru8RRD9rnGNgHmM
+
+## 텔레그램
+- Bot Token: 7947112373:AAEs5o3fcm0JoPewh7K5YTUwzq4poWw97pY
+- Chat ID (내부알림): -1003366455717
+
+## 이메일 (Resend)
+- From: KEAI 한국기업심사원 <noreply@mail.policy-fund.online>
+- Staff: ceo@k-eai.kr
+- BCC: mkt@polarad.co.kr
+
+## 네이버 SENS SMS
+- Service ID: ncp:sms:kr:362578528555:keai
+- 발신번호: 01028886514
+
+## Cloudflare Workers
+- 기존 Worker: keai (홈페이지 폼용)
+- Meta Worker: keai-meta (신규 생성 필요)
+- Account ID: 75123333ef4e1c6368873dd55fca00ab
+
+## Make 시나리오 구조
+1. Meta 리드 수신 (Webhook)
+2. Airtable 저장 (기본 저장은 Make에서)
+3. Worker 호출 (알림 발송)
+   - 텔레그램 (내부)
+   - 이메일 (내부/고객)
+   - 문자 발송 (고객)

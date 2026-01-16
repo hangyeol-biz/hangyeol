@@ -1,0 +1,21 @@
+name = "hangyeol"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+account_id = "1886ec3623cea58c2f9df4b57199f86d"
+
+# 환경변수 (Cloudflare Dashboard에서 설정하거나 wrangler secret put 사용)
+# wrangler secret put AIRTABLE_TOKEN
+# wrangler secret put RESEND_API_KEY
+# wrangler secret put TELEGRAM_BOT_TOKEN
+# wrangler secret put NCP_ACCESS_KEY
+# wrangler secret put NCP_SECRET_KEY
+
+[vars]
+AIRTABLE_BASE_ID = "appMkaHfMP4ZGxcPw"
+AIRTABLE_TABLE_NAME = "고객정보"
+STAFF_EMAIL = "khg471@naver.com"
+STAFF_BCC = "mkt@polarad.co.kr"
+TELEGRAM_CHAT_ID = "-1003699023763"
+NCP_SERVICE_ID = "ncp:sms:kr:362578528555:hangyeol"
+SMS_FROM = "01045326750"
+AIRTABLE_SHARE_URL = "https://airtable.com/appMkaHfMP4ZGxcPw/tblv1hdnYYIeU1V5h"

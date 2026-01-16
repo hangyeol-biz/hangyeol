@@ -1,0 +1,14 @@
+# 한결 컨설팅 robots.txt
+# https://biz-hangyeol.co.kr
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://biz-hangyeol.co.kr/sitemap.xml
+
+# Disallow
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /js/config.js
