@@ -51,3 +51,5 @@ scripts/
 
 # OG 이미지 템플릿
 og/
+
+.vercel
