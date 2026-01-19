@@ -579,7 +579,6 @@ export default async function handler(req, res) {
                 'topPages': JSON.stringify(topPages),
                 'topCountries': JSON.stringify(countries),
                 'topReferrers': JSON.stringify(referrers),
-                'collectedAt': new Date().toISOString(),
             };
 
             const success = await upsertAnalyticsData(record);
