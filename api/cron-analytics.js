@@ -11,13 +11,13 @@ function getEnv(key, defaultValue = '') {
     return value.trim().replace(/[\r\n]/g, '');
 }
 
-const CRON_SECRET = getEnv('CRON_SECRET');
+const CRON_SECRET = getEnv('CRON_SECRET', 'keai-cron-secret-2024');
 const AIRTABLE_TOKEN = getEnv('AIRTABLE_TOKEN');
-const AIRTABLE_BASE_ID = getEnv('AIRTABLE_BASE_ID');
-const ANALYTICS_TABLE_ID = getEnv('ANALYTICS_TABLE_ID'); // Analytics 테이블 ID
-const LEADS_TABLE_ID = getEnv('LEADS_TABLE_ID'); // Leads 테이블 ID
-const GA4_PROPERTY_ID = getEnv('GA4_PROPERTY_ID');
-const SEARCH_CONSOLE_SITE = getEnv('SEARCH_CONSOLE_SITE');
+const AIRTABLE_BASE_ID = getEnv('AIRTABLE_BASE_ID', 'appxVw5QQ0g4JEjoR');
+const ANALYTICS_TABLE_ID = 'tblvtCiOigcPRPXpY'; // Analytics 테이블 ID
+const LEADS_TABLE_ID = 'tblS5O4LN5C7L9Km7'; // 한국기업심사원 테이블 ID
+const GA4_PROPERTY_ID = getEnv('GA4_PROPERTY_ID', '516503347');
+const SEARCH_CONSOLE_SITE = getEnv('SEARCH_CONSOLE_SITE', 'https://k-eai.kr');
 
 // Google API Access Token 획득
 async function getAccessToken() {

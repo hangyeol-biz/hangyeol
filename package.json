@@ -1,7 +1,7 @@
 {
-  "name": "hangyeol",
+  "name": "keai",
   "version": "1.0.0",
-  "description": "한결 컨설팅 - 정책자금 전문 홈페이지",
+  "description": "KEAI - 한국기업심사원 홈페이지",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hangyeol-biz/hangyeol.git"
+    "url": "git@github-lkh:lkh1000712-create/keai.git"
   },
   "keywords": [],
   "author": "",

@@ -7,7 +7,7 @@
    HERO STYLE GUIDE (히어로 폰트 스타일 가이드)
    ================================================
 
-   [기준: index.html 메인 히어로 (.hangyeol-hero)]
+   [기준: index.html 메인 히어로 (.keai-hero)]
    모든 히어로 섹션은 이 기준을 따릅니다.
 
    ▸ Badge (배지)
@@ -29,8 +29,8 @@
      - Description: rgba(255, 255, 255, 0.9)
 
    적용 대상:
-   - .hangyeol-hero (메인 페이지)
-   - .hangyeol-about-hero (회사소개 페이지)
+   - .keai-hero (메인 페이지)
+   - .keai-about-hero (회사소개 페이지)
    - 기타 히어로 섹션 추가 시 동일 적용
    ================================================ */
 
@@ -116,7 +116,7 @@ img {
 /* ================================================
    HEADER
    ================================================ */
-.hangyeol-header {
+.keai-header {
     position: fixed;
     top: 0;
     left: 0;
@@ -128,31 +128,31 @@ img {
     padding-bottom: 9px;
 }
 
-.hangyeol-header-container {
+.keai-header-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.hangyeol-header-main {
+.keai-header-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0 4px 0;
 }
 
-.hangyeol-logo {
+.keai-logo {
     display: flex;
     align-items: flex-end;
     gap: 12px;
 }
 
-.hangyeol-logo-image {
+.keai-logo-image {
     height: 50px;
     width: auto;
 }
 
-.hangyeol-logo-text {
+.keai-logo-text {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -160,7 +160,7 @@ img {
     padding-bottom: 2px;
 }
 
-.hangyeol-logo-title {
+.keai-logo-title {
     font-size: 24px;
     font-weight: 700;
     color: var(--primary);
@@ -168,25 +168,25 @@ img {
     letter-spacing: 0.5px;
 }
 
-.hangyeol-logo-subtitle {
+.keai-logo-subtitle {
     font-size: 11px;
     color: var(--text-muted);
     letter-spacing: 0.3px;
 }
 
 /* Navigation */
-.hangyeol-nav {
+.keai-nav {
     display: none;
 }
 
-.hangyeol-nav-list {
+.keai-nav-list {
     display: flex;
     align-items: center;
     gap: 8px;
     list-style: none;
 }
 
-.hangyeol-nav-item a {
+.keai-nav-item a {
     display: block;
     padding: 10px 20px;
     font-size: 15px;
@@ -196,22 +196,22 @@ img {
     transition: var(--transition);
 }
 
-.hangyeol-nav-item a:hover {
+.keai-nav-item a:hover {
     background: var(--bg-light);
     color: var(--primary);
 }
 
-.hangyeol-nav-item a.active {
+.keai-nav-item a.active {
     background: var(--primary);
     color: var(--bg-white);
 }
 
 /* Header CTA */
-.hangyeol-header-cta {
+.keai-header-cta {
     display: none;
 }
 
-.hangyeol-btn-header-cta {
+.keai-btn-header-cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -228,19 +228,19 @@ img {
     min-width: 110px;
 }
 
-.hangyeol-btn-header-cta:hover {
+.keai-btn-header-cta:hover {
     background: var(--primary-dark);
     box-shadow: var(--shadow-md);
 }
 
-.hangyeol-btn-header-cta svg {
+.keai-btn-header-cta svg {
     width: 16px;
     height: 16px;
     fill: currentColor;
 }
 
 /* Mobile Menu Button */
-.hangyeol-mobile-menu-btn {
+.keai-mobile-menu-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -251,14 +251,14 @@ img {
     cursor: pointer;
 }
 
-.hangyeol-mobile-menu-btn svg {
+.keai-mobile-menu-btn svg {
     width: 24px;
     height: 24px;
     fill: var(--text-primary);
 }
 
 /* Mobile Menu */
-.hangyeol-mobile-menu {
+.keai-mobile-menu {
     position: fixed;
     top: 0;
     right: -100%;
@@ -272,11 +272,11 @@ img {
     z-index: 1001;
 }
 
-.hangyeol-mobile-menu.active {
+.keai-mobile-menu.active {
     right: 0;
 }
 
-.hangyeol-mobile-menu-header {
+.keai-mobile-menu-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -285,13 +285,13 @@ img {
     border-bottom: 2px solid var(--gray-100);
 }
 
-.hangyeol-mobile-menu-title {
+.keai-mobile-menu-title {
     font-size: 18px;
     font-weight: 700;
     color: var(--text-primary);
 }
 
-.hangyeol-mobile-menu-close {
+.keai-mobile-menu-close {
     width: 32px;
     height: 32px;
     display: flex;
@@ -302,16 +302,16 @@ img {
     cursor: pointer;
 }
 
-.hangyeol-mobile-nav-list {
+.keai-mobile-nav-list {
     list-style: none;
     margin-bottom: 24px;
 }
 
-.hangyeol-mobile-nav-item {
+.keai-mobile-nav-item {
     margin-bottom: 8px;
 }
 
-.hangyeol-mobile-nav-item a {
+.keai-mobile-nav-item a {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -323,12 +323,12 @@ img {
     transition: var(--transition);
 }
 
-.hangyeol-mobile-nav-item a.active {
+.keai-mobile-nav-item a.active {
     background: var(--primary);
     color: var(--bg-white);
 }
 
-.hangyeol-mobile-overlay {
+.keai-mobile-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -341,26 +341,26 @@ img {
     z-index: 999;
 }
 
-.hangyeol-mobile-overlay.active {
+.keai-mobile-overlay.active {
     opacity: 1;
     visibility: visible;
 }
 
 /* Header Responsive */
 @media (min-width: 768px) {
-    .hangyeol-nav {
+    .keai-nav {
         display: block;
     }
-    .hangyeol-mobile-menu-btn {
+    .keai-mobile-menu-btn {
         display: none;
     }
-    .hangyeol-logo-title {
+    .keai-logo-title {
         font-size: 20px;
     }
 }
 
 @media (min-width: 1024px) {
-    .hangyeol-header-cta {
+    .keai-header-cta {
         display: block;
     }
 }
@@ -368,14 +368,14 @@ img {
 /* ================================================
    HERO SECTION
    ================================================ */
-.hangyeol-hero {
+.keai-hero {
     position: relative;
     width: 100%;
     background: url('../cdn-images-webp/623f54c4be1c1.webp') center/cover no-repeat;
     margin-top: 80px;
 }
 
-.hangyeol-hero::before {
+.keai-hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -386,7 +386,7 @@ img {
     z-index: 0;
 }
 
-.hangyeol-hero-container {
+.keai-hero-container {
     position: relative;
     z-index: 1;
     max-width: 1200px;
@@ -395,12 +395,12 @@ img {
     min-height: 100%;
 }
 
-.hangyeol-hero-headline {
+.keai-hero-headline {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.hangyeol-hero-badge {
+.keai-hero-badge {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -414,13 +414,13 @@ img {
     margin-bottom: 20px;
 }
 
-.hangyeol-hero-badge svg {
+.keai-hero-badge svg {
     width: 16px;
     height: 16px;
     fill: var(--bg-white);
 }
 
-.hangyeol-hero-title {
+.keai-hero-title {
     font-size: 28px;
     font-weight: 700;
     line-height: 1.4;
@@ -430,7 +430,7 @@ img {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.hangyeol-hero-description {
+.keai-hero-description {
     font-size: 15px;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.9);
@@ -438,14 +438,14 @@ img {
 }
 
 /* Hero CTA Buttons */
-.hangyeol-hero-cta {
+.keai-hero-cta {
     display: flex;
     flex-direction: column;
     gap: 12px;
     margin-top: 32px;
 }
 
-.hangyeol-btn-primary {
+.keai-btn-primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -463,19 +463,19 @@ img {
     box-shadow: var(--shadow-md);
 }
 
-.hangyeol-btn-primary:hover {
+.keai-btn-primary:hover {
     background: var(--bg-light);
     box-shadow: var(--shadow-lg);
     transform: translateY(-2px);
 }
 
-.hangyeol-btn-primary svg {
+.keai-btn-primary svg {
     width: 20px;
     height: 20px;
     fill: currentColor;
 }
 
-.hangyeol-btn-secondary {
+.keai-btn-secondary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -492,41 +492,41 @@ img {
     transition: var(--transition);
 }
 
-.hangyeol-btn-secondary:hover {
+.keai-btn-secondary:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--bg-white);
     transform: translateY(-2px);
 }
 
-.hangyeol-btn-secondary svg {
+.keai-btn-secondary svg {
     width: 20px;
     height: 20px;
     fill: currentColor;
 }
 
 /* Hero Feature Cards */
-.hangyeol-features-grid {
+.keai-features-grid {
     margin-top: 60px;
     position: relative;
 }
 
-.hangyeol-features-slider {
+.keai-features-slider {
     position: relative;
     overflow: hidden;
     padding: 0 0 50px;
 }
 
-.hangyeol-features-track {
+.keai-features-track {
     display: flex;
     transition: transform 0.3s ease;
 }
 
-.hangyeol-features-track .hangyeol-feature-card {
+.keai-features-track .keai-feature-card {
     flex: 0 0 100%;
     min-width: 100%;
 }
 
-.hangyeol-feature-card {
+.keai-feature-card {
     background: var(--bg-white);
     border: 1px solid var(--gray-200);
     border-radius: 12px;
@@ -537,13 +537,13 @@ img {
     transition: var(--transition);
 }
 
-.hangyeol-feature-card:hover {
+.keai-feature-card:hover {
     border-color: var(--primary);
     box-shadow: var(--shadow-lg);
     transform: translateY(-4px);
 }
 
-.hangyeol-feature-image {
+.keai-feature-image {
     width: 100%;
     height: 240px;
     overflow: hidden;
@@ -551,7 +551,7 @@ img {
     background: var(--gray-50);
 }
 
-.hangyeol-feature-image img {
+.keai-feature-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -560,23 +560,23 @@ img {
     transition: transform 0.3s ease;
 }
 
-.hangyeol-feature-card:hover .hangyeol-feature-image img {
+.keai-feature-card:hover .keai-feature-image img {
     transform: scale(1.05);
 }
 
-.hangyeol-feature-content {
+.keai-feature-content {
     padding: 28px 24px;
     text-align: center;
 }
 
-.hangyeol-feature-title {
+.keai-feature-title {
     font-size: 18px;
     font-weight: 700;
     color: var(--navy);
     margin-bottom: 12px;
 }
 
-.hangyeol-feature-description {
+.keai-feature-description {
     font-size: 14px;
     line-height: 1.6;
     color: var(--text-muted);
@@ -584,7 +584,7 @@ img {
 }
 
 /* Slider Navigation */
-.hangyeol-slider-nav {
+.keai-slider-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -602,32 +602,32 @@ img {
     transition: var(--transition);
 }
 
-.hangyeol-slider-nav:hover {
+.keai-slider-nav:hover {
     background: var(--primary);
     border-color: var(--primary);
     transform: translateY(-50%) scale(1.1);
 }
 
-.hangyeol-slider-nav svg {
+.keai-slider-nav svg {
     width: 20px;
     height: 20px;
     fill: var(--navy);
 }
 
-.hangyeol-slider-nav:hover svg {
+.keai-slider-nav:hover svg {
     fill: var(--bg-white);
 }
 
-.hangyeol-slider-prev {
+.keai-slider-prev {
     left: 10px;
 }
 
-.hangyeol-slider-next {
+.keai-slider-next {
     right: 10px;
 }
 
 /* Slider Dots */
-.hangyeol-slider-dots {
+.keai-slider-dots {
     display: flex;
     justify-content: center;
     gap: 8px;
@@ -638,7 +638,7 @@ img {
     transform: translateX(-50%);
 }
 
-.hangyeol-slider-dot {
+.keai-slider-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -649,14 +649,14 @@ img {
     padding: 0;
 }
 
-.hangyeol-slider-dot.active {
+.keai-slider-dot.active {
     background: var(--bg-white);
     width: 24px;
     border-radius: 4px;
 }
 
 /* Hero Notice Box */
-.hangyeol-notice-box {
+.keai-notice-box {
     background: var(--bg-white);
     border: 1px solid var(--gray-200);
     border-left: 4px solid var(--primary);
@@ -668,7 +668,7 @@ img {
     max-width: 100%;
 }
 
-.hangyeol-notice-title {
+.keai-notice-title {
     font-size: 15px;
     font-weight: 700;
     color: var(--primary);
@@ -679,13 +679,13 @@ img {
     gap: 6px;
 }
 
-.hangyeol-notice-title svg {
+.keai-notice-title svg {
     width: 20px;
     height: 20px;
     fill: currentColor;
 }
 
-.hangyeol-notice-list {
+.keai-notice-list {
     font-size: 13px;
     color: var(--text-muted);
     line-height: 1.8;
@@ -696,13 +696,13 @@ img {
     text-align: left;
 }
 
-.hangyeol-notice-list li {
+.keai-notice-list li {
     padding-left: 20px;
     position: relative;
     margin-bottom: 8px;
 }
 
-.hangyeol-notice-list li::before {
+.keai-notice-list li::before {
     content: '✓';
     position: absolute;
     left: 0;
@@ -712,86 +712,86 @@ img {
 
 /* Hero Responsive */
 @media (min-width: 768px) {
-    .hangyeol-hero-container {
+    .keai-hero-container {
         padding: 100px 40px 120px;
     }
-    .hangyeol-hero-badge {
+    .keai-hero-badge {
         font-size: 14px;
     }
-    .hangyeol-hero-title {
+    .keai-hero-title {
         font-size: 40px;
     }
-    .hangyeol-hero-description {
+    .keai-hero-description {
         font-size: 17px;
     }
-    .hangyeol-hero-cta {
+    .keai-hero-cta {
         flex-direction: row;
         justify-content: center;
         gap: 16px;
     }
-    .hangyeol-btn-primary,
-    .hangyeol-btn-secondary {
+    .keai-btn-primary,
+    .keai-btn-secondary {
         width: auto;
         min-width: 200px;
     }
 
     /* Grid layout for features */
-    .hangyeol-features-slider {
+    .keai-features-slider {
         overflow: visible;
         padding: 0;
     }
-    .hangyeol-features-track {
+    .keai-features-track {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
         transform: none;
         transition: none;
     }
-    .hangyeol-features-track .hangyeol-feature-card {
+    .keai-features-track .keai-feature-card {
         flex: none;
         min-width: auto;
     }
-    .hangyeol-slider-nav,
-    .hangyeol-slider-dots {
+    .keai-slider-nav,
+    .keai-slider-dots {
         display: none;
     }
-    .hangyeol-feature-image {
+    .keai-feature-image {
         height: 260px;
     }
-    .hangyeol-feature-content {
+    .keai-feature-content {
         padding: 32px 28px;
     }
-    .hangyeol-notice-box {
+    .keai-notice-box {
         padding: 28px 40px;
     }
-    .hangyeol-notice-title {
+    .keai-notice-title {
         font-size: 16px;
     }
-    .hangyeol-notice-list {
+    .keai-notice-list {
         font-size: 14px;
     }
 }
 
 @media (min-width: 1024px) {
-    .hangyeol-hero-container {
+    .keai-hero-container {
         padding: 120px 40px 140px;
     }
-    .hangyeol-hero-title {
+    .keai-hero-title {
         font-size: 50px;
     }
-    .hangyeol-hero-description {
+    .keai-hero-description {
         font-size: 19px;
     }
-    .hangyeol-feature-image {
+    .keai-feature-image {
         height: 280px;
     }
-    .hangyeol-feature-content {
+    .keai-feature-content {
         padding: 36px 32px;
     }
-    .hangyeol-feature-title {
+    .keai-feature-title {
         font-size: 20px;
     }
-    .hangyeol-feature-description {
+    .keai-feature-description {
         font-size: 15px;
     }
 }
@@ -799,13 +799,13 @@ img {
 /* ================================================
    PROCESS SECTION
    ================================================ */
-.hangyeol-process {
+.keai-process {
     position: relative;
     width: 100%;
     background: url('https://cdn.imweb.me/upload/S20251117ed7f35ec2bb5b/710f959602a89.png') center/cover no-repeat;
 }
 
-.hangyeol-process::before {
+.keai-process::before {
     content: '';
     position: absolute;
     top: 0;
@@ -819,7 +819,7 @@ img {
     z-index: 0;
 }
 
-.hangyeol-process-container {
+.keai-process-container {
     position: relative;
     z-index: 1;
     max-width: 1200px;
@@ -829,12 +829,12 @@ img {
 }
 
 /* Section Header */
-.hangyeol-section-header {
+.keai-section-header {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.hangyeol-section-badge {
+.keai-section-badge {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -848,13 +848,13 @@ img {
     margin-bottom: 16px;
 }
 
-.hangyeol-section-badge svg {
+.keai-section-badge svg {
     width: 16px;
     height: 16px;
     fill: var(--primary);
 }
 
-.hangyeol-section-title {
+.keai-section-title {
     font-size: 32px;
     font-weight: 700;
     line-height: 1.4;
@@ -863,7 +863,7 @@ img {
     word-break: keep-all;
 }
 
-.hangyeol-section-description {
+.keai-section-description {
     font-size: 16px;
     line-height: 1.6;
     color: var(--text-muted);
@@ -880,7 +880,7 @@ img {
 }
 
 /* Process Steps Grid (Desktop) */
-.hangyeol-steps-grid {
+.keai-steps-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 24px;
@@ -888,7 +888,7 @@ img {
 }
 
 /* Step Card */
-.hangyeol-step-card {
+.keai-step-card {
     background: var(--bg-white);
     border: 2px solid var(--gray-300);
     border-radius: 12px;
@@ -901,14 +901,14 @@ img {
     position: relative;
 }
 
-.hangyeol-step-card:hover {
+.keai-step-card:hover {
     border-color: var(--primary);
     box-shadow: var(--shadow-lg);
     transform: translateX(8px);
 }
 
 /* Mobile Step Card */
-.hangyeol-mobile-step-card {
+.keai-mobile-step-card {
     background: var(--bg-white);
     border: 2px solid var(--gray-300);
     border-radius: 12px;
@@ -922,13 +922,13 @@ img {
     align-items: center;
 }
 
-.hangyeol-mobile-step-card:hover {
+.keai-mobile-step-card:hover {
     border-color: var(--primary);
     box-shadow: var(--shadow-lg);
 }
 
 /* Step Icon */
-.hangyeol-step-icon-wrapper {
+.keai-step-icon-wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -936,7 +936,7 @@ img {
     gap: 12px;
 }
 
-.hangyeol-step-icon {
+.keai-step-icon {
     width: 80px;
     height: 80px;
     display: flex;
@@ -948,13 +948,13 @@ img {
     flex-shrink: 0;
 }
 
-.hangyeol-step-icon svg {
+.keai-step-icon svg {
     width: 40px;
     height: 40px;
     fill: var(--bg-white);
 }
 
-.hangyeol-step-number {
+.keai-step-number {
     position: absolute;
     top: -8px;
     right: -8px;
@@ -972,11 +972,11 @@ img {
 }
 
 /* Step Content */
-.hangyeol-step-content {
+.keai-step-content {
     flex: 1;
 }
 
-.hangyeol-step-title {
+.keai-step-title {
     font-size: 20px;
     font-weight: 700;
     color: var(--text-primary);
@@ -984,7 +984,7 @@ img {
     word-break: keep-all;
 }
 
-.hangyeol-step-description {
+.keai-step-description {
     font-size: 15px;
     line-height: 1.7;
     color: var(--text-muted);
@@ -992,7 +992,7 @@ img {
     margin-bottom: 16px;
 }
 
-.hangyeol-step-details {
+.keai-step-details {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -1000,7 +1000,7 @@ img {
     justify-content: center;
 }
 
-.hangyeol-step-detail-item {
+.keai-step-detail-item {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -1011,19 +1011,19 @@ img {
     color: var(--text-secondary);
 }
 
-.hangyeol-step-detail-item svg {
+.keai-step-detail-item svg {
     width: 14px;
     height: 14px;
     fill: var(--primary);
 }
 
 /* Process CTA */
-.hangyeol-process-cta {
+.keai-process-cta {
     text-align: center;
     margin-top: 32px;
 }
 
-.hangyeol-btn-cta {
+.keai-btn-cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1040,13 +1040,13 @@ img {
     box-shadow: var(--shadow-md);
 }
 
-.hangyeol-btn-cta:hover {
+.keai-btn-cta:hover {
     background: var(--primary-dark);
     box-shadow: var(--shadow-lg);
     transform: translateY(-2px);
 }
 
-.hangyeol-btn-cta svg {
+.keai-btn-cta svg {
     width: 20px;
     height: 20px;
     fill: currentColor;
@@ -1054,7 +1054,7 @@ img {
 
 /* Process Responsive */
 @media (min-width: 768px) {
-    .hangyeol-process-container {
+    .keai-process-container {
         padding: 80px 40px 100px;
     }
     .mobile-only {
@@ -1063,32 +1063,32 @@ img {
     .desktop-only {
         display: block;
     }
-    .hangyeol-section-title {
+    .keai-section-title {
         font-size: 40px;
     }
-    .hangyeol-section-description {
+    .keai-section-description {
         font-size: 18px;
     }
-    .hangyeol-steps-grid {
+    .keai-steps-grid {
         grid-template-columns: 1fr;
         gap: 32px;
     }
-    .hangyeol-process-cta {
+    .keai-process-cta {
         margin-top: 60px;
     }
 }
 
 @media (min-width: 1024px) {
-    .hangyeol-process-container {
+    .keai-process-container {
         padding: 100px 40px 120px;
     }
-    .hangyeol-section-title {
+    .keai-section-title {
         font-size: 48px;
     }
-    .hangyeol-step-title {
+    .keai-step-title {
         font-size: 22px;
     }
-    .hangyeol-step-description {
+    .keai-step-description {
         font-size: 16px;
     }
 }
@@ -1096,7 +1096,7 @@ img {
 /* ================================================
    SERVICE SECTION
    ================================================ */
-.hangyeol-service {
+.keai-service {
     position: relative;
     width: 100vw;
     max-width: 100vw;
@@ -1105,7 +1105,7 @@ img {
     background: url('https://cdn.imweb.me/upload/S20251117ed7f35ec2bb5b/22449daa5656a.png') center/cover no-repeat;
 }
 
-.hangyeol-service::before {
+.keai-service::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1116,7 +1116,7 @@ img {
     z-index: 0;
 }
 
-.hangyeol-service-container {
+.keai-service-container {
     position: relative;
     z-index: 1;
     max-width: 1200px;
@@ -1126,33 +1126,33 @@ img {
 }
 
 /* Service Header (White text) */
-.hangyeol-service .hangyeol-section-badge {
+.keai-service .keai-section-badge {
     background: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.4);
     color: var(--bg-white);
 }
 
-.hangyeol-service .hangyeol-section-badge svg {
+.keai-service .keai-section-badge svg {
     fill: var(--bg-white);
 }
 
-.hangyeol-service .hangyeol-section-title {
+.keai-service .keai-section-title {
     color: var(--bg-white);
 }
 
-.hangyeol-service .hangyeol-section-description {
+.keai-service .keai-section-description {
     color: rgba(255, 255, 255, 0.9);
 }
 
 /* Service Grid */
-.hangyeol-service-grid {
+.keai-service-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 24px;
 }
 
 /* Service Card */
-.hangyeol-service-card {
+.keai-service-card {
     background: var(--bg-white);
     border: 2px solid var(--gray-300);
     border-radius: 12px;
@@ -1164,13 +1164,13 @@ img {
     transition: var(--transition);
 }
 
-.hangyeol-service-card:hover {
+.keai-service-card:hover {
     border-color: var(--primary);
     box-shadow: var(--shadow-lg);
     transform: translateY(-4px);
 }
 
-.hangyeol-service-icon {
+.keai-service-icon {
     width: 80px;
     height: 80px;
     display: flex;
@@ -1182,13 +1182,13 @@ img {
     box-shadow: var(--shadow-md);
 }
 
-.hangyeol-service-icon svg {
+.keai-service-icon svg {
     width: 40px;
     height: 40px;
     fill: var(--bg-white);
 }
 
-.hangyeol-service-title {
+.keai-service-title {
     font-size: 20px;
     font-weight: 700;
     color: var(--text-primary);
@@ -1196,7 +1196,7 @@ img {
     word-break: keep-all;
 }
 
-.hangyeol-service-description {
+.keai-service-description {
     font-size: 15px;
     line-height: 1.7;
     color: var(--text-muted);
@@ -1204,7 +1204,7 @@ img {
     margin-bottom: 20px;
 }
 
-.hangyeol-service-features {
+.keai-service-features {
     list-style: none;
     width: 100%;
     display: flex;
@@ -1213,7 +1213,7 @@ img {
     align-items: center;
 }
 
-.hangyeol-service-feature-item {
+.keai-service-feature-item {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -1222,7 +1222,7 @@ img {
     text-align: left;
 }
 
-.hangyeol-service-feature-item svg {
+.keai-service-feature-item svg {
     width: 18px;
     height: 18px;
     fill: var(--primary);
@@ -1231,34 +1231,34 @@ img {
 
 /* Service Responsive */
 @media (min-width: 768px) {
-    .hangyeol-service-container {
+    .keai-service-container {
         padding: 80px 40px 100px;
     }
-    .hangyeol-service-grid {
+    .keai-service-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 32px;
     }
 }
 
 @media (min-width: 1024px) {
-    .hangyeol-service-container {
+    .keai-service-container {
         padding: 100px 40px 120px;
     }
-    .hangyeol-service-grid {
+    .keai-service-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    .hangyeol-service-icon {
+    .keai-service-icon {
         width: 96px;
         height: 96px;
     }
-    .hangyeol-service-icon svg {
+    .keai-service-icon svg {
         width: 48px;
         height: 48px;
     }
-    .hangyeol-service-title {
+    .keai-service-title {
         font-size: 22px;
     }
-    .hangyeol-service-description {
+    .keai-service-description {
         font-size: 16px;
     }
 }
@@ -1266,7 +1266,7 @@ img {
 /* ================================================
    FORM SECTION
    ================================================ */
-.hangyeol-form-section {
+.keai-form-section {
     background: var(--bg-white);
     padding: 80px 0;
     position: relative;
@@ -1274,27 +1274,27 @@ img {
     margin-left: calc(-50vw + 50%);
 }
 
-.hangyeol-form-container {
+.keai-form-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.hangyeol-form-wrapper {
+.keai-form-wrapper {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0;
 }
 
 /* Form Image (Left Side) */
-.hangyeol-form-image {
+.keai-form-image {
     display: none;
     position: relative;
     overflow: hidden;
     border-radius: 16px 0 0 16px;
 }
 
-.hangyeol-form-image img {
+.keai-form-image img {
     width: 120%;
     height: 120%;
     object-fit: cover;
@@ -1302,7 +1302,7 @@ img {
     transform: scale(1.1) translateY(0);
 }
 
-.hangyeol-form-image-overlay {
+.keai-form-image-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -1317,7 +1317,7 @@ img {
     text-align: center;
 }
 
-.hangyeol-form-image-title {
+.keai-form-image-title {
     font-size: 28px;
     font-weight: 700;
     color: var(--bg-white);
@@ -1325,7 +1325,7 @@ img {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.hangyeol-form-image-text {
+.keai-form-image-text {
     font-size: 16px;
     color: rgba(255, 255, 255, 0.95);
     line-height: 1.7;
@@ -1333,7 +1333,7 @@ img {
 }
 
 /* Form Area (Right Side) */
-.hangyeol-form-area {
+.keai-form-area {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -1344,7 +1344,7 @@ img {
     position: relative;
 }
 
-.hangyeol-form-area::before {
+.keai-form-area::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1360,46 +1360,46 @@ img {
     50% { opacity: 1; }
 }
 
-.hangyeol-form-header {
+.keai-form-header {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.hangyeol-form-title {
+.keai-form-title {
     font-size: 24px;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 8px;
 }
 
-.hangyeol-form-subtitle {
+.keai-form-subtitle {
     font-size: 16px;
     color: var(--text-muted);
 }
 
 /* Form Groups */
-.hangyeol-form-row {
+.keai-form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-bottom: 16px;
 }
 
-.hangyeol-form-row.four-columns {
+.keai-form-row.four-columns {
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
 }
 
-.hangyeol-form-row.full {
+.keai-form-row.full {
     grid-template-columns: 1fr;
     margin-bottom: 12px;
 }
 
-.hangyeol-form-group {
+.keai-form-group {
     margin-bottom: 0;
 }
 
-.hangyeol-form-label {
+.keai-form-label {
     display: block;
     font-size: 14px;
     font-weight: 600;
@@ -1407,11 +1407,11 @@ img {
     margin-bottom: 8px;
 }
 
-.hangyeol-required {
+.keai-required {
     color: #ef4444;
 }
 
-.hangyeol-form-control {
+.keai-form-control {
     width: 100%;
     padding: 12px 16px;
     font-size: 15px;
@@ -1424,14 +1424,14 @@ img {
     height: 46px;
 }
 
-.hangyeol-form-control:focus {
+.keai-form-control:focus {
     outline: none;
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(15, 76, 129, 0.1);
     background: var(--bg-white);
 }
 
-select.hangyeol-form-control {
+select.keai-form-control {
     cursor: pointer;
     appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2364748b'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
@@ -1441,18 +1441,18 @@ select.hangyeol-form-control {
     padding-right: 40px;
 }
 
-textarea.hangyeol-form-control {
+textarea.keai-form-control {
     min-height: 60px;
     height: 60px;
     resize: vertical;
 }
 
 /* Fund Type Options */
-.hangyeol-fund-type-group {
+.keai-fund-type-group {
     margin-bottom: 16px;
 }
 
-.hangyeol-fund-type-label {
+.keai-fund-type-label {
     font-size: 14px;
     font-weight: 600;
     color: var(--text-primary);
@@ -1460,22 +1460,22 @@ textarea.hangyeol-form-control {
     display: block;
 }
 
-.hangyeol-fund-type-options {
+.keai-fund-type-options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
 }
 
-.hangyeol-fund-type-option {
+.keai-fund-type-option {
     position: relative;
 }
 
-.hangyeol-fund-type-option input[type="checkbox"] {
+.keai-fund-type-option input[type="checkbox"] {
     position: absolute;
     opacity: 0;
 }
 
-.hangyeol-fund-type-option label {
+.keai-fund-type-option label {
     display: block;
     padding: 12px 16px;
     background: var(--bg-white);
@@ -1489,7 +1489,7 @@ textarea.hangyeol-form-control {
     color: var(--text-primary);
 }
 
-.hangyeol-fund-type-option input[type="checkbox"]:checked + label {
+.keai-fund-type-option input[type="checkbox"]:checked + label {
     background: var(--primary);
     border-color: var(--primary);
     color: #ffffff;
@@ -1497,7 +1497,7 @@ textarea.hangyeol-form-control {
 }
 
 /* Privacy Section */
-.hangyeol-privacy-section {
+.keai-privacy-section {
     margin: 20px 0;
     padding: 16px;
     background: var(--gray-50);
@@ -1505,14 +1505,14 @@ textarea.hangyeol-form-control {
     border-radius: 8px;
 }
 
-.hangyeol-privacy-title {
+.keai-privacy-title {
     font-size: 16px;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 12px;
 }
 
-.hangyeol-privacy-content {
+.keai-privacy-content {
     font-size: 13px;
     color: var(--text-secondary);
     line-height: 1.6;
@@ -1526,17 +1526,17 @@ textarea.hangyeol-form-control {
     display: none;
 }
 
-.hangyeol-privacy-content.show {
+.keai-privacy-content.show {
     display: block;
 }
 
-.hangyeol-privacy-checkbox {
+.keai-privacy-checkbox {
     display: flex;
     align-items: flex-start;
     gap: 8px;
 }
 
-.hangyeol-privacy-checkbox input[type="checkbox"] {
+.keai-privacy-checkbox input[type="checkbox"] {
     width: 18px;
     height: 18px;
     cursor: pointer;
@@ -1545,14 +1545,14 @@ textarea.hangyeol-form-control {
     accent-color: var(--primary);
 }
 
-.hangyeol-privacy-checkbox label {
+.keai-privacy-checkbox label {
     font-size: 14px;
     color: var(--text-secondary);
     cursor: pointer;
     line-height: 1.4;
 }
 
-.hangyeol-privacy-detail-link {
+.keai-privacy-detail-link {
     color: var(--primary);
     text-decoration: underline;
     cursor: pointer;
@@ -1561,11 +1561,11 @@ textarea.hangyeol-form-control {
 }
 
 /* Submit Section */
-.hangyeol-submit-section {
+.keai-submit-section {
     text-align: center;
 }
 
-.hangyeol-submit-button {
+.keai-submit-button {
     background: var(--primary);
     color: var(--bg-white);
     padding: 16px 48px;
@@ -1578,27 +1578,27 @@ textarea.hangyeol-form-control {
     box-shadow: var(--shadow-md);
 }
 
-.hangyeol-submit-button:hover {
+.keai-submit-button:hover {
     background: var(--primary-dark);
     box-shadow: var(--shadow-lg);
     transform: translateY(-2px);
 }
 
-.hangyeol-submit-button:disabled {
+.keai-submit-button:disabled {
     background: var(--gray-400);
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
 }
 
-.hangyeol-submit-note {
+.keai-submit-note {
     font-size: 13px;
     color: var(--text-muted);
     margin-top: 12px;
 }
 
 /* Message Boxes */
-.hangyeol-message-box {
+.keai-message-box {
     display: none;
     padding: 15px;
     border-radius: 8px;
@@ -1606,70 +1606,70 @@ textarea.hangyeol-form-control {
     text-align: center;
 }
 
-.hangyeol-message-box.success {
+.keai-message-box.success {
     background: #d4edda;
     color: #155724;
     border: 1px solid #c3e6cb;
 }
 
-.hangyeol-message-box.error {
+.keai-message-box.error {
     background: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
 }
 
-.hangyeol-message-box.active {
+.keai-message-box.active {
     display: block;
 }
 
 /* Form Responsive */
 @media (min-width: 768px) {
-    .hangyeol-form-wrapper {
+    .keai-form-wrapper {
         grid-template-columns: 1fr 1.2fr;
         gap: 0;
     }
-    .hangyeol-form-image {
+    .keai-form-image {
         display: block;
     }
-    .hangyeol-form-area {
+    .keai-form-area {
         border-radius: 0 16px 16px 0;
     }
 }
 
 @media (max-width: 768px) {
-    .hangyeol-form-section {
+    .keai-form-section {
         padding: 40px 0;
     }
-    .hangyeol-form-area {
+    .keai-form-area {
         padding: 20px 16px;
         border-radius: 12px;
     }
-    .hangyeol-form-header {
+    .keai-form-header {
         margin-bottom: 20px;
     }
-    .hangyeol-form-title {
+    .keai-form-title {
         font-size: 20px;
     }
-    .hangyeol-form-subtitle {
+    .keai-form-subtitle {
         font-size: 13px;
     }
-    .hangyeol-form-row {
+    .keai-form-row {
         gap: 10px;
         margin-bottom: 8px;
     }
-    .hangyeol-form-row.four-columns {
+    .keai-form-row.four-columns {
         grid-template-columns: 1fr 1fr;
     }
-    .hangyeol-form-label {
+    .keai-form-label {
         font-size: 12px;
         margin-bottom: 4px;
     }
-    .hangyeol-form-control {
+    .keai-form-control {
         padding: 8px 12px;
         font-size: 14px;
         height: 38px;
     }
-    .hangyeol-submit-button {
+    .keai-submit-button {
         width: 100%;
         padding: 12px 24px;
         font-size: 15px;
@@ -1677,8 +1677,8 @@ textarea.hangyeol-form-control {
 }
 
 @media (max-width: 480px) {
-    .hangyeol-form-row:nth-child(3),
-    .hangyeol-form-row:nth-child(4) {
+    .keai-form-row:nth-child(3),
+    .keai-form-row:nth-child(4) {
         grid-template-columns: 1fr;
     }
 }
@@ -1686,11 +1686,11 @@ textarea.hangyeol-form-control {
 /* ================================================
    FOOTER
    ================================================ */
-.hangyeol-footer {
+.keai-footer {
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.hangyeol-footer-wrapper {
+.keai-footer-wrapper {
     background: #1e293b;
     color: var(--bg-white);
     padding: 60px 0 0;
@@ -1703,23 +1703,23 @@ textarea.hangyeol-form-control {
     margin-right: -50vw;
 }
 
-.hangyeol-footer-container {
+.keai-footer-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 /* Footer Top */
-.hangyeol-footer-top {
+.keai-footer-top {
     padding-bottom: 30px;
     border-bottom: 1px solid rgba(15, 76, 129, 0.2);
 }
 
-.hangyeol-footer-info {
+.keai-footer-info {
     margin-bottom: 0;
 }
 
-.hangyeol-footer-logo {
+.keai-footer-logo {
     display: flex;
     align-items: flex-end;
     gap: 12px;
@@ -1727,12 +1727,12 @@ textarea.hangyeol-form-control {
     justify-content: flex-start;
 }
 
-.hangyeol-footer-logo-image {
+.keai-footer-logo-image {
     height: 50px;
     width: auto;
 }
 
-.hangyeol-footer-logo-text-wrapper {
+.keai-footer-logo-text-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1740,7 +1740,7 @@ textarea.hangyeol-form-control {
     padding-bottom: 2px;
 }
 
-.hangyeol-footer-logo-text {
+.keai-footer-logo-text {
     font-size: 24px;
     font-weight: 700;
     color: var(--primary-bright);
@@ -1748,7 +1748,7 @@ textarea.hangyeol-form-control {
     letter-spacing: 0.5px;
 }
 
-.hangyeol-footer-desc {
+.keai-footer-desc {
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.8;
     font-size: 15px;
@@ -1758,7 +1758,7 @@ textarea.hangyeol-form-control {
 }
 
 /* Footer Middle */
-.hangyeol-footer-middle {
+.keai-footer-middle {
     display: grid;
     grid-template-columns: 2.5fr 1fr;
     gap: 80px;
@@ -1766,36 +1766,36 @@ textarea.hangyeol-form-control {
     border-bottom: 1px solid rgba(15, 76, 129, 0.2);
 }
 
-.hangyeol-footer-title {
+.keai-footer-title {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 20px;
     color: var(--primary-bright);
 }
 
-.hangyeol-footer-list {
+.keai-footer-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.hangyeol-footer-list li {
+.keai-footer-list li {
     margin-bottom: 12px;
 }
 
-.hangyeol-footer-list a {
+.keai-footer-list a {
     color: rgba(255, 255, 255, 0.8);
     transition: var(--transition);
     font-size: 15px;
 }
 
-.hangyeol-footer-list a:hover {
+.keai-footer-list a:hover {
     color: var(--primary-bright);
     padding-left: 5px;
 }
 
 /* Contact Items */
-.hangyeol-contact-item {
+.keai-contact-item {
     display: flex;
     align-items: flex-start;
     gap: 10px;
@@ -1804,12 +1804,12 @@ textarea.hangyeol-form-control {
     font-size: 15px;
 }
 
-.hangyeol-contact-item span {
+.keai-contact-item span {
     word-break: keep-all;
     line-height: 1.4;
 }
 
-.hangyeol-contact-item svg {
+.keai-contact-item svg {
     width: 16px;
     height: 16px;
     flex-shrink: 0;
@@ -1817,46 +1817,46 @@ textarea.hangyeol-form-control {
 }
 
 /* Footer Bottom */
-.hangyeol-footer-bottom {
+.keai-footer-bottom {
     padding: 30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.hangyeol-copyright {
+.keai-copyright {
     color: rgba(255, 255, 255, 0.7);
     margin: 0;
     font-size: 14px;
 }
 
-.hangyeol-footer-links {
+.keai-footer-links {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.hangyeol-footer-links a {
+.keai-footer-links a {
     color: rgba(255, 255, 255, 0.7);
     transition: color 0.3s ease;
     font-size: 14px;
 }
 
-.hangyeol-footer-links a:hover {
+.keai-footer-links a:hover {
     color: var(--primary-bright);
 }
 
-.hangyeol-footer-links .divider {
+.keai-footer-links .divider {
     color: rgba(15, 76, 129, 0.4);
 }
 
 /* Footer Responsive */
 @media (max-width: 968px) {
-    .hangyeol-footer-middle {
+    .keai-footer-middle {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    .hangyeol-footer-bottom {
+    .keai-footer-bottom {
         flex-direction: column;
         gap: 20px;
         text-align: center;
@@ -1864,36 +1864,36 @@ textarea.hangyeol-form-control {
 }
 
 @media (max-width: 768px) {
-    .hangyeol-footer-wrapper {
+    .keai-footer-wrapper {
         padding: 40px 0 0;
     }
-    .hangyeol-footer-container {
+    .keai-footer-container {
         padding: 0 16px;
     }
-    .hangyeol-footer-middle {
+    .keai-footer-middle {
         grid-template-columns: 1.5fr 0.7fr;
         gap: 12px;
         padding: 30px 0;
     }
-    .hangyeol-footer-logo-image {
+    .keai-footer-logo-image {
         height: 40px;
     }
-    .hangyeol-footer-logo-text {
+    .keai-footer-logo-text {
         font-size: 20px;
     }
-    .hangyeol-footer-desc {
+    .keai-footer-desc {
         font-size: 13px;
     }
-    .hangyeol-contact-item {
+    .keai-contact-item {
         font-size: 11.5px;
         margin-bottom: 8px;
         gap: 8px;
     }
-    .hangyeol-contact-item svg {
+    .keai-contact-item svg {
         width: 12px;
         height: 12px;
     }
-    .hangyeol-footer-list a {
+    .keai-footer-list a {
         font-size: 10.5px;
     }
 }
@@ -1940,14 +1940,14 @@ textarea.hangyeol-form-control {
 /* ================================================
    COMPANY PAGE - ABOUT HERO SECTION
    ================================================ */
-.hangyeol-about-hero {
+.keai-about-hero {
     position: relative;
     width: 100%;
     background: url('../cdn-images-webp/623f54c4be1c1.webp') center/cover no-repeat;
     margin-top: 80px;
 }
 
-.hangyeol-about-hero::before {
+.keai-about-hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1958,7 +1958,7 @@ textarea.hangyeol-form-control {
     z-index: 0;
 }
 
-.hangyeol-about-hero-container {
+.keai-about-hero-container {
     position: relative;
     z-index: 1;
     max-width: 1200px;
@@ -1967,12 +1967,12 @@ textarea.hangyeol-form-control {
     min-height: 100%;
 }
 
-.hangyeol-about-hero-headline {
+.keai-about-hero-headline {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.hangyeol-about-hero-badge {
+.keai-about-hero-badge {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -1986,7 +1986,7 @@ textarea.hangyeol-form-control {
     margin-bottom: 20px;
 }
 
-.hangyeol-about-hero-title {
+.keai-about-hero-title {
     font-size: 28px;
     font-weight: 700;
     line-height: 1.4;
@@ -1996,11 +1996,11 @@ textarea.hangyeol-form-control {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.hangyeol-about-hero-title-highlight {
+.keai-about-hero-title-highlight {
     color: var(--bg-white);
 }
 
-.hangyeol-about-hero-subtitle {
+.keai-about-hero-subtitle {
     font-size: 15px;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.95);
@@ -2009,7 +2009,7 @@ textarea.hangyeol-form-control {
     margin-bottom: 16px;
 }
 
-.hangyeol-about-hero-description {
+.keai-about-hero-description {
     font-size: 15px;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.9);
@@ -2018,7 +2018,7 @@ textarea.hangyeol-form-control {
 }
 
 /* About Hero Notice Box */
-.hangyeol-about-notice-box {
+.keai-about-notice-box {
     background: rgba(26, 115, 232, 0.15);
     border: 1px solid rgba(26, 115, 232, 0.4);
     border-left: 4px solid var(--primary-bright);
@@ -2033,7 +2033,7 @@ textarea.hangyeol-form-control {
     margin-right: auto;
 }
 
-.hangyeol-about-notice-title {
+.keai-about-notice-title {
     font-size: 14px;
     font-weight: 700;
     color: var(--primary-bright);
@@ -2043,7 +2043,7 @@ textarea.hangyeol-form-control {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.hangyeol-about-notice-list {
+.keai-about-notice-list {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.95);
     line-height: 1.7;
@@ -2054,14 +2054,14 @@ textarea.hangyeol-form-control {
     text-align: left;
 }
 
-.hangyeol-about-notice-list li {
+.keai-about-notice-list li {
     padding-left: 18px;
     position: relative;
     margin-bottom: 6px;
     white-space: nowrap;
 }
 
-.hangyeol-about-notice-list li::before {
+.keai-about-notice-list li::before {
     content: '•';
     position: absolute;
     left: 0;
@@ -2071,75 +2071,75 @@ textarea.hangyeol-form-control {
 
 /* About Hero Responsive */
 @media (min-width: 768px) {
-    .hangyeol-about-hero-container {
+    .keai-about-hero-container {
         padding: 100px 40px 80px;
     }
-    .hangyeol-about-hero-badge {
+    .keai-about-hero-badge {
         font-size: 14px;
     }
-    .hangyeol-about-hero-title {
+    .keai-about-hero-title {
         font-size: 40px;
     }
-    .hangyeol-about-hero-subtitle {
+    .keai-about-hero-subtitle {
         font-size: 17px;
     }
-    .hangyeol-about-hero-description {
+    .keai-about-hero-description {
         font-size: 17px;
     }
-    .hangyeol-about-notice-box {
+    .keai-about-notice-box {
         padding: 24px 32px;
     }
-    .hangyeol-about-notice-title {
+    .keai-about-notice-title {
         font-size: 15px;
     }
-    .hangyeol-about-notice-list {
+    .keai-about-notice-list {
         font-size: 14px;
     }
 }
 
 @media (min-width: 1024px) {
-    .hangyeol-about-hero-container {
+    .keai-about-hero-container {
         padding: 120px 40px 80px;
     }
-    .hangyeol-about-hero-title {
+    .keai-about-hero-title {
         font-size: 50px;
     }
-    .hangyeol-about-hero-subtitle {
+    .keai-about-hero-subtitle {
         font-size: 19px;
     }
-    .hangyeol-about-hero-description {
+    .keai-about-hero-description {
         font-size: 19px;
     }
 }
 
 @media (max-width: 480px) {
-    .hangyeol-about-notice-list {
+    .keai-about-notice-list {
         font-size: 11px;
     }
-    .hangyeol-about-notice-title {
+    .keai-about-notice-title {
         font-size: 12px;
     }
-    .hangyeol-about-notice-box {
+    .keai-about-notice-box {
         padding: 16px 12px;
     }
 }
 
-.hangyeol-mobile-br {
+.keai-mobile-br {
     display: none;
 }
 
-.hangyeol-pc-br {
+.keai-pc-br {
     display: none;
 }
 
 @media (max-width: 768px) {
-    .hangyeol-mobile-br {
+    .keai-mobile-br {
         display: inline;
     }
 }
 
 @media (min-width: 769px) {
-    .hangyeol-pc-br {
+    .keai-pc-br {
         display: inline;
     }
 }
@@ -2147,7 +2147,7 @@ textarea.hangyeol-form-control {
 /* ================================================
    COMPANY PAGE - SERVICE SECTION
    ================================================ */
-.hangyeol-company-service {
+.keai-company-service {
     position: relative;
     width: 100%;
     padding: 100px 20px;
@@ -2155,19 +2155,19 @@ textarea.hangyeol-form-control {
     overflow: hidden;
 }
 
-.hangyeol-company-service-container {
+.keai-company-service-container {
     position: relative;
     z-index: 2;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.hangyeol-company-service-title {
+.keai-company-service-title {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.hangyeol-company-service-title h2 {
+.keai-company-service-title h2 {
     font-size: clamp(32px, 4vw, 42px);
     font-weight: 800;
     color: var(--navy);
@@ -2175,19 +2175,19 @@ textarea.hangyeol-form-control {
     letter-spacing: -0.5px;
 }
 
-.hangyeol-company-service-title p {
+.keai-company-service-title p {
     font-size: clamp(16px, 2vw, 20px);
     color: var(--text-muted);
     font-weight: 400;
 }
 
-.hangyeol-company-service-grid {
+.keai-company-service-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
 }
 
-.hangyeol-company-service-card {
+.keai-company-service-card {
     background: var(--bg-white);
     border: 1px solid var(--gray-200);
     border-radius: 16px;
@@ -2196,44 +2196,44 @@ textarea.hangyeol-form-control {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
-.hangyeol-company-service-card:hover {
+.keai-company-service-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 24px rgba(15, 76, 129, 0.15);
     border-color: var(--primary);
 }
 
-.hangyeol-company-service-card-image {
+.keai-company-service-card-image {
     width: 100%;
     height: 220px;
     object-fit: cover;
     display: block;
 }
 
-.hangyeol-company-service-card-content {
+.keai-company-service-card-content {
     padding: 32px;
 }
 
-.hangyeol-company-service-card h3 {
+.keai-company-service-card h3 {
     font-size: 22px;
     font-weight: 700;
     color: var(--navy);
     margin-bottom: 16px;
 }
 
-.hangyeol-company-service-card p {
+.keai-company-service-card p {
     font-size: 16px;
     color: var(--text-muted);
     line-height: 1.7;
     margin-bottom: 24px;
 }
 
-.hangyeol-company-service-tags {
+.keai-company-service-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.hangyeol-company-service-tag {
+.keai-company-service-tag {
     display: inline-block;
     padding: 6px 14px;
     background: var(--bg-light);
@@ -2246,68 +2246,68 @@ textarea.hangyeol-form-control {
 
 /* Company Service Responsive */
 @media (max-width: 1024px) {
-    .hangyeol-company-service {
+    .keai-company-service {
         padding: 80px 20px;
     }
-    .hangyeol-company-service-grid {
+    .keai-company-service-grid {
         grid-template-columns: 1fr;
         gap: 24px;
     }
-    .hangyeol-company-service-card-image {
+    .keai-company-service-card-image {
         height: 200px;
     }
 }
 
 @media (max-width: 768px) {
-    .hangyeol-company-service {
+    .keai-company-service {
         padding: 60px 16px;
     }
-    .hangyeol-company-service-title {
+    .keai-company-service-title {
         margin-bottom: 40px;
     }
-    .hangyeol-company-service-title h2 {
+    .keai-company-service-title h2 {
         font-size: 28px;
     }
-    .hangyeol-company-service-title p {
+    .keai-company-service-title p {
         font-size: 16px;
     }
-    .hangyeol-company-service-grid {
+    .keai-company-service-grid {
         gap: 20px;
     }
-    .hangyeol-company-service-card-image {
+    .keai-company-service-card-image {
         height: 180px;
     }
-    .hangyeol-company-service-card-content {
+    .keai-company-service-card-content {
         padding: 24px;
     }
-    .hangyeol-company-service-card h3 {
+    .keai-company-service-card h3 {
         font-size: 20px;
         margin-bottom: 12px;
     }
-    .hangyeol-company-service-card p {
+    .keai-company-service-card p {
         font-size: 15px;
         margin-bottom: 20px;
     }
-    .hangyeol-company-service-tag {
+    .keai-company-service-tag {
         font-size: 12px;
         padding: 5px 12px;
     }
 }
 
 @media (max-width: 480px) {
-    .hangyeol-company-service-card-image {
+    .keai-company-service-card-image {
         height: 160px;
     }
-    .hangyeol-company-service-card-content {
+    .keai-company-service-card-content {
         padding: 20px;
     }
-    .hangyeol-company-service-card h3 {
+    .keai-company-service-card h3 {
         font-size: 18px;
     }
-    .hangyeol-company-service-card p {
+    .keai-company-service-card p {
         font-size: 14px;
     }
-    .hangyeol-company-service-tag {
+    .keai-company-service-tag {
         font-size: 11px;
         padding: 4px 10px;
     }
@@ -2316,7 +2316,7 @@ textarea.hangyeol-form-control {
 /* ================================================
    COMPANY PAGE - CEO SECTION
    ================================================ */
-.hangyeol-ceo-section {
+.keai-ceo-section {
     position: relative;
     width: 100vw;
     max-width: 100vw;
@@ -2329,7 +2329,7 @@ textarea.hangyeol-form-control {
     isolation: isolate;
 }
 
-.hangyeol-ceo-section::before {
+.keai-ceo-section::before {
     content: '';
     position: absolute;
     top: -100px;
@@ -2340,7 +2340,7 @@ textarea.hangyeol-form-control {
     z-index: 0;
 }
 
-.hangyeol-ceo-container {
+.keai-ceo-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -2348,12 +2348,12 @@ textarea.hangyeol-form-control {
     z-index: 1;
 }
 
-.hangyeol-ceo-section-header {
+.keai-ceo-section-header {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.hangyeol-ceo-section-header h2 {
+.keai-ceo-section-header h2 {
     font-size: clamp(32px, 4vw, 42px);
     font-weight: 800;
     color: var(--bg-white);
@@ -2362,13 +2362,13 @@ textarea.hangyeol-form-control {
     text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
 }
 
-.hangyeol-ceo-section-header p {
+.keai-ceo-section-header p {
     font-size: clamp(16px, 2vw, 20px);
     color: rgba(255, 255, 255, 0.8);
     font-weight: 400;
 }
 
-.hangyeol-ceo-intro-container {
+.keai-ceo-intro-container {
     background: var(--bg-white);
     border: 1px solid var(--gray-300);
     border-radius: 20px;
@@ -2382,12 +2382,12 @@ textarea.hangyeol-form-control {
     margin-bottom: 0;
 }
 
-.hangyeol-ceo-intro-container:hover {
+.keai-ceo-intro-container:hover {
     box-shadow: 0 8px 32px rgba(15, 76, 129, 0.2);
     transform: translateY(-4px);
 }
 
-.hangyeol-ceo-content-wrapper {
+.keai-ceo-content-wrapper {
     display: flex;
     align-items: flex-start;
     gap: 60px;
@@ -2395,13 +2395,13 @@ textarea.hangyeol-form-control {
 }
 
 /* CEO Photo Section */
-.hangyeol-ceo-photo-section {
+.keai-ceo-photo-section {
     flex: 0 0 320px;
     text-align: center;
     position: relative;
 }
 
-.hangyeol-ceo-card {
+.keai-ceo-card {
     background: var(--bg-white);
     padding: 20px;
     border-radius: 16px;
@@ -2413,12 +2413,12 @@ textarea.hangyeol-form-control {
     transition: var(--transition);
 }
 
-.hangyeol-ceo-card:hover {
+.keai-ceo-card:hover {
     box-shadow: var(--shadow-lg);
     transform: translateY(-4px);
 }
 
-.hangyeol-ceo-card::before {
+.keai-ceo-card::before {
     content: '대표';
     position: absolute;
     top: 15px;
@@ -2432,7 +2432,7 @@ textarea.hangyeol-form-control {
     box-shadow: 0 2px 8px rgba(15, 76, 129, 0.4);
 }
 
-.hangyeol-ceo-member-image {
+.keai-ceo-member-image {
     width: 280px;
     height: 320px;
     border-radius: 12px;
@@ -2441,7 +2441,7 @@ textarea.hangyeol-form-control {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.hangyeol-ceo-member-image img {
+.keai-ceo-member-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -2449,12 +2449,12 @@ textarea.hangyeol-form-control {
     transform: scale(1.3) translateY(10%);
 }
 
-.hangyeol-ceo-member-info {
+.keai-ceo-member-info {
     text-align: center;
     margin-top: 20px;
 }
 
-.hangyeol-ceo-member-name {
+.keai-ceo-member-name {
     font-size: 28px;
     font-weight: 700;
     color: var(--primary);
@@ -2463,18 +2463,18 @@ textarea.hangyeol-form-control {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.hangyeol-ceo-member-title {
+.keai-ceo-member-title {
     font-size: 18px;
     color: var(--primary);
     font-weight: 600;
 }
 
 /* CEO Greeting Section */
-.hangyeol-ceo-greeting-section {
+.keai-ceo-greeting-section {
     flex: 1;
 }
 
-.hangyeol-ceo-greeting-section h3 {
+.keai-ceo-greeting-section h3 {
     font-size: 28px;
     font-weight: 700;
     color: var(--text-primary);
@@ -2482,7 +2482,7 @@ textarea.hangyeol-form-control {
     line-height: 1.6;
 }
 
-.hangyeol-ceo-greeting-section h3::after {
+.keai-ceo-greeting-section h3::after {
     content: '';
     display: block;
     width: 60px;
@@ -2492,138 +2492,138 @@ textarea.hangyeol-form-control {
     margin-top: 16px;
 }
 
-.hangyeol-ceo-highlight-text {
+.keai-ceo-highlight-text {
     color: var(--primary);
     font-weight: 800;
 }
 
-.hangyeol-ceo-greeting-text p {
+.keai-ceo-greeting-text p {
     font-size: 17px;
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 24px;
 }
 
-.hangyeol-ceo-greeting-text p:first-of-type {
+.keai-ceo-greeting-text p:first-of-type {
     font-size: 18px;
     color: var(--text-primary);
     font-weight: 500;
     margin-bottom: 28px;
 }
 
-.hangyeol-ceo-greeting-text p:last-of-type {
+.keai-ceo-greeting-text p:last-of-type {
     margin-bottom: 0;
 }
 
-.hangyeol-ceo-emphasis {
+.keai-ceo-emphasis {
     color: var(--primary);
     font-weight: 700;
 }
 
-.hangyeol-ceo-pc-br {
+.keai-ceo-pc-br {
     display: inline;
 }
 
-.hangyeol-ceo-mobile-br {
+.keai-ceo-mobile-br {
     display: none;
 }
 
 /* CEO Section Responsive */
 @media (max-width: 1024px) {
-    .hangyeol-ceo-intro-container {
+    .keai-ceo-intro-container {
         gap: 40px;
         padding: 40px;
     }
-    .hangyeol-ceo-photo-section {
+    .keai-ceo-photo-section {
         flex: 0 0 280px;
     }
-    .hangyeol-ceo-member-image {
+    .keai-ceo-member-image {
         width: 240px;
         height: 320px;
     }
 }
 
 @media (max-width: 768px) {
-    .hangyeol-ceo-section {
+    .keai-ceo-section {
         padding: 0 16px;
         margin-top: 0;
         margin-bottom: 0;
     }
-    .hangyeol-ceo-container {
+    .keai-ceo-container {
         padding: 60px 20px;
     }
-    .hangyeol-ceo-section-header {
+    .keai-ceo-section-header {
         margin-bottom: 40px;
     }
-    .hangyeol-ceo-section-header h2 {
+    .keai-ceo-section-header h2 {
         font-size: 28px;
     }
-    .hangyeol-ceo-section-header p {
+    .keai-ceo-section-header p {
         font-size: 16px;
     }
-    .hangyeol-ceo-intro-container {
+    .keai-ceo-intro-container {
         padding: 30px 20px;
         gap: 30px;
     }
-    .hangyeol-ceo-pc-br {
+    .keai-ceo-pc-br {
         display: none;
     }
-    .hangyeol-ceo-mobile-br {
+    .keai-ceo-mobile-br {
         display: inline;
     }
-    .hangyeol-ceo-content-wrapper {
+    .keai-ceo-content-wrapper {
         flex-direction: column;
         gap: 40px;
     }
-    .hangyeol-ceo-photo-section {
+    .keai-ceo-photo-section {
         flex: none;
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
     }
-    .hangyeol-ceo-member-image {
+    .keai-ceo-member-image {
         width: 220px;
         height: 280px;
     }
-    .hangyeol-ceo-member-name {
+    .keai-ceo-member-name {
         font-size: 24px;
     }
-    .hangyeol-ceo-member-title {
+    .keai-ceo-member-title {
         font-size: 16px;
     }
-    .hangyeol-ceo-greeting-section h3 {
+    .keai-ceo-greeting-section h3 {
         font-size: 20px;
         line-height: 1.6;
     }
-    .hangyeol-ceo-greeting-text p {
+    .keai-ceo-greeting-text p {
         font-size: 15px;
     }
-    .hangyeol-ceo-greeting-text p:first-of-type {
+    .keai-ceo-greeting-text p:first-of-type {
         font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
-    .hangyeol-ceo-intro-container {
+    .keai-ceo-intro-container {
         padding: 24px 16px;
     }
-    .hangyeol-ceo-member-image {
+    .keai-ceo-member-image {
         width: 180px;
         height: 240px;
     }
-    .hangyeol-ceo-member-name {
+    .keai-ceo-member-name {
         font-size: 22px;
     }
-    .hangyeol-ceo-member-title {
+    .keai-ceo-member-title {
         font-size: 15px;
     }
-    .hangyeol-ceo-greeting-section h3 {
+    .keai-ceo-greeting-section h3 {
         font-size: 20px;
     }
-    .hangyeol-ceo-greeting-text p {
+    .keai-ceo-greeting-text p {
         font-size: 14px;
     }
-    .hangyeol-ceo-greeting-text p:first-of-type {
+    .keai-ceo-greeting-text p:first-of-type {
         font-size: 15px;
     }
 }
@@ -2650,7 +2650,7 @@ textarea.hangyeol-form-control {
 /* ================================================
    LEGAL MODAL
    ================================================ */
-.hangyeol-modal-overlay {
+.keai-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -2665,11 +2665,11 @@ textarea.hangyeol-form-control {
     padding: 20px;
 }
 
-.hangyeol-modal-overlay.active {
+.keai-modal-overlay.active {
     display: flex;
 }
 
-.hangyeol-modal {
+.keai-modal {
     background: var(--bg-white);
     border-radius: 16px;
     width: 100%;
@@ -2692,7 +2692,7 @@ textarea.hangyeol-form-control {
     }
 }
 
-.hangyeol-modal-header {
+.keai-modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2700,13 +2700,13 @@ textarea.hangyeol-form-control {
     border-bottom: 1px solid var(--gray-200);
 }
 
-.hangyeol-modal-title {
+.keai-modal-title {
     font-size: 20px;
     font-weight: 700;
     color: var(--text-primary);
 }
 
-.hangyeol-modal-close {
+.keai-modal-close {
     width: 36px;
     height: 36px;
     display: flex;
@@ -2719,53 +2719,53 @@ textarea.hangyeol-form-control {
     transition: var(--transition);
 }
 
-.hangyeol-modal-close:hover {
+.keai-modal-close:hover {
     background: var(--gray-200);
 }
 
-.hangyeol-modal-close svg {
+.keai-modal-close svg {
     width: 20px;
     height: 20px;
     fill: var(--text-secondary);
 }
 
-.hangyeol-modal-body {
+.keai-modal-body {
     padding: 28px;
     overflow-y: auto;
     flex: 1;
 }
 
-.hangyeol-modal-body h4 {
+.keai-modal-body h4 {
     font-size: 16px;
     font-weight: 700;
     color: var(--primary);
     margin: 24px 0 12px;
 }
 
-.hangyeol-modal-body h4:first-child {
+.keai-modal-body h4:first-child {
     margin-top: 0;
 }
 
-.hangyeol-modal-body p {
+.keai-modal-body p {
     font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 12px;
 }
 
-.hangyeol-modal-body ul {
+.keai-modal-body ul {
     padding-left: 20px;
     margin-bottom: 16px;
 }
 
-.hangyeol-modal-body li {
+.keai-modal-body li {
     font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 6px;
 }
 
-.hangyeol-modal-body .hangyeol-legal-info {
+.keai-modal-body .keai-legal-info {
     background: var(--gray-50);
     border: 1px solid var(--gray-200);
     border-radius: 8px;
@@ -2773,22 +2773,22 @@ textarea.hangyeol-form-control {
     margin-top: 24px;
 }
 
-.hangyeol-modal-body .hangyeol-legal-info p {
+.keai-modal-body .keai-legal-info p {
     margin-bottom: 6px;
     font-size: 13px;
 }
 
-.hangyeol-modal-body .hangyeol-legal-info p:last-child {
+.keai-modal-body .keai-legal-info p:last-child {
     margin-bottom: 0;
 }
 
-.hangyeol-modal-footer {
+.keai-modal-footer {
     padding: 20px 28px;
     border-top: 1px solid var(--gray-200);
     text-align: center;
 }
 
-.hangyeol-modal-footer button {
+.keai-modal-footer button {
     padding: 12px 40px;
     background: var(--primary);
     color: var(--bg-white);
@@ -2800,25 +2800,25 @@ textarea.hangyeol-form-control {
     transition: var(--transition);
 }
 
-.hangyeol-modal-footer button:hover {
+.keai-modal-footer button:hover {
     background: var(--primary-dark);
 }
 
 /* Modal Responsive */
 @media (max-width: 768px) {
-    .hangyeol-modal {
+    .keai-modal {
         max-height: 90vh;
     }
-    .hangyeol-modal-header {
+    .keai-modal-header {
         padding: 20px;
     }
-    .hangyeol-modal-title {
+    .keai-modal-title {
         font-size: 18px;
     }
-    .hangyeol-modal-body {
+    .keai-modal-body {
         padding: 20px;
     }
-    .hangyeol-modal-footer {
+    .keai-modal-footer {
         padding: 16px 20px;
     }
 }
@@ -2826,7 +2826,7 @@ textarea.hangyeol-form-control {
 /* ================================================
    JJK PARTNERSHIP SECTION
    ================================================ */
-.hangyeol-partnership-section {
+.keai-partnership-section {
     padding: 30px 0;
     border-bottom: 1px solid rgba(26, 115, 232, 0.2);
     display: flex;
@@ -2834,7 +2834,7 @@ textarea.hangyeol-form-control {
     align-items: center;
 }
 
-.hangyeol-partnership-link {
+.keai-partnership-link {
     display: inline-flex;
     align-items: center;
     gap: 14px;
@@ -2866,14 +2866,14 @@ textarea.hangyeol-form-control {
     }
 }
 
-.hangyeol-partnership-link:hover {
+.keai-partnership-link:hover {
     background: linear-gradient(135deg, rgba(26, 115, 232, 0.25), rgba(66, 133, 244, 0.15));
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 0 60px rgba(26, 115, 232, 0.6),
                 0 0 90px rgba(26, 115, 232, 0.4);
 }
 
-.hangyeol-partnership-icon {
+.keai-partnership-icon {
     width: auto;
     height: 24px;
     max-width: 112px;
@@ -2882,7 +2882,7 @@ textarea.hangyeol-form-control {
     filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(26, 115, 232, 0.8));
 }
 
-.hangyeol-partnership-link span {
+.keai-partnership-link span {
     font-size: 13px;
     font-weight: 600;
     white-space: nowrap;
@@ -2893,21 +2893,21 @@ textarea.hangyeol-form-control {
 
 /* Mobile */
 @media (max-width: 768px) {
-    .hangyeol-partnership-section {
+    .keai-partnership-section {
         padding: 20px 0;
         justify-content: center;
     }
 
-    .hangyeol-partnership-link {
+    .keai-partnership-link {
         padding: 12px 18px;
         gap: 10px;
     }
 
-    .hangyeol-partnership-icon {
+    .keai-partnership-icon {
         height: 20px;
     }
 
-    .hangyeol-partnership-link span {
+    .keai-partnership-link span {
         font-size: 11px;
     }
 }

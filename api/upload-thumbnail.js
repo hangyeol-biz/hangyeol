@@ -15,7 +15,7 @@ function getEnv(key, defaultValue = '') {
 const R2_ACCOUNT_ID = getEnv('R2_ACCOUNT_ID');
 const R2_ACCESS_KEY_ID = getEnv('R2_ACCESS_KEY_ID');
 const R2_SECRET_ACCESS_KEY = getEnv('R2_SECRET_ACCESS_KEY');
-const R2_BUCKET_NAME = getEnv('R2_BUCKET_NAME', 'hangyeol');
+const R2_BUCKET_NAME = getEnv('R2_BUCKET_NAME', 'keai');
 const R2_PUBLIC_URL = getEnv('R2_PUBLIC_URL') || `https://pub-${R2_ACCOUNT_ID}.r2.dev`;
 
 // S3 클라이언트 생성 (R2 호환)

@@ -154,7 +154,7 @@ async function getGA4Data(accessToken: string, startDate: string, endDate: strin
 
 // Search Console 데이터 가져오기
 async function getSearchConsoleData(accessToken: string, startDate: string, endDate: string) {
-  const siteUrl = process.env.SEARCH_CONSOLE_SITE || 'https://biz-hangyeol.co.kr';
+  const siteUrl = process.env.SEARCH_CONSOLE_SITE || 'https://k-eai.kr';
 
   const response = await fetch(
     `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(siteUrl)}/searchAnalytics/query`,

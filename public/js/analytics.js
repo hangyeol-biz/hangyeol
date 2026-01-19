@@ -1,10 +1,10 @@
 /* ================================================
-   한결 컨설팅 방문통계 - analytics.js
+   KEAI 방문통계 - analytics.js
    Airtable 캐시 기반 통계 (하루 1회 갱신)
    ================================================ */
 
 // 캐시 설정
-const CACHE_KEY = 'hangyeol_analytics_cache';
+const CACHE_KEY = 'keai_analytics_cache';
 const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24시간 (밀리초)
 
 // 월 이름 배열

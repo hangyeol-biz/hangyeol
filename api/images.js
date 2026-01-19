@@ -18,7 +18,7 @@ function getEnv(key, defaultValue = '') {
 const R2_ACCOUNT_ID = getEnv('R2_ACCOUNT_ID');
 const R2_ACCESS_KEY_ID = getEnv('R2_ACCESS_KEY_ID');
 const R2_SECRET_ACCESS_KEY = getEnv('R2_SECRET_ACCESS_KEY');
-const R2_BUCKET_NAME = getEnv('R2_BUCKET_NAME', 'hangyeol');
+const R2_BUCKET_NAME = getEnv('R2_BUCKET_NAME', 'keai');
 const R2_PUBLIC_URL = getEnv('R2_PUBLIC_URL') || `https://pub-${R2_ACCOUNT_ID}.r2.dev`;
 
 // Airtable 설정 (환경변수 필수)
@@ -27,7 +27,7 @@ const AIRTABLE_BASE_ID = getEnv('AIRTABLE_BASE_ID');
 const AIRTABLE_TABLE_NAME = '이미지설정';
 
 // 관리자 비밀번호
-const ADMIN_PASSWORD = getEnv('ADMIN_PASSWORD');
+const ADMIN_PASSWORD = getEnv('ADMIN_PASSWORD', 'keai2025');
 
 // 최대 파일 크기
 const MAX_FILE_SIZE = 300 * 1024; // 300KB
@@ -37,15 +37,15 @@ const MAX_FILE_SIZE = 300 * 1024; // 300KB
 // ============================================
 const IMAGE_DEFINITIONS = [
     // === 공통 요소 (6개) ===
-    { id: 'logo', name: '헤더 로고', category: '공통', recommendedSize: '200x60', pages: ['전체'], cssSelector: '.hangyeol-logo-image' },
-    { id: 'logo-white', name: '푸터 로고 (흰색)', category: '공통', recommendedSize: '200x60', pages: ['전체'], cssSelector: '.hangyeol-footer-logo-image' },
+    { id: 'logo', name: '헤더 로고', category: '공통', recommendedSize: '200x60', pages: ['전체'], cssSelector: '.keai-logo-image' },
+    { id: 'logo-white', name: '푸터 로고 (흰색)', category: '공통', recommendedSize: '200x60', pages: ['전체'], cssSelector: '.keai-footer-logo-image' },
     { id: 'favicon', name: '파비콘', category: '공통', recommendedSize: '32x32', pages: ['전체'], cssSelector: 'link[rel="icon"]' },
-    { id: 'ceo-profile', name: '대표자 프로필', category: '공통', recommendedSize: '600x600', pages: ['company.html'], cssSelector: '.hangyeol-ceo-profile img' },
-    { id: 'form-image', name: '상담 폼 이미지', category: '공통', recommendedSize: '800x1000', pages: ['index.html', 'company.html', 'process.html', 'fund.html', 'pro.html'], cssSelector: '.hangyeol-contact-image img' },
-    { id: 'partnership-icon', name: '업무협약 아이콘', category: '공통', recommendedSize: '80x80', pages: ['전체'], cssSelector: '.hangyeol-partnership-icon' },
+    { id: 'ceo-profile', name: '대표자 프로필', category: '공통', recommendedSize: '600x600', pages: ['company.html'], cssSelector: '.keai-ceo-profile img' },
+    { id: 'form-image', name: '상담 폼 이미지', category: '공통', recommendedSize: '800x1000', pages: ['index.html', 'company.html', 'process.html', 'fund.html', 'pro.html'], cssSelector: '.keai-contact-image img' },
+    { id: 'partnership-icon', name: '업무협약 아이콘', category: '공통', recommendedSize: '80x80', pages: ['전체'], cssSelector: '.keai-partnership-icon' },
 
     // === 홈 (index.html) - 4개 ===
-    { id: 'hero-home', name: '홈 히어로 배경', category: '홈', recommendedSize: '1920x1080', pages: ['index.html'], cssSelector: '.hangyeol-hero', cssProperty: 'background-image' },
+    { id: 'hero-home', name: '홈 히어로 배경', category: '홈', recommendedSize: '1920x1080', pages: ['index.html'], cssSelector: '.keai-hero', cssProperty: 'background-image' },
     { id: 'home-service-icon-1', name: '홈 서비스 아이콘 1', category: '홈', recommendedSize: '120x120', pages: ['index.html'], description: '1:1 전문가 상담' },
     { id: 'home-service-icon-2', name: '홈 서비스 아이콘 2', category: '홈', recommendedSize: '120x120', pages: ['index.html'], description: '맞춤형 자금 설계' },
     { id: 'home-service-icon-3', name: '홈 서비스 아이콘 3', category: '홈', recommendedSize: '120x120', pages: ['index.html'], description: '사후 관리 지원' },
@@ -57,7 +57,7 @@ const IMAGE_DEFINITIONS = [
     { id: 'company-card-4', name: '서비스 카드 4', category: '회사소개', recommendedSize: '400x300', pages: ['company.html'], description: '확보 후 사후관리 지원' },
 
     // === 진행과정 (process.html) - 7개 ===
-    { id: 'hero-process', name: '진행과정 히어로 배경', category: '진행과정', recommendedSize: '1920x1080', pages: ['process.html'], cssSelector: '.hangyeol-hero', cssProperty: 'background-image' },
+    { id: 'hero-process', name: '진행과정 히어로 배경', category: '진행과정', recommendedSize: '1920x1080', pages: ['process.html'], cssSelector: '.keai-hero', cssProperty: 'background-image' },
     { id: 'partner-seoul', name: '서울신용보증재단', category: '진행과정', recommendedSize: '200x80', pages: ['process.html'], description: '협력기관 로고' },
     { id: 'partner-gyeonggi', name: '경기신용보증재단', category: '진행과정', recommendedSize: '200x80', pages: ['process.html'], description: '협력기관 로고' },
     { id: 'partner-kosme', name: '중소벤처기업진흥공단', category: '진행과정', recommendedSize: '200x80', pages: ['process.html'], description: '협력기관 로고' },
@@ -66,20 +66,20 @@ const IMAGE_DEFINITIONS = [
     { id: 'partner-semas', name: '소상공인진흥공단', category: '진행과정', recommendedSize: '200x80', pages: ['process.html'], description: '협력기관 로고' },
 
     // === 자금상담 (fund.html) - 3개 ===
-    { id: 'hero-fund', name: '자금상담 히어로 배경', category: '자금상담', recommendedSize: '1920x1080', pages: ['fund.html'], cssSelector: '.hangyeol-hero', cssProperty: 'background-image' },
-    { id: 'fund-cta-bg', name: '자금상담 CTA 배경', category: '자금상담', recommendedSize: '1920x600', pages: ['fund.html'], cssSelector: '.hangyeol-cta-section', cssProperty: 'background-image' },
-    { id: 'fund-process-bg', name: '자금상담 진행과정 배경', category: '자금상담', recommendedSize: '1920x800', pages: ['fund.html'], cssSelector: '.hangyeol-process-section', cssProperty: 'background-image' },
+    { id: 'hero-fund', name: '자금상담 히어로 배경', category: '자금상담', recommendedSize: '1920x1080', pages: ['fund.html'], cssSelector: '.keai-hero', cssProperty: 'background-image' },
+    { id: 'fund-cta-bg', name: '자금상담 CTA 배경', category: '자금상담', recommendedSize: '1920x600', pages: ['fund.html'], cssSelector: '.keai-cta-section', cssProperty: 'background-image' },
+    { id: 'fund-process-bg', name: '자금상담 진행과정 배경', category: '자금상담', recommendedSize: '1920x800', pages: ['fund.html'], cssSelector: '.keai-process-section', cssProperty: 'background-image' },
 
     // === 전문서비스 (pro.html) - 6개 ===
-    { id: 'hero-pro', name: '전문서비스 히어로 배경', category: '전문서비스', recommendedSize: '1920x1080', pages: ['pro.html'], cssSelector: '.hangyeol-hero', cssProperty: 'background-image' },
-    { id: 'pro-section-bg', name: '전문서비스 섹션 배경', category: '전문서비스', recommendedSize: '1920x800', pages: ['pro.html'], cssSelector: '.hangyeol-pro-section', cssProperty: 'background-image' },
+    { id: 'hero-pro', name: '전문서비스 히어로 배경', category: '전문서비스', recommendedSize: '1920x1080', pages: ['pro.html'], cssSelector: '.keai-hero', cssProperty: 'background-image' },
+    { id: 'pro-section-bg', name: '전문서비스 섹션 배경', category: '전문서비스', recommendedSize: '1920x800', pages: ['pro.html'], cssSelector: '.keai-pro-section', cssProperty: 'background-image' },
     { id: 'pro-icon-1', name: '전문서비스 아이콘 1', category: '전문서비스', recommendedSize: '120x120', pages: ['pro.html'] },
     { id: 'pro-icon-2', name: '전문서비스 아이콘 2', category: '전문서비스', recommendedSize: '120x120', pages: ['pro.html'] },
     { id: 'pro-icon-3', name: '전문서비스 아이콘 3', category: '전문서비스', recommendedSize: '120x120', pages: ['pro.html'] },
     { id: 'pro-icon-4', name: '전문서비스 아이콘 4', category: '전문서비스', recommendedSize: '120x120', pages: ['pro.html'] },
 
     // === 온라인마케팅 (mkt.html) - 2개 ===
-    { id: 'hero-mkt', name: '마케팅 히어로 배경', category: '마케팅', recommendedSize: '1920x1080', pages: ['mkt.html'], cssSelector: '.hangyeol-hero', cssProperty: 'background-image' },
+    { id: 'hero-mkt', name: '마케팅 히어로 배경', category: '마케팅', recommendedSize: '1920x1080', pages: ['mkt.html'], cssSelector: '.keai-hero', cssProperty: 'background-image' },
     { id: 'mkt-process-graph', name: '마케팅 진행 그래프', category: '마케팅', recommendedSize: '1200x600', pages: ['mkt.html'] },
 
     // === OG 이미지 (6개) ===

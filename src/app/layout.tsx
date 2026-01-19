@@ -3,8 +3,8 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "한결 컨설팅 - 정책자금 전문",
-  description: "정책자금 전문 컨설팅, 한결 컨설팅과 함께하세요",
+  title: "KEAI - 한국기업심사원",
+  description: "기업심사관 전문가와 함께하는 자금확보 컨설팅",
 };
 
 export default function RootLayout({

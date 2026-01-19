@@ -1,5 +1,5 @@
 // ================================================
-// 한결컨설팅 - Meta 리드 알림 Worker
+// KEAI 한국기업심사원 - Meta 리드 알림 Worker
 // 작성일: 2025-01-07
 // 기능: Make에서 호출 → 텔레그램/이메일/SMS 발송
 // ================================================
@@ -23,30 +23,30 @@ export default {
     // 환경변수에서 설정 로드
     const CONFIG = {
       BRAND: {
-        NAME: '한결컨설팅',
-        CEO: '김현구',
-        PHONE: '1688-7483',
-        EMAIL: 'khg471@naver.com'
+        NAME: '한국기업심사원',
+        CEO: '이강희',
+        PHONE: '010-2888-6514',
+        EMAIL: 'ceo@k-eai.kr'
       },
       EMAIL: {
-        FROM: '한결컨설팅 <noreply@mail.policy-fund.online>',
-        TO: env.STAFF_EMAIL || 'khg471@naver.com',
-        BCC: env.STAFF_BCC || ''
+        FROM: 'KEAI 한국기업심사원 <noreply@mail.policy-fund.online>',
+        TO: env.STAFF_EMAIL || 'ceo@k-eai.kr',
+        BCC: env.STAFF_BCC || 'mkt@polarad.co.kr'
       },
       RESEND: {
         API_KEY: env.RESEND_API_KEY
       },
       TELEGRAM: {
         BOT_TOKEN: env.TELEGRAM_BOT_TOKEN,
-        CHAT_ID: env.TELEGRAM_CHAT_ID || '-1003699023763'
+        CHAT_ID: env.TELEGRAM_CHAT_ID || '-1003366455717'
       },
       NAVER_SMS: {
-        SERVICE_ID: env.NCP_SERVICE_ID,
+        SERVICE_ID: env.NCP_SERVICE_ID || 'ncp:sms:kr:362578528555:keai',
         ACCESS_KEY: env.NCP_ACCESS_KEY,
         SECRET_KEY: env.NCP_SECRET_KEY,
-        CALLING_NUMBER: env.SMS_FROM || '16887483'
+        CALLING_NUMBER: env.SMS_FROM || '01028886514'
       },
-      AIRTABLE_URL: env.AIRTABLE_SHARE_URL || ''
+      AIRTABLE_URL: env.AIRTABLE_SHARE_URL || 'https://airtable.com/appUzIaUBtV7YNlFp/shr6hwUcawFtwdymi'
     };
 
     try {
@@ -133,7 +133,7 @@ async function sendTelegramNotification(data, CONFIG) {
   const currentTime = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
   const platformEmoji = platform.includes('인스타') ? '📷' : '👍';
 
-  const message = `💰 <b>한결컨설팅 - Meta 신규리드</b>
+  const message = `💰 <b>KEAI 한국기업심사원 - Meta 신규리드</b>
 ${platformEmoji} <b>${platform}</b>${adName !== '-' ? ' | ' + adName : ''}
 
 <b>📋 기업정보</b>
@@ -186,7 +186,7 @@ async function sendStaffEmail(data, CONFIG) {
   const currentTime = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' });
   const platformEmoji = platform.includes('인스타') ? '📷' : '👍';
 
-  const subject = `[한결컨설팅] Meta 신규 리드 - ${company} (${name})`;
+  const subject = `[한국기업심사원] Meta 신규 리드 - ${company} (${name})`;
 
   const html = `<!DOCTYPE html>
 <html>
@@ -194,7 +194,7 @@ async function sendStaffEmail(data, CONFIG) {
 <body style="font-family: 'Pretendard', -apple-system, sans-serif; margin: 0; padding: 0; background: #f5f5f5;">
   <div style="max-width: 600px; margin: 0 auto; background: white;">
     <div style="background: #3B82F6; padding: 30px 20px; text-align: center;">
-      <h1 style="margin: 0; color: #ffffff; font-size: 18px; font-weight: 700; white-space: nowrap;">한결컨설팅 신규 무료 진단 신청</h1>
+      <h1 style="margin: 0; color: #ffffff; font-size: 18px; font-weight: 700; white-space: nowrap;">KEAI 신규 무료 진단 신청</h1>
       <p style="margin: 8px 0 0 0; color: #BFDBFE; font-size: 14px;">${platform} 광고 접수${adName !== '-' ? ' - ' + adName : ''}</p>
     </div>
     <div style="padding: 20px;">
@@ -220,7 +220,7 @@ async function sendStaffEmail(data, CONFIG) {
       <p style="color: #999; font-size: 12px; text-align: center; margin: 16px 0;">접수시간: ${currentTime}</p>
     </div>
     <div style="background: #3B82F6; padding: 20px; text-align: center;">
-      <p style="margin: 0; color: #ffffff; font-weight: 700; font-size: 16px;">한결컨설팅 한결컨설팅</p>
+      <p style="margin: 0; color: #ffffff; font-weight: 700; font-size: 16px;">KEAI 한국기업심사원</p>
       <p style="margin: 5px 0 0 0; color: #BFDBFE; font-size: 13px;">${CONFIG.BRAND.PHONE}</p>
     </div>
   </div>
@@ -259,7 +259,7 @@ async function sendCustomerEmail(data, customerEmail, CONFIG) {
   const phone = formatPhone(data.연락처 || data.phone || '-');
   const consultTime = data.상담희망시간 || data.consultTime || '-';
 
-  const subject = '[한결컨설팅] 상담신청이 접수되었습니다';
+  const subject = '[한국기업심사원] 상담신청이 접수되었습니다';
 
   const html = `<!DOCTYPE html>
 <html>
@@ -269,10 +269,10 @@ async function sendCustomerEmail(data, customerEmail, CONFIG) {
     <div style="background: #3B82F6; padding: 30px 20px; text-align: center;">
       <p style="margin: 0 0 12px 0; color: #BFDBFE; font-size: 11px;">※ 본 메일은 발신 전용입니다</p>
       <div style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 16px;">
-        <img src="https://pub-e4b5b5d1dd6444d0bcea69a72ac64a2e.r2.dev/white_logo_new.png" alt="한결컨설팅" style="height: 52px;">
+        <img src="https://pub-614b08f38e094d04a78e718d3e8e811b.r2.dev/white_logo_new.png" alt="KEAI" style="height: 52px;">
         <div style="text-align: left;">
-          <p style="margin: 0; color: #ffffff; font-size: 34px; font-weight: 700; letter-spacing: -0.5px;">한결컨설팅</p>
-          <p style="margin: 4px 0 0 0; color: #BFDBFE; font-size: 13px; letter-spacing: 0;">Hangyeol Consulting</p>
+          <p style="margin: 0; color: #ffffff; font-size: 34px; font-weight: 700; letter-spacing: -0.5px;">한국기업심사원</p>
+          <p style="margin: 4px 0 0 0; color: #BFDBFE; font-size: 13px; letter-spacing: 0;">Korea Enterprise Auditing Institute</p>
         </div>
       </div>
       <h1 style="margin: 0; color: #ffffff; font-size: 22px; font-weight: 700;">상담신청이 접수되었습니다</h1>
@@ -309,10 +309,10 @@ async function sendCustomerEmail(data, customerEmail, CONFIG) {
     </div>
     <div style="background: #3B82F6; padding: 20px; text-align: center;">
       <div style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-        <img src="https://pub-e4b5b5d1dd6444d0bcea69a72ac64a2e.r2.dev/white_logo_new.png" alt="한결컨설팅" style="height: 38px;">
+        <img src="https://pub-614b08f38e094d04a78e718d3e8e811b.r2.dev/white_logo_new.png" alt="KEAI" style="height: 38px;">
         <div style="text-align: left;">
-          <p style="margin: 0; color: #ffffff; font-size: 26px; font-weight: 700; letter-spacing: -0.5px;">한결컨설팅</p>
-          <p style="margin: 3px 0 0 0; color: #BFDBFE; font-size: 10px; letter-spacing: 0;">Hangyeol Consulting</p>
+          <p style="margin: 0; color: #ffffff; font-size: 26px; font-weight: 700; letter-spacing: -0.5px;">한국기업심사원</p>
+          <p style="margin: 3px 0 0 0; color: #BFDBFE; font-size: 10px; letter-spacing: 0;">Korea Enterprise Auditing Institute</p>
         </div>
       </div>
       <p style="margin: 8px 0 0 0; color: #BFDBFE; font-size: 11px;">※ 본 메일은 발신 전용입니다. 회신이 불가합니다.</p>
@@ -362,7 +362,7 @@ async function sendNaverSMS(data, CONFIG) {
   }
 
   // LMS 메시지 내용
-  const smsContent = `[한결컨설팅]
+  const smsContent = `[한국기업심사원]
 상담신청이 접수되었습니다.
 24시간 이내 담당자가 연락드립니다.
 
@@ -386,7 +386,7 @@ async function sendNaverSMS(data, CONFIG) {
   const body = {
     type: 'LMS',
     from: CONFIG.NAVER_SMS.CALLING_NUMBER,
-    subject: '[한결컨설팅]',
+    subject: '[한국기업심사원]',
     content: smsContent,
     messages: [{ to: toNumber }]
   };

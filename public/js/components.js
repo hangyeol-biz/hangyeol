@@ -1,11 +1,11 @@
 /* ================================================
-   한결 컨설팅 컴포넌트 로더
+   KEAI 컴포넌트 로더
    공통 컴포넌트를 동적으로 로드하여 코드 중복 제거
    ================================================ */
 
 // 대시보드 사이드바 컴포넌트
 function loadSidebar(currentPage) {
-  const brandName = window.CONFIG?.BRAND?.name || '한결 컨설팅';
+  const brandName = window.CONFIG?.BRAND?.name || 'KEAI';
 
   const sidebarHTML = `
     <div class="sidebar-header">
