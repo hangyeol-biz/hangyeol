@@ -71,16 +71,13 @@ export default async function handler(req, res) {
         // 직접 날짜 지정이 있으면 사용, 없으면 period/days 기반 계산
         if (queryStartDate && queryEndDate) {
             // 직접 날짜 지정
-            const start = new Date(queryStartDate);
-            start.setDate(start.getDate() - 1); // 필터 조건이 IS_AFTER이므로 하루 전
-            startDateStr = formatDate(start);
+            startDateStr = queryStartDate;
             endDateStr = queryEndDate;
         } else if (days) {
             // days 파라미터 (analytics.html 호환)
             const endDate = new Date();
             const startDate = new Date();
             startDate.setDate(endDate.getDate() - parseInt(days));
-            startDate.setDate(startDate.getDate() - 1); // IS_AFTER 보정
             startDateStr = formatDate(startDate);
             endDateStr = formatDate(endDate);
         } else {
@@ -104,9 +101,6 @@ export default async function handler(req, res) {
                 default:
                     startDate.setDate(endDate.getDate() - 30);
             }
-
-            // 하루 전부터 조회 (필터 조건이 IS_AFTER이므로)
-            startDate.setDate(startDate.getDate() - 1);
 
             startDateStr = formatDate(startDate);
             endDateStr = formatDate(endDate);
