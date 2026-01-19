@@ -25,7 +25,7 @@ const R2_PUBLIC_URL = getEnv('R2_PUBLIC_URL') || `https://pub-${R2_ACCOUNT_ID}.r
 
 // Airtable 설정
 const AIRTABLE_TOKEN = getEnv('AIRTABLE_TOKEN');
-const AIRTABLE_BASE_ID = getEnv('AIRTABLE_BASE_ID', 'appxVw5QQ0g4JEjoR');
+const AIRTABLE_BASE_ID = getEnv('AIRTABLE_BASE_ID', 'appMkaHfMP4ZGxcPw');
 const AIRTABLE_TABLE_ID = 'tblS5O4LN5C7L9Km7'; // 팝업 테이블
 
 // 최대 파일 크기

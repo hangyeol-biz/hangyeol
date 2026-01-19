@@ -2,9 +2,9 @@
 // GET /api/sitemap - XML sitemap 반환
 
 const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN;
-const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'appxVw5QQ0g4JEjoR';
-const AIRTABLE_TABLE_ID = process.env.AIRTABLE_TABLE_ID || 'tblvARTwWZRjnft2B';
-const SITE_URL = 'https://www.k-eai.kr';
+const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'appMkaHfMP4ZGxcPw';
+const AIRTABLE_TABLE_ID = process.env.AIRTABLE_TABLE_ID || 'tblOPQMuTj9SOUeGZ';
+const SITE_URL = 'https://biz-hangyeol.co.kr';
 
 // 슬러그 생성 함수
 function generateSlug(title) {

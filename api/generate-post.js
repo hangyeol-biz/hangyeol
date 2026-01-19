@@ -14,14 +14,14 @@ import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 // 환경변수
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN;
-const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'appxVw5QQ0g4JEjoR';
-const AIRTABLE_TABLE_ID = process.env.AIRTABLE_TABLE_ID || 'tblvARTwWZRjnft2B';
+const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'appMkaHfMP4ZGxcPw';
+const AIRTABLE_TABLE_ID = process.env.AIRTABLE_TABLE_ID || 'tblOPQMuTj9SOUeGZ';
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || '-1003394139746';
 const CRON_SECRET = process.env.CRON_SECRET;
 
 // Cloudflare R2 (이미지 저장 - S3 호환 API)
-const R2_ACCOUNT_ID = process.env.R2_ACCOUNT_ID || '75123333ef4e1c6368873dd55fca00ab';
+const R2_ACCOUNT_ID = process.env.R2_ACCOUNT_ID || '1886ec3623cea58c2f9df4b57199f86d';
 const R2_BUCKET_NAME = process.env.R2_BUCKET_NAME || 'hangyeol';
 const R2_ACCESS_KEY_ID = process.env.R2_ACCESS_KEY_ID;
 const R2_SECRET_ACCESS_KEY = process.env.R2_SECRET_ACCESS_KEY;
