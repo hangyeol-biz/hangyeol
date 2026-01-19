@@ -1490,9 +1490,9 @@ textarea.keai-form-control {
 }
 
 .keai-fund-type-option input[type="checkbox"]:checked + label {
-    background: rgba(15, 76, 129, 0.1);
+    background: var(--primary);
     border-color: var(--primary);
-    color: var(--primary);
+    color: #ffffff;
     font-weight: 600;
 }
 
