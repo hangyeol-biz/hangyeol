@@ -39,7 +39,7 @@
 # SSH 푸시
 GIT_SSH_COMMAND="ssh -i ~/.ssh/id_ed25519_hangyeol" git push origin main
 
-# Vercel 배포
+# Vercel 배포 (hangyeol 프로젝트로 연결됨)
 vercel --prod --token $VERCEL_TOKEN
 
 # Worker 배포
@@ -47,6 +47,16 @@ CLOUDFLARE_API_TOKEN="$CLOUDFLARE_API_TOKEN" npx wrangler deploy
 ```
 
 > 모든 토큰/키는 `.env.local` 파일에 저장됨 (Git 제외)
+
+### ⚠️ 배포 주의사항
+
+| 항목 | 설명 |
+|------|------|
+| **배포 폴더** | `public/` 폴더가 실제 배포됨 |
+| **HTML 수정 시** | 루트 HTML 수정 후 **반드시 `public/` 폴더로 복사** 필요 |
+| **복사 명령어** | `cp index.html company.html fund.html mkt.html post.html pro.html process.html privacy.html public/` |
+| **추가 파일** | `public/board.html`은 별도 수정 필요 (루트에 없음) |
+| **Vercel 프로젝트** | `hangyeols-projects-f88eba8a/hangyeol` (자동 연결됨) |
 
 ---
 
