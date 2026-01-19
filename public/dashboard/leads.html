@@ -11,9 +11,8 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>접수 관리 - 한결 컨설팅 관리자</title>
+    <title>접수 관리 - 한결컨설팅</title>
     <meta name="robots" content="noindex, nofollow">
-    <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
     <style>
@@ -121,6 +120,20 @@
 
         .btn-view:hover {
             background: #DBEAFE;
+        }
+
+        .btn-delete {
+            background: #FEE2E2;
+            color: #DC2626;
+        }
+
+        .btn-delete:hover {
+            background: #FECACA;
+        }
+
+        .action-btns {
+            display: flex;
+            gap: 8px;
         }
 
         /* 로딩/빈 상태 */
@@ -592,7 +605,10 @@
                     <td data-label="필요자금">${lead.필요자금규모 || '-'}</td>
                     <td data-label="상태"><span class="status-badge ${getStatusClass(lead.상태)}">${lead.상태 || '신규'}</span></td>
                     <td>
-                        <button class="btn-action btn-view" onclick="showDetail('${lead.id}')">상세보기</button>
+                        <div class="action-btns">
+                            <button class="btn-action btn-view" onclick="showDetail('${lead.id}')">상세</button>
+                            <button class="btn-action btn-delete" onclick="deleteLead('${lead.id}', '${(lead.기업명 || '').replace(/'/g, "\\'")}')">삭제</button>
+                        </div>
                     </td>
                 </tr>
             `).join('');
@@ -723,6 +739,30 @@
         document.getElementById('detailModal').addEventListener('click', function(e) {
             if (e.target === this) closeModal();
         });
+
+        // 접수 삭제
+        async function deleteLead(id, name) {
+            if (!confirm(`"${name || '이 항목'}"을(를) 삭제하시겠습니까?\n\n삭제된 데이터는 복구할 수 없습니다.`)) {
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/leads?id=${id}`, {
+                    method: 'DELETE'
+                });
+
+                if (!response.ok) throw new Error('Delete failed');
+
+                // 목록에서 제거
+                allLeads = allLeads.filter(l => l.id !== id);
+                renderLeads();
+                alert('삭제되었습니다.');
+
+            } catch (error) {
+                console.error('Delete error:', error);
+                alert('삭제 중 오류가 발생했습니다.');
+            }
+        }
     </script>
 </body>
 </html>

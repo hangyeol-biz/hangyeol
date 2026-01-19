@@ -11,7 +11,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게시글 작성 - 한결 컨설팅 관리자</title>
+    <title>게시글 작성 - 한결컨설팅</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
     <style>
@@ -1074,7 +1074,7 @@
         // 임시저장
         function saveDraft() {
             const data = collectFormData();
-            localStorage.setItem('hangyeol_draft_post', JSON.stringify(data));
+            localStorage.setItem('keai_draft_post', JSON.stringify(data));
             showToast('임시저장 되었습니다');
         }
 
@@ -1106,7 +1106,7 @@
 
                 if (result.success) {
                     showToast(isEditing ? '수정되었습니다' : '게시되었습니다', 'success');
-                    localStorage.removeItem('hangyeol_draft_post');
+                    localStorage.removeItem('keai_draft_post');
                     setTimeout(() => {
                         window.location.href = 'board.html';
                     }, 1000);
@@ -1145,7 +1145,7 @@
         // 페이지 로드 시 임시저장 복원 확인
         window.addEventListener('load', function() {
             if (!isEditing) {
-                const draft = localStorage.getItem('hangyeol_draft_post');
+                const draft = localStorage.getItem('keai_draft_post');
                 if (draft) {
                     const data = JSON.parse(draft);
                     if (confirm('임시저장된 글이 있습니다. 복원하시겠습니까?')) {
