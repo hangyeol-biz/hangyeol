@@ -75,7 +75,7 @@ async function getAccessToken() {
 
     const tokenData = await tokenResponse.json();
     if (!tokenData.access_token) {
-        throw new Error('Failed to get access token: ' + JSON.stringify(tokenData));
+        throw new Error(`Failed to get access token: ${JSON.stringify(tokenData)} | clientEmail: ${clientEmail} | hasBase64: ${hasBase64Key} | keyStart: ${privateKey?.substring(0, 30)}`);
     }
 
     return tokenData.access_token;
