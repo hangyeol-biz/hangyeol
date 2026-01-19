@@ -28,7 +28,7 @@ async function getAccessToken() {
     let privateKey = hasBase64Key
         ? Buffer.from(process.env.GOOGLE_PRIVATE_KEY_BASE64, 'base64').toString('utf8')
         : process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n');
-    const clientEmail = process.env.GOOGLE_CLIENT_EMAIL;
+    const clientEmail = process.env.GOOGLE_CLIENT_EMAIL?.trim();
 
     console.log('[GA Auth] Client Email:', clientEmail);
     console.log('[GA Auth] Private Key exists:', !!privateKey);
