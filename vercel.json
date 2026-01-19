@@ -3,6 +3,14 @@
   "buildCommand": "",
   "outputDirectory": "public",
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "admin.biz-hangyeol.co.kr" }],
+      "destination": "/dashboard",
+      "permanent": false
+    }
+  ],
   "crons": [
     {
       "path": "/api/generate-post",
