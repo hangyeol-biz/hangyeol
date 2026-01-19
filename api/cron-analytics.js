@@ -21,7 +21,10 @@ const SEARCH_CONSOLE_SITE = getEnv('SEARCH_CONSOLE_SITE', 'https://k-eai.kr');
 
 // Google API Access Token 획득
 async function getAccessToken() {
-    const privateKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n');
+    // base64 인코딩된 키 우선 사용 (Vercel 환경변수 호환성)
+    let privateKey = process.env.GOOGLE_PRIVATE_KEY_BASE64
+        ? Buffer.from(process.env.GOOGLE_PRIVATE_KEY_BASE64, 'base64').toString('utf8')
+        : process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n');
     const clientEmail = process.env.GOOGLE_CLIENT_EMAIL;
 
     if (!privateKey || !clientEmail) {
