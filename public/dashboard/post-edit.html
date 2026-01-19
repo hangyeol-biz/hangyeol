@@ -644,11 +644,17 @@
             <div class="form-row-inline">
                 <div class="form-row">
                     <label class="form-label">카테고리 *</label>
-                    <select id="post-category" class="form-select">
-                        <option value="공지">공지</option>
-                        <option value="뉴스">뉴스</option>
-                        <option value="정보">정보</option>
-                    </select>
+                    <input type="text" id="post-category" class="form-input" list="category-list" placeholder="카테고리 입력 (예: 2026 정책자금)">
+                    <datalist id="category-list">
+                        <option value="공지">
+                        <option value="뉴스">
+                        <option value="정보">
+                        <option value="2026 정책자금">
+                        <option value="2026 창업지원">
+                        <option value="2026 신규정책">
+                        <option value="2026 고용지원">
+                        <option value="2026 경영지원">
+                    </datalist>
                 </div>
                 <div class="form-row">
                     <label class="form-label">썸네일</label>
@@ -945,8 +951,7 @@
             // Shift + Enter: 줄바꿈
             if (e.shiftKey && e.key === "Enter") {
                 e.preventDefault();
-                insertAtCursor("
-");
+                insertAtCursor("\n");
                 return;
             }
             // Ctrl + H: 섹션

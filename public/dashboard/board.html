@@ -443,12 +443,9 @@
                 </div>
             </div>
 
-            <!-- 필터 -->
-            <div class="filter-bar">
+            <!-- 필터 (동적 생성) -->
+            <div class="filter-bar" id="filter-bar">
                 <button class="filter-btn active" data-filter="all">전체</button>
-                <button class="filter-btn" data-filter="공지">공지</button>
-                <button class="filter-btn" data-filter="뉴스">뉴스</button>
-                <button class="filter-btn" data-filter="정보">정보</button>
             </div>
 
             <!-- 테이블 -->
@@ -510,6 +507,7 @@
                 if (result.success && result.posts && result.posts.length > 0) {
                     allPosts = result.posts;
                     renderPosts(allPosts);
+                    renderFilters(allPosts); // 동적 필터 생성
                 } else {
                     document.getElementById('empty-state').style.display = 'block';
                 }
@@ -518,6 +516,26 @@
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('empty-state').style.display = 'block';
             }
+        }
+
+        // 동적 필터 생성
+        function renderFilters(posts) {
+            const filterBar = document.getElementById('filter-bar');
+
+            // 카테고리 추출 (중복 제거)
+            const categories = [...new Set(posts.map(p => p.카테고리).filter(Boolean))];
+
+            // 필터 버튼 생성
+            categories.forEach(category => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.dataset.filter = category;
+                btn.textContent = category;
+                filterBar.appendChild(btn);
+            });
+
+            // 이벤트 재설정
+            setupFilters();
         }
 
         // 게시글 렌더링
