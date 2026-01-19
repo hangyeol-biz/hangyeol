@@ -10,7 +10,7 @@ function getEnv(key, defaultValue = '') {
 
 const AIRTABLE_TOKEN = getEnv('AIRTABLE_TOKEN');
 const AIRTABLE_BASE_ID = getEnv('AIRTABLE_BASE_ID', 'appxVw5QQ0g4JEjoR');
-const ANALYTICS_TABLE_ID = 'tblvtCiOigcPRPXpY'; // Analytics 테이블 ID
+const ANALYTICS_TABLE_ID = 'tblZDJlggjmMzEbJj'; // Analytics 테이블 ID (한결)
 
 // Airtable에서 방문통계 데이터 조회
 async function getAnalyticsFromAirtable(startDate, endDate) {
