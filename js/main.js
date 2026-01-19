@@ -285,7 +285,7 @@
         ceo: '김현구',
         phone: '1688-7483',
         email: 'khg471@naver.com',
-        address: '서울특별시 강남구',
+        address: '경상북도 구미시 옥계북로 36, 802호 Room 5 (옥계동, 메디칼타워)',
         bizno: '252-18-02813',
         hours: '평일 09:00-18:00',
         logo: 'https://biz-hangyeol.co.kr/logo.png'
@@ -370,7 +370,7 @@
                     <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">대표</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500;">${BRAND_INFO.ceo}</td></tr>
                     <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">대표전화</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500;">${BRAND_INFO.phone}</td></tr>
                     <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">이메일</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500;">${BRAND_INFO.email}</td></tr>
-                    <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">주소</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500; line-height: 1.5;">인천광역시 서구 중봉대로 612번길 10-20<br><span style="color: #888;">505-J302호 (청라동, 청라프라자)</span></td></tr>
+                    <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">주소</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500; line-height: 1.5;">${BRAND_INFO.address}</td></tr>
                     <tr><td style="padding: 8px 0;"><span style="color: #999;">사업자번호</span></td><td style="padding: 8px 0; text-align: right; font-weight: 500;">${BRAND_INFO.bizno}</td></tr>
                 </table>
             </div>
