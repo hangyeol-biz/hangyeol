@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이메일 템플릿 미리보기 - 한결컨설팅</title>
+    <style>
+        body { font-family: 'Pretendard', -apple-system, sans-serif; background: #e5e5e5; margin: 0; padding: 40px 20px; }
+        .preview-container { max-width: 1400px; margin: 0 auto; }
+        .preview-header { text-align: center; margin-bottom: 40px; }
+        .preview-header h1 { color: #1a1a1a; font-size: 28px; margin-bottom: 10px; }
+        .preview-header p { color: #666; }
+        .preview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .preview-box { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .preview-title { background: #0F4C81; color: #fff; padding: 15px 20px; font-size: 16px; font-weight: 600; }
+        .preview-title span { opacity: 0.7; font-weight: 400; font-size: 14px; }
+        .preview-content { padding: 20px; background: #f5f5f5; }
+        .preview-content iframe { width: 100%; height: 600px; border: none; background: #fff; }
+        .status-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin-left: 10px; }
+        .status-ok { background: #d4edda; color: #155724; }
+        .status-warn { background: #fff3cd; color: #856404; }
+        @media (max-width: 1000px) { .preview-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <div class="preview-header">
+            <h1>이메일 템플릿 미리보기</h1>
+            <p>한결컨설팅 - 폼 접수 시 발송되는 이메일</p>
+        </div>
+
+        <div class="preview-grid">
+            <!-- 고객용 이메일 -->
+            <div class="preview-box">
+                <div class="preview-title">
+                    고객용 이메일 <span>(접수 확인)</span>
+                    <span class="status-badge status-ok">한결컨설팅 정보</span>
+                </div>
+                <div class="preview-content">
+                    <iframe srcdoc='
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"></head>
+<body style="font-family: Pretendard, -apple-system, sans-serif; line-height: 1.6; color: #333; background: #f5f5f5; margin: 0; padding: 0;">
+    <div style="max-width: 600px; margin: 0 auto; background: #fff;">
+        <div style="background: #0F4C81; padding: 20px; text-align: center;">
+            <h2 style="color: #fff; margin: 0; font-size: 20px;">자금 심사 신청이 접수되었습니다</h2>
+        </div>
+        <div style="padding: 30px;">
+            <p><strong>홍길동</strong> 대표님, 안녕하세요.<br><strong>한결컨설팅</strong>입니다.</p>
+            <p>자금 심사 신청이 정상적으로 접수되었습니다.</p>
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 25px 0; border-left: 4px solid #0F4C81;">
+                <h3 style="margin-top: 0; color: #0F4C81; font-size: 16px;">신청 정보</h3>
+                <table style="width: 100%; font-size: 14px;">
+                    <tr><td style="padding: 5px 0; color: #666;">기업명</td><td style="padding: 5px 0; font-weight: 600;">(주)테스트기업</td></tr>
+                    <tr><td style="padding: 5px 0; color: #666;">대표자</td><td style="padding: 5px 0; font-weight: 600;">홍길동</td></tr>
+                    <tr><td style="padding: 5px 0; color: #666;">연락처</td><td style="padding: 5px 0; font-weight: 600;">010-1234-5678</td></tr>
+                    <tr><td style="padding: 5px 0; color: #666;">필요 자금</td><td style="padding: 5px 0; font-weight: 600;">1억원</td></tr>
+                    <tr><td style="padding: 5px 0; color: #666;">자금 종류</td><td style="padding: 5px 0; font-weight: 600;">정책자금, 신용보증</td></tr>
+                </table>
+            </div>
+            <p style="background: #e8f4fd; padding: 15px; border-radius: 8px; text-align: center; color: #0F4C81; font-weight: 600;">담당 전문가가 24시간 내 연락드리겠습니다.</p>
+        </div>
+        <div style="background: #f8f9fa; padding: 25px 30px; border-top: 1px solid #eee;">
+            <div style="text-align: center;">
+                <img src="https://biz-hangyeol.co.kr/logo.png" alt="한결컨설팅" style="height: 35px; margin-bottom: 20px;">
+            </div>
+            <div style="background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                <table style="width: 100%; font-size: 13px; color: #555;">
+                    <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">대표</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500;">김현구</td></tr>
+                    <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">대표전화</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500;">1688-7483</td></tr>
+                    <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">이메일</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500;">khg471@naver.com</td></tr>
+                    <tr><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;"><span style="color: #999;">주소</span></td><td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0; text-align: right; font-weight: 500; line-height: 1.5;">서울특별시 강남구</td></tr>
+                    <tr><td style="padding: 8px 0;"><span style="color: #999;">사업자번호</span></td><td style="padding: 8px 0; text-align: right; font-weight: 500;">252-18-02813</td></tr>
+                </table>
+            </div>
+            <p style="text-align: center; margin-top: 15px; font-size: 12px; color: #999;">상담시간: 평일 09:00-18:00</p>
+        </div>
+    </div>
+</body>
+</html>
+                    '></iframe>
+                </div>
+            </div>
+
+            <!-- 담당자용 이메일 -->
+            <div class="preview-box">
+                <div class="preview-title">
+                    담당자용 이메일 <span>(내부 알림)</span>
+                    <span class="status-badge status-ok">정상</span>
+                </div>
+                <div class="preview-content">
+                    <iframe srcdoc='
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"></head>
+<body style="font-family: Pretendard, sans-serif; line-height: 1.6; color: #333;">
+    <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+        <h2 style="color: #0F4C81; border-bottom: 3px solid #0F4C81; padding-bottom: 10px;">
+            🔔 새로운 심사 신청
+        </h2>
+
+        <div style="background: #f9f9f9; padding: 15px; border-radius: 5px; margin: 20px 0;">
+            <h3 style="margin-top: 0;">📋 기업 정보</h3>
+            <p><strong>기업명:</strong> (주)테스트기업</p>
+            <p><strong>사업자번호:</strong> 123-45-67890</p>
+            <p><strong>업종:</strong> IT서비스</p>
+            <p><strong>설립연도:</strong> 2020</p>
+        </div>
+
+        <div style="background: #f9f9f9; padding: 15px; border-radius: 5px; margin: 20px 0;">
+            <h3 style="margin-top: 0;">👤 담당자 정보</h3>
+            <p><strong>대표자명:</strong> 홍길동</p>
+            <p><strong>연락처:</strong> 010-1234-5678</p>
+            <p><strong>이메일:</strong> test@example.com</p>
+            <p><strong>통화가능시간:</strong> 오전 10시~12시</p>
+        </div>
+
+        <div style="background: #f9f9f9; padding: 15px; border-radius: 5px; margin: 20px 0;">
+            <h3 style="margin-top: 0;">💰 자금 정보</h3>
+            <p><strong>필요 자금 규모:</strong> 1억원</p>
+            <p><strong>자금 종류:</strong> 정책자금, 신용보증</p>
+        </div>
+
+        <div style="background: #e3f2fd; padding: 15px; border-radius: 5px; margin: 20px 0; border-left: 4px solid #0F4C81;">
+            <h3 style="margin-top: 0;">📝 문의 내용</h3>
+            <p style="white-space: pre-wrap;">정책자금 신청 관련하여 상담 부탁드립니다.</p>
+        </div>
+
+        <p style="color: #666; font-size: 14px;">
+            신청일시: 2025. 1. 19. 오후 3:45:30
+        </p>
+    </div>
+</body>
+</html>
+                    '></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px; padding: 20px; background: #fff; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+            <h3 style="margin-top: 0; color: #0F4C81;">현재 설정된 브랜드 정보</h3>
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr><td style="padding: 10px; border-bottom: 1px solid #eee; color: #666;">상호명</td><td style="padding: 10px; border-bottom: 1px solid #eee; font-weight: 600;">한결컨설팅</td></tr>
+                <tr><td style="padding: 10px; border-bottom: 1px solid #eee; color: #666;">대표자</td><td style="padding: 10px; border-bottom: 1px solid #eee;">김현구</td></tr>
+                <tr><td style="padding: 10px; border-bottom: 1px solid #eee; color: #666;">대표전화</td><td style="padding: 10px; border-bottom: 1px solid #eee;">1688-7483</td></tr>
+                <tr><td style="padding: 10px; border-bottom: 1px solid #eee; color: #666;">이메일</td><td style="padding: 10px; border-bottom: 1px solid #eee;">khg471@naver.com</td></tr>
+                <tr><td style="padding: 10px; border-bottom: 1px solid #eee; color: #666;">사업자번호</td><td style="padding: 10px; border-bottom: 1px solid #eee;">252-18-02813</td></tr>
+                <tr><td style="padding: 10px; border-bottom: 1px solid #eee; color: #666;">주소</td><td style="padding: 10px; border-bottom: 1px solid #eee;">서울특별시 강남구</td></tr>
+                <tr><td style="padding: 10px; color: #666;">로고</td><td style="padding: 10px;">https://biz-hangyeol.co.kr/logo.png</td></tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -46,6 +46,15 @@ async function makeSignature(method, url, timestamp, accessKey, secretKey) {
 
 export default {
   async fetch(request, env) {
+    // ================================================
+    // 기능 활성화 플래그 (true: ON, false: OFF)
+    // ================================================
+    const FEATURES = {
+      EMAIL_CUSTOMER: false,  // 고객 이메일 OFF
+      EMAIL_STAFF: false,     // 담당자 이메일 OFF
+      SMS: false              // SMS OFF
+    };
+
     // 환경변수에서 설정 가져오기
     const CONFIG = {
       AIRTABLE: {
@@ -141,7 +150,7 @@ export default {
       // ================================================
       // 2. Resend 이메일 발송 (고객용)
       // ================================================
-      if (!data.skipCustomerEmail && data.customerEmail) {
+      if (FEATURES.EMAIL_CUSTOMER && !data.skipCustomerEmail && data.customerEmail) {
         try {
           console.log('📧 Sending customer email...');
           const customerEmailResponse = await fetch('https://api.resend.com/emails', {
@@ -180,35 +189,41 @@ export default {
       // ================================================
       // 3. Resend 이메일 발송 (담당자용)
       // ================================================
-      try {
-        console.log('📧 Sending staff email...');
-        const staffEmailResponse = await fetch('https://api.resend.com/emails', {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${CONFIG.RESEND.API_KEY}`,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            from: CONFIG.RESEND.FROM,
-            to: CONFIG.EMAIL.STAFF,
-            bcc: CONFIG.EMAIL.BCC,
-            subject: data.staffSubject,
-            html: data.staffHtml
-          })
-        });
+      if (FEATURES.EMAIL_STAFF) {
+        try {
+          console.log('📧 Sending staff email...');
+          const staffEmailResponse = await fetch('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${CONFIG.RESEND.API_KEY}`,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              from: CONFIG.RESEND.FROM,
+              to: CONFIG.EMAIL.STAFF,
+              bcc: CONFIG.EMAIL.BCC,
+              subject: data.staffSubject,
+              html: data.staffHtml
+            })
+          });
 
-        if (staffEmailResponse.ok) {
-          const staffResult = await staffEmailResponse.json();
-          results.email.staff.success = true;
-          console.log('✅ Staff email sent:', staffResult.id);
-        } else {
-          const error = await staffEmailResponse.json();
-          results.email.staff.error = error;
-          console.error('❌ Staff email error:', error);
+          if (staffEmailResponse.ok) {
+            const staffResult = await staffEmailResponse.json();
+            results.email.staff.success = true;
+            console.log('✅ Staff email sent:', staffResult.id);
+          } else {
+            const error = await staffEmailResponse.json();
+            results.email.staff.error = error;
+            console.error('❌ Staff email error:', error);
+          }
+        } catch (error) {
+          results.email.staff.error = error.message;
+          console.error('❌ Staff email exception:', error.message);
         }
-      } catch (error) {
-        results.email.staff.error = error.message;
-        console.error('❌ Staff email exception:', error.message);
+      } else {
+        results.email.staff.success = true;
+        results.email.staff.error = 'Feature disabled';
+        console.log('⏭️ Staff email skipped (feature disabled)');
       }
 
       // ================================================
@@ -270,7 +285,7 @@ ${fields['문의사항'] ? `<b>💬 문의내용</b>\n${fields['문의사항']}\
       // ================================================
       // 5. SENS SMS(LMS) 발송 - 고객에게 접수 안내 문자
       // ================================================
-      if (data.airtableFields && data.airtableFields['연락처']) {
+      if (FEATURES.SMS && data.airtableFields && data.airtableFields['연락처']) {
         try {
           console.log('📱 Sending SMS via SENS...');
 
@@ -333,8 +348,9 @@ ${fields['문의사항'] ? `<b>💬 문의내용</b>\n${fields['문의사항']}\
           console.error('❌ SMS exception:', error.message);
         }
       } else {
-        results.sms.error = 'No phone number provided';
-        console.log('⏭️ SMS skipped - no phone number');
+        results.sms.success = true;
+        results.sms.error = FEATURES.SMS ? 'No phone number provided' : 'Feature disabled';
+        console.log('⏭️ SMS skipped -', FEATURES.SMS ? 'no phone number' : 'feature disabled');
       }
 
       // ================================================

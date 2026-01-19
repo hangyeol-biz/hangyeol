@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이메일 템플릿 미리보기 - 한결컨설팅</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Pretendard', -apple-system, sans-serif;
+            background: #1a1a2e;
+            min-height: 100vh;
+            padding: 30px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        .header p {
+            color: #888;
+            font-size: 14px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        @media (max-width: 1200px) {
+            .container { grid-template-columns: 1fr; }
+        }
+        .email-box {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .email-header {
+            background: linear-gradient(135deg, #0F4C81, #1565C0);
+            color: #fff;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .email-header h2 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .email-header .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .email-content {
+            padding: 0;
+        }
+
+        /* 고객용 이메일 스타일 */
+        .customer-email {
+            font-family: 'Pretendard', -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .customer-email .top-banner {
+            background: #0F4C81;
+            padding: 20px;
+            text-align: center;
+        }
+        .customer-email .top-banner h3 {
+            color: #fff;
+            margin: 0;
+            font-size: 18px;
+        }
+        .customer-email .body {
+            padding: 30px;
+        }
+        .customer-email .info-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #0F4C81;
+        }
+        .customer-email .info-box h4 {
+            margin: 0 0 15px 0;
+            color: #0F4C81;
+            font-size: 15px;
+        }
+        .customer-email .info-box table {
+            width: 100%;
+            font-size: 14px;
+        }
+        .customer-email .info-box td {
+            padding: 5px 0;
+        }
+        .customer-email .info-box td:first-child {
+            color: #666;
+            width: 100px;
+        }
+        .customer-email .info-box td:last-child {
+            font-weight: 600;
+        }
+        .customer-email .cta-box {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            color: #0F4C81;
+            font-weight: 600;
+        }
+        .customer-email .footer {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            border-top: 1px solid #eee;
+        }
+        .customer-email .footer .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .customer-email .footer .logo img {
+            height: 80px;
+        }
+        .customer-email .footer .company-info {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .customer-email .footer .company-info table {
+            width: 100%;
+            font-size: 13px;
+            color: #555;
+        }
+        .customer-email .footer .company-info td {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .customer-email .footer .company-info tr:last-child td {
+            border-bottom: none;
+        }
+        .customer-email .footer .company-info td:first-child {
+            color: #999;
+        }
+        .customer-email .footer .company-info td:last-child {
+            text-align: right;
+            font-weight: 500;
+        }
+        .customer-email .footer .hours {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* 내부 알림 이메일 스타일 */
+        .staff-email {
+            font-family: 'Pretendard', -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding: 25px;
+        }
+        .staff-email h3 {
+            color: #0F4C81;
+            border-bottom: 3px solid #0F4C81;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        .staff-email .section {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .staff-email .section h4 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+        }
+        .staff-email .section p {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+        .staff-email .section strong {
+            color: #333;
+        }
+        .staff-email .inquiry {
+            background: #e3f2fd;
+            border-left: 4px solid #0F4C81;
+        }
+        .staff-email .timestamp {
+            color: #666;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>한결컨설팅 이메일 템플릿 미리보기</h1>
+        <p>폼 접수 시 발송되는 이메일 디자인</p>
+    </div>
+
+    <div class="container">
+        <!-- 고객용 이메일 -->
+        <div class="email-box">
+            <div class="email-header">
+                <h2>고객용 이메일</h2>
+                <span class="badge">접수 확인</span>
+            </div>
+            <div class="email-content">
+                <div class="customer-email">
+                    <div class="top-banner">
+                        <h3>자금 심사 신청이 접수되었습니다</h3>
+                    </div>
+                    <div class="body">
+                        <p><strong>홍길동</strong> 대표님, 안녕하세요.<br><strong>한결컨설팅</strong>입니다.</p>
+                        <p>자금 심사 신청이 정상적으로 접수되었습니다.</p>
+
+                        <div class="info-box">
+                            <h4>신청 정보</h4>
+                            <table>
+                                <tr><td>기업명</td><td>(주)테스트기업</td></tr>
+                                <tr><td>대표자</td><td>홍길동</td></tr>
+                                <tr><td>연락처</td><td>010-1234-5678</td></tr>
+                                <tr><td>필요 자금</td><td>1억원</td></tr>
+                                <tr><td>자금 종류</td><td>정책자금, 신용보증</td></tr>
+                            </table>
+                        </div>
+
+                        <div class="cta-box">
+                            담당 전문가가 24시간 내 연락드리겠습니다.
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="logo">
+                            <img src="https://biz-hangyeol.co.kr/logo.png" alt="한결컨설팅">
+                        </div>
+                        <div class="company-info">
+                            <table>
+                                <tr><td>대표</td><td>김현구</td></tr>
+                                <tr><td>대표전화</td><td>1688-7483</td></tr>
+                                <tr><td>이메일</td><td>khg471@naver.com</td></tr>
+                                <tr><td>주소</td><td>경상북도 구미시 옥계북로 36, 802호 Room 5<br>(옥계동, 메디칼타워)</td></tr>
+                                <tr><td>사업자번호</td><td>252-18-02813</td></tr>
+                            </table>
+                        </div>
+                        <p class="hours">상담시간: 평일 09:00-18:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 내부 알림 이메일 -->
+        <div class="email-box">
+            <div class="email-header">
+                <h2>내부 알림 이메일</h2>
+                <span class="badge">담당자 수신</span>
+            </div>
+            <div class="email-content">
+                <div class="staff-email">
+                    <h3>🔔 새로운 심사 신청</h3>
+
+                    <div class="section">
+                        <h4>📋 기업 정보</h4>
+                        <p><strong>기업명:</strong> (주)테스트기업</p>
+                        <p><strong>사업자번호:</strong> 123-45-67890</p>
+                        <p><strong>업종:</strong> IT서비스</p>
+                        <p><strong>설립연도:</strong> 2020</p>
+                    </div>
+
+                    <div class="section">
+                        <h4>👤 담당자 정보</h4>
+                        <p><strong>대표자명:</strong> 홍길동</p>
+                        <p><strong>연락처:</strong> 010-1234-5678</p>
+                        <p><strong>이메일:</strong> test@example.com</p>
+                        <p><strong>통화가능시간:</strong> 오전 10시~12시</p>
+                    </div>
+
+                    <div class="section">
+                        <h4>💰 자금 정보</h4>
+                        <p><strong>필요 자금 규모:</strong> 1억원</p>
+                        <p><strong>자금 종류:</strong> 정책자금, 신용보증</p>
+                    </div>
+
+                    <div class="section inquiry">
+                        <h4>📝 문의 내용</h4>
+                        <p>정책자금 신청 관련하여 상담 부탁드립니다.<br>사업 확장을 위한 운영자금이 필요합니다.</p>
+                    </div>
+
+                    <p class="timestamp">신청일시: 2025. 1. 19. 오후 4:30:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
