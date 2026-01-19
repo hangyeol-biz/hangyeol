@@ -9,15 +9,15 @@ function getEnv(key, defaultValue = '') {
 }
 
 const AIRTABLE_TOKEN = getEnv('AIRTABLE_TOKEN');
-const AIRTABLE_BASE_ID = getEnv('AIRTABLE_BASE_ID', 'appxVw5QQ0g4JEjoR');
+const AIRTABLE_BASE_ID = getEnv('AIRTABLE_BASE_ID', 'appMkaHfMP4ZGxcPw');
 const ANALYTICS_TABLE_ID = 'tblZDJlggjmMzEbJj'; // Analytics 테이블 ID (한결)
 
 // Airtable에서 방문통계 데이터 조회
 async function getAnalyticsFromAirtable(startDate, endDate) {
     const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${ANALYTICS_TABLE_ID}`;
 
-    // 날짜 범위 필터
-    const filterFormula = `AND(IS_AFTER({date}, '${startDate}'), IS_BEFORE({date}, '${endDate}'))`;
+    // 날짜 범위 필터 (IS_SAME_OR_AFTER, IS_SAME_OR_BEFORE로 해당 날짜 포함)
+    const filterFormula = `AND(IS_SAME_OR_AFTER({date}, '${startDate}'), IS_SAME_OR_BEFORE({date}, '${endDate}'))`;
     const params = new URLSearchParams({
         'filterByFormula': filterFormula,
         'sort[0][field]': 'date',
