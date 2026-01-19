@@ -45,9 +45,7 @@ npm-debug.log*
 
 # 이미지 변환/업로드 관련 (빌드 시에만 필요)
 cdn-images/
-cdn-images-webp/
 image-url-mapping.json
-scripts/
 
 # OG 이미지 템플릿
 og/
