@@ -22,17 +22,10 @@ const SEARCH_CONSOLE_SITE = getEnv('SEARCH_CONSOLE_SITE', 'https://k-eai.kr');
 // Google API Access Token 획득
 async function getAccessToken() {
     // base64 인코딩된 키 우선 사용 (Vercel 환경변수 호환성)
-    const hasBase64Key = !!process.env.GOOGLE_PRIVATE_KEY_BASE64;
-    console.log('[GA Auth] Using base64 key:', hasBase64Key);
-
-    let privateKey = hasBase64Key
+    let privateKey = process.env.GOOGLE_PRIVATE_KEY_BASE64
         ? Buffer.from(process.env.GOOGLE_PRIVATE_KEY_BASE64, 'base64').toString('utf8')
         : process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n');
     const clientEmail = process.env.GOOGLE_CLIENT_EMAIL?.trim();
-
-    console.log('[GA Auth] Client Email:', clientEmail);
-    console.log('[GA Auth] Private Key exists:', !!privateKey);
-    console.log('[GA Auth] Private Key starts with:', privateKey?.substring(0, 30));
 
     if (!privateKey || !clientEmail) {
         throw new Error('Google credentials not configured');
@@ -75,7 +68,7 @@ async function getAccessToken() {
 
     const tokenData = await tokenResponse.json();
     if (!tokenData.access_token) {
-        throw new Error(`Failed to get access token: ${JSON.stringify(tokenData)} | clientEmail: ${clientEmail} | hasBase64: ${hasBase64Key} | keyStart: ${privateKey?.substring(0, 30)}`);
+        throw new Error('Failed to get access token: ' + JSON.stringify(tokenData));
     }
 
     return tokenData.access_token;
