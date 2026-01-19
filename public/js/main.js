@@ -270,25 +270,25 @@
     // FORM HANDLING
     // ================================================
 
-    // Cloudflare Workers URL (KEAI용으로 변경 필요)
-    const WORKER_URL = 'https://keai.lkh1000712.workers.dev/';
+    // Cloudflare Workers URL - 한결컨설팅
+    const WORKER_URL = 'https://hangyeol.khg471.workers.dev';
 
-    // Airtable 설정 - KEAI (토큰은 Worker 환경변수에서 관리)
+    // Airtable 설정 - 한결컨설팅 (토큰은 Worker 환경변수에서 관리)
     const AIRTABLE_CONFIG = {
-        baseId: 'appYxrGK0yOZ8YdIG',
+        baseId: 'appMkaHfMP4ZGxcPw',
         tableName: '고객정보'
     };
 
-    // 브랜드 정보 - KEAI
+    // 브랜드 정보 - 한결컨설팅
     const BRAND_INFO = {
-        name: '한국기업심사원',
-        ceo: '이강희',
-        phone: '1688-8401',
-        email: 'ceo@k-eai.kr',
-        address: '인천광역시 서구 중봉대로 612번길 10-20, 505-J302호(청라동, 청라프라자)',
-        bizno: '794-35-01595',
+        name: '한결컨설팅',
+        ceo: '김현구',
+        phone: '1688-7483',
+        email: 'khg471@naver.com',
+        address: '서울특별시 강남구',
+        bizno: '252-18-02813',
         hours: '평일 09:00-18:00',
-        logo: 'https://keai-three.vercel.app/logo.png'
+        logo: 'https://biz-hangyeol.co.kr/logo.png'
     };
 
     window.handleSubmit = async function(event) {

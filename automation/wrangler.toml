@@ -12,7 +12,7 @@ account_id = "1886ec3623cea58c2f9df4b57199f86d"
 
 [vars]
 AIRTABLE_BASE_ID = "appMkaHfMP4ZGxcPw"
-AIRTABLE_TABLE_NAME = "고객정보"
+AIRTABLE_TABLE_NAME = "tblv1hdnYYIeU1V5h"
 STAFF_EMAIL = "khg471@naver.com"
 STAFF_BCC = "mkt@polarad.co.kr"
 TELEGRAM_CHAT_ID = "-1003699023763"

@@ -1,17 +1,26 @@
 // ================================================
-// KEAI 한국기업심사원 - 통합 Workers API
-// 작성일: 2024-12-13
+// 한결컨설팅 - 통합 Workers API
+// 작성일: 2025-01-19
 // 기능: Airtable + Resend + Telegram + SENS SMS 통합
 // 배포: Cloudflare Workers
 // ================================================
 
-// 설정 (환경변수에서 가져옴 - Cloudflare Dashboard에서 설정)
+// 설정 (환경변수에서 가져옴 - Cloudflare Dashboard 또는 wrangler.toml에서 설정)
 // 필요한 환경변수:
-// - AIRTABLE_TOKEN
-// - RESEND_API_KEY
-// - TELEGRAM_BOT_TOKEN
-// - NCP_ACCESS_KEY
-// - NCP_SECRET_KEY
+// - AIRTABLE_TOKEN (secret)
+// - RESEND_API_KEY (secret)
+// - TELEGRAM_BOT_TOKEN (secret)
+// - NCP_ACCESS_KEY (secret)
+// - NCP_SECRET_KEY (secret)
+// wrangler.toml [vars]에서 설정:
+// - AIRTABLE_BASE_ID
+// - AIRTABLE_TABLE_NAME
+// - AIRTABLE_SHARE_URL
+// - STAFF_EMAIL
+// - STAFF_BCC
+// - TELEGRAM_CHAT_ID
+// - NCP_SERVICE_ID
+// - SMS_FROM
 
 // HMAC-SHA256 서명 생성 함수 (네이버 SENS API용)
 async function makeSignature(method, url, timestamp, accessKey, secretKey) {
@@ -40,30 +49,31 @@ export default {
     // 환경변수에서 설정 가져오기
     const CONFIG = {
       AIRTABLE: {
-        BASE_ID: 'appYxrGK0yOZ8YdIG',
-        TABLE_NAME: '고객정보',
+        BASE_ID: env.AIRTABLE_BASE_ID || 'appMkaHfMP4ZGxcPw',
+        TABLE_NAME: env.AIRTABLE_TABLE_NAME || '고객정보',
         TOKEN: env.AIRTABLE_TOKEN,
-        SHARE_URL: 'https://airtable.com/appYxrGK0yOZ8YdIG/shrNjfhYB8gCYNB2P'
+        SHARE_URL: env.AIRTABLE_SHARE_URL || 'https://airtable.com/appMkaHfMP4ZGxcPw/tblv1hdnYYIeU1V5h'
       },
       RESEND: {
         API_KEY: env.RESEND_API_KEY,
-        FROM: 'KEAI 한국기업심사원 <noreply@mail.policy-fund.online>'
+        FROM: '한결컨설팅 <noreply@mail.policy-fund.online>'
       },
       EMAIL: {
-        STAFF: 'ceo@k-eai.kr',
-        BCC: 'mkt@polarad.co.kr'
+        STAFF: env.STAFF_EMAIL || 'khg471@naver.com',
+        BCC: env.STAFF_BCC || 'mkt@polarad.co.kr'
       },
       TELEGRAM: {
         BOT_TOKEN: env.TELEGRAM_BOT_TOKEN,
-        CHAT_ID: '-1003366455717'
+        CHAT_ID: env.TELEGRAM_CHAT_ID || '-1003699023763'
       },
       SENS: {
-        SERVICE_ID: 'ncp:sms:kr:362578528555:keai',
+        SERVICE_ID: env.NCP_SERVICE_ID || 'ncp:sms:kr:362578528555:hangyeol',
         ACCESS_KEY: env.NCP_ACCESS_KEY,
         SECRET_KEY: env.NCP_SECRET_KEY,
-        FROM: '01028886514'  // 발신번호
+        FROM: env.SMS_FROM || '01045326750'
       }
     };
+
     // CORS 헤더
     const corsHeaders = {
       'Access-Control-Allow-Origin': '*',
@@ -208,7 +218,7 @@ export default {
         console.log('📱 Sending Telegram message...');
 
         const fields = data.airtableFields;
-        const telegramText = `🔔 <b>KEAI 한국기업심사원 - 신규 심사 신청</b>
+        const telegramText = `🔔 <b>한결컨설팅 - 신규 상담 신청</b>
 
 <b>👤 고객정보</b>
 ├ 기업명: <b>${fields['기업명'] || ''}</b>
@@ -268,7 +278,7 @@ ${fields['문의사항'] ? `<b>💬 문의내용</b>\n${fields['문의사항']}\
           const customerPhone = data.airtableFields['연락처'].replace(/-/g, '');
 
           // LMS 메시지 내용
-          const smsContent = `[한국기업심사원] 접수완료
+          const smsContent = `[한결컨설팅] 접수완료
 24시간이내 담당자 배정후
 연락드립니다.
 
@@ -286,7 +296,7 @@ ${fields['문의사항'] ? `<b>💬 문의내용</b>\n${fields['문의사항']}\
           const smsPayload = {
             type: 'LMS',  // 장문 문자 (LMS)
             from: CONFIG.SENS.FROM,
-            subject: '[한국기업심사원]',  // LMS 제목
+            subject: '[한결컨설팅]',  // LMS 제목
             content: smsContent,
             messages: [
               {

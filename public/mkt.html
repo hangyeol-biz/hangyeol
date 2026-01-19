@@ -2555,7 +2555,9 @@
         }
     }
 
-    // 폼 제출 처리
+    // 폼 제출 처리 - Worker 연동
+    const MKT_WORKER_URL = 'https://hangyeol.khg471.workers.dev';
+
     document.getElementById('consultForm').addEventListener('submit', async function(e) {
         e.preventDefault();
 
@@ -2572,46 +2574,62 @@
         submitBtn.textContent = '전송 중...';
 
         const formData = new FormData(this);
-        const data = {};
-
-        for (let [key, value] of formData.entries()) {
-            if (key !== 'service') {
-                data[key] = value;
-            }
-        }
-
         const services = formData.getAll('service');
+
         if (services.length === 0) {
             alert('관심 서비스를 하나 이상 선택해주세요.');
             submitBtn.disabled = false;
             submitBtn.textContent = originalText;
             return;
         }
-        data.service = services.join(', ');
-        data.timestamp = new Date().toLocaleString('ko-KR');
-        data.privacy_agreed = privacyAgree.checked ? '동의' : '미동의';
-        data.source = '한결 컨설팅 한결 홈페이지 접수';
+
+        // Airtable 필드 매핑
+        const airtableFields = {
+            '기업명': formData.get('company') || '',
+            '대표자명': formData.get('name') || '',
+            '연락처': formData.get('phone') || '',
+            '이메일': formData.get('email') || '',
+            '자금종류': services.join(', '),
+            '필요자금규모': formData.get('budget') || '',
+            '문의사항': formData.get('message') || '',
+            '개인정보동의': privacyAgree.checked,
+            '업종': '[MKT] 마케팅 상담',
+            '접수일시': new Date().toLocaleString('ko-KR')
+        };
+
+        const payload = {
+            airtableFields: airtableFields,
+            skipCustomerEmail: true
+        };
 
         try {
-            const now = new Date();
-            const hour = now.getHours();
-            const day = now.getDay();
-            const isWorkingTime = day >= 1 && day <= 5 && hour >= 9 && hour < 18;
+            const response = await fetch(MKT_WORKER_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
 
-            let message = '상담 신청이 접수되었습니다.\n';
-            if (isWorkingTime) {
-                message += '영업일 기준 24시간 내에 연락드리겠습니다.';
+            const result = await response.json();
+
+            if (result.success && (result.airtable.success || result.telegram.success)) {
+                const now = new Date();
+                const hour = now.getHours();
+                const day = now.getDay();
+                const isWorkingTime = day >= 1 && day <= 5 && hour >= 9 && hour < 18;
+
+                let message = '상담 신청이 접수되었습니다.\n';
+                if (isWorkingTime) {
+                    message += '영업일 기준 24시간 내에 연락드리겠습니다.';
+                } else {
+                    message += '현재 업무시간이 아닙니다.\n다음 영업일에 연락드리겠습니다.\n\n';
+                    message += '업무시간: 평일 09:00-18:00';
+                }
+
+                alert(message);
+                this.reset();
             } else {
-                message += '현재 업무시간이 아닙니다.\n다음 영업일에 연락드리겠습니다.\n\n';
-                message += '업무시간: 평일 09:00-18:00';
+                throw new Error('전송 실패');
             }
-
-            if (data.email) {
-                message += '\n\n확인 메일을 발송했습니다.';
-            }
-
-            alert(message);
-            this.reset();
 
         } catch (error) {
             console.error('전송 실패:', error);
