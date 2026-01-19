@@ -4,8 +4,8 @@
 // PUT /api/leads?id=xxx - 상태 업데이트
 
 const AIRTABLE_TOKEN = process.env.AIRTABLE_TOKEN;
-const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'appxVw5QQ0g4JEjoR';
-const AIRTABLE_TABLE_NAME = '한국기업심사원';
+const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'appMkaHfMP4ZGxcPw';
+const AIRTABLE_TABLE_ID = 'tblv1hdnYYIeU1V5h'; // 게시판 테이블 ID
 
 export default async function handler(req, res) {
     // CORS 헤더
@@ -54,7 +54,7 @@ export default async function handler(req, res) {
 
 // 모든 접수 내역 조회
 async function getAllLeads() {
-    const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE_NAME)}`;
+    const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_ID}`;
 
     const params = new URLSearchParams({
         'maxRecords': '100'
@@ -99,7 +99,7 @@ async function getAllLeads() {
 
 // 단일 접수 내역 조회
 async function getLeadById(id) {
-    const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE_NAME)}/${id}`;
+    const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_ID}/${id}`;
 
     const response = await fetch(url, {
         headers: {
@@ -138,7 +138,7 @@ async function getLeadById(id) {
 
 // 접수 내역 업데이트 (상태 변경 등)
 async function updateLead(id, data) {
-    const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE_NAME)}/${id}`;
+    const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_ID}/${id}`;
 
     const fields = {};
     if (data.상태 !== undefined) fields['상태'] = data.상태;
