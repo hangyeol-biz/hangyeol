@@ -1,5 +1,5 @@
 /**
- * KEAI 한국기업심사원 - Main JavaScript
+ * 한결 컨설팅 한국기업심사원 - Main JavaScript
  * Corporate Blue Theme
  */
 
@@ -135,7 +135,7 @@
             }
         }
 
-        console.log('[KEAI] Hero slider initialized');
+        console.log('[한결 컨설팅] Hero slider initialized');
         return true;
     }
 
@@ -179,7 +179,7 @@
         `;
         document.head.appendChild(style);
 
-        console.log('[KEAI] Scroll animations initialized');
+        console.log('[한결 컨설팅] Scroll animations initialized');
     }
 
     // ================================================
@@ -213,7 +213,7 @@
             }
         });
 
-        console.log('[KEAI] Process Swiper initialized');
+        console.log('[한결 컨설팅] Process Swiper initialized');
     }
 
     function initServiceSwiper() {
@@ -241,7 +241,7 @@
             }
         });
 
-        console.log('[KEAI] Service Swiper initialized');
+        console.log('[한결 컨설팅] Service Swiper initialized');
     }
 
     function handleResize() {
@@ -598,7 +598,7 @@
         initMobileInputScroll();
         initSmoothScroll();
 
-        console.log('[KEAI] Main.js initialized');
+        console.log('[한결 컨설팅] Main.js initialized');
     }
 
     // Run on DOM ready
