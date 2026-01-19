@@ -1,5 +1,5 @@
 /**
- * KEAI 한국기업심사원 - Main JavaScript
+ * HANGYEOL 한결컨설팅 - Main JavaScript
  * Corporate Blue Theme
  */
 
@@ -10,8 +10,8 @@
     // MOBILE MENU
     // ================================================
     window.toggleMobileMenu = function() {
-        const menu = document.getElementById('keaiMobileMenu');
-        const overlay = document.getElementById('keaiMobileOverlay');
+        const menu = document.getElementById('hangyeolMobileMenu');
+        const overlay = document.getElementById('hangyeolMobileOverlay');
         if (menu && overlay) {
             menu.classList.toggle('active');
             overlay.classList.toggle('active');
@@ -53,14 +53,14 @@
     // HERO SLIDER (Mobile)
     // ================================================
     function initHeroSlider() {
-        const section = document.querySelector('.keai-hero');
+        const section = document.querySelector('.hangyeol-hero');
         if (!section) return false;
 
-        const track = section.querySelector('.keai-features-track');
-        const cards = section.querySelectorAll('.keai-feature-card');
-        const prevBtn = section.querySelector('.keai-slider-prev');
-        const nextBtn = section.querySelector('.keai-slider-next');
-        const dots = section.querySelectorAll('.keai-slider-dot');
+        const track = section.querySelector('.hangyeol-features-track');
+        const cards = section.querySelectorAll('.hangyeol-feature-card');
+        const prevBtn = section.querySelector('.hangyeol-slider-prev');
+        const nextBtn = section.querySelector('.hangyeol-slider-next');
+        const dots = section.querySelectorAll('.hangyeol-slider-dot');
 
         if (!track || cards.length === 0) return false;
 
@@ -135,7 +135,7 @@
             }
         }
 
-        console.log('[KEAI] Hero slider initialized');
+        console.log('[한결] Hero slider initialized');
         return true;
     }
 
@@ -158,8 +158,8 @@
 
         // Target elements
         const elements = document.querySelectorAll(
-            '.keai-hero-headline, .keai-feature-card, .keai-notice-box, ' +
-            '.keai-step-card, .keai-mobile-step-card, .keai-service-card'
+            '.hangyeol-hero-headline, .hangyeol-feature-card, .hangyeol-notice-box, ' +
+            '.hangyeol-step-card, .hangyeol-mobile-step-card, .hangyeol-service-card'
         );
 
         elements.forEach((el, index) => {
@@ -179,7 +179,7 @@
         `;
         document.head.appendChild(style);
 
-        console.log('[KEAI] Scroll animations initialized');
+        console.log('[한결] Scroll animations initialized');
     }
 
     // ================================================
@@ -193,7 +193,7 @@
         if (window.innerWidth >= 768) return;
         if (processSwiperInstance) return;
 
-        const swiperEl = document.querySelector('.keai-process .mobile-swiper');
+        const swiperEl = document.querySelector('.hangyeol-process .mobile-swiper');
         if (!swiperEl) return;
 
         processSwiperInstance = new Swiper(swiperEl, {
@@ -204,16 +204,16 @@
             grabCursor: true,
             watchOverflow: true,
             navigation: {
-                nextEl: '.keai-process .swiper-button-next',
-                prevEl: '.keai-process .swiper-button-prev',
+                nextEl: '.hangyeol-process .swiper-button-next',
+                prevEl: '.hangyeol-process .swiper-button-prev',
             },
             pagination: {
-                el: '.keai-process .swiper-pagination',
+                el: '.hangyeol-process .swiper-pagination',
                 clickable: true,
             }
         });
 
-        console.log('[KEAI] Process Swiper initialized');
+        console.log('[한결] Process Swiper initialized');
     }
 
     function initServiceSwiper() {
@@ -221,7 +221,7 @@
         if (window.innerWidth >= 768) return;
         if (serviceSwiperInstance) return;
 
-        const swiperEl = document.querySelector('.keai-service .mobile-swiper');
+        const swiperEl = document.querySelector('.hangyeol-service .mobile-swiper');
         if (!swiperEl) return;
 
         serviceSwiperInstance = new Swiper(swiperEl, {
@@ -232,16 +232,16 @@
             grabCursor: true,
             watchOverflow: true,
             navigation: {
-                nextEl: '.keai-service .swiper-button-next',
-                prevEl: '.keai-service .swiper-button-prev',
+                nextEl: '.hangyeol-service .swiper-button-next',
+                prevEl: '.hangyeol-service .swiper-button-prev',
             },
             pagination: {
-                el: '.keai-service .swiper-pagination',
+                el: '.hangyeol-service .swiper-pagination',
                 clickable: true,
             }
         });
 
-        console.log('[KEAI] Service Swiper initialized');
+        console.log('[한결] Service Swiper initialized');
     }
 
     function handleResize() {
@@ -509,7 +509,7 @@
     // ESC 키로 모달 닫기
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
-            const modals = document.querySelectorAll('.keai-modal-overlay.active');
+            const modals = document.querySelectorAll('.hangyeol-modal-overlay.active');
             modals.forEach(modal => {
                 modal.classList.remove('active');
             });
@@ -552,7 +552,7 @@
     // Mobile input scroll
     function initMobileInputScroll() {
         if (window.innerWidth <= 768) {
-            const inputs = document.querySelectorAll('.keai-form-control');
+            const inputs = document.querySelectorAll('.hangyeol-form-control');
             inputs.forEach(input => {
                 input.addEventListener('focus', function() {
                     setTimeout(() => {
@@ -598,7 +598,7 @@
         initMobileInputScroll();
         initSmoothScroll();
 
-        console.log('[KEAI] Main.js initialized');
+        console.log('[한결] Main.js initialized');
     }
 
     // Run on DOM ready

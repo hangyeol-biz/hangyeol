@@ -41,14 +41,14 @@
     <!-- Post Page Styles -->
     <style>
     /* Post Detail Page */
-    .keai-post-section {
+    .hangyeol-post-section {
         background: linear-gradient(180deg, #F8FAFC 0%, #EFF6FF 100%);
         min-height: calc(100vh - 200px);
         padding: 40px 0 80px;
     }
 
     /* 2컬럼 레이아웃 */
-    .keai-post-layout {
+    .hangyeol-post-layout {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
@@ -58,17 +58,17 @@
     }
 
     @media (min-width: 1024px) {
-        .keai-post-layout {
+        .hangyeol-post-layout {
             grid-template-columns: 1fr 300px;
         }
     }
 
-    .keai-post-main {
+    .hangyeol-post-main {
         min-width: 0;
     }
 
     /* Breadcrumb */
-    .keai-post-breadcrumb {
+    .hangyeol-post-breadcrumb {
         display: flex;
         align-items: center;
         gap: 8px;
@@ -77,29 +77,29 @@
         color: #6B7280;
     }
 
-    .keai-post-breadcrumb a {
+    .hangyeol-post-breadcrumb a {
         color: #6B7280;
         text-decoration: none;
         transition: color 0.3s ease;
     }
 
-    .keai-post-breadcrumb a:hover {
+    .hangyeol-post-breadcrumb a:hover {
         color: #0F4C81;
     }
 
-    .keai-post-breadcrumb svg {
+    .hangyeol-post-breadcrumb svg {
         width: 16px;
         height: 16px;
         fill: #9CA3AF;
     }
 
-    .keai-post-breadcrumb span.current {
+    .hangyeol-post-breadcrumb span.current {
         color: #1F2937;
         font-weight: 500;
     }
 
     /* Post Card */
-    .keai-post-card {
+    .hangyeol-post-card {
         background: #FFFFFF;
         border-radius: 20px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -107,12 +107,12 @@
     }
 
     /* Post Header */
-    .keai-post-header {
+    .hangyeol-post-header {
         padding: 40px 40px 30px;
         border-bottom: 1px solid #E5E7EB;
     }
 
-    .keai-post-category {
+    .hangyeol-post-category {
         display: inline-block;
         padding: 6px 16px;
         background: linear-gradient(135deg, #0F4C81 0%, #1A73E8 100%);
@@ -123,19 +123,19 @@
         margin-bottom: 16px;
     }
 
-    .keai-post-category.notice {
+    .hangyeol-post-category.notice {
         background: linear-gradient(135deg, #0F4C81 0%, #1A73E8 100%);
     }
 
-    .keai-post-category.news {
+    .hangyeol-post-category.news {
         background: linear-gradient(135deg, #059669 0%, #10B981 100%);
     }
 
-    .keai-post-category.info {
+    .hangyeol-post-category.info {
         background: linear-gradient(135deg, #D97706 0%, #F59E0B 100%);
     }
 
-    .keai-post-title {
+    .hangyeol-post-title {
         font-size: 28px;
         font-weight: 700;
         color: #1F2937;
@@ -144,14 +144,14 @@
         word-break: keep-all;
     }
 
-    .keai-post-subtitle {
+    .hangyeol-post-subtitle {
         font-size: 16px;
         color: #6B7280;
         line-height: 1.6;
         margin-bottom: 20px;
     }
 
-    .keai-post-meta {
+    .hangyeol-post-meta {
         display: flex;
         align-items: center;
         gap: 24px;
@@ -161,34 +161,34 @@
         border-top: 1px solid #E5E7EB;
     }
 
-    .keai-post-meta-item {
+    .hangyeol-post-meta-item {
         display: flex;
         align-items: center;
         gap: 6px;
     }
 
-    .keai-post-meta-item svg {
+    .hangyeol-post-meta-item svg {
         width: 18px;
         height: 18px;
         fill: #9CA3AF;
     }
 
     @media (min-width: 768px) {
-        .keai-post-title {
+        .hangyeol-post-title {
             font-size: 32px;
         }
-        .keai-post-subtitle {
+        .hangyeol-post-subtitle {
             font-size: 17px;
         }
     }
 
     /* Post Thumbnail */
-    .keai-post-thumbnail-wrap {
+    .hangyeol-post-thumbnail-wrap {
         width: 100%;
         border-bottom: 1px solid #E5E7EB;
     }
 
-    .keai-post-thumbnail {
+    .hangyeol-post-thumbnail {
         width: 100%;
         max-height: 500px;
         object-fit: cover;
@@ -196,22 +196,22 @@
     }
 
     /* Post Content */
-    .keai-post-content {
+    .hangyeol-post-content {
         padding: 40px;
     }
 
-    .keai-post-body {
+    .hangyeol-post-body {
         font-size: 16px;
         line-height: 1.9;
         color: #374151;
     }
 
-    .keai-post-body p {
+    .hangyeol-post-body p {
         margin-bottom: 16px;
     }
 
     /* 섹션 제목 (■) */
-    .keai-post-body .section-title {
+    .hangyeol-post-body .section-title {
         color: #0F4C81;
         font-size: 18px;
         font-weight: 700;
@@ -223,7 +223,7 @@
         gap: 8px;
     }
 
-    .keai-post-body .section-title::before {
+    .hangyeol-post-body .section-title::before {
         content: '';
         width: 4px;
         height: 20px;
@@ -232,13 +232,13 @@
     }
 
     /* 숫자 리스트 */
-    .keai-post-body .number-list {
+    .hangyeol-post-body .number-list {
         list-style: none;
         padding: 0;
         margin: 16px 0;
     }
 
-    .keai-post-body .number-list li {
+    .hangyeol-post-body .number-list li {
         display: flex;
         align-items: flex-start;
         gap: 12px;
@@ -247,7 +247,7 @@
         line-height: 1.6;
     }
 
-    .keai-post-body .number-badge {
+    .hangyeol-post-body .number-badge {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -262,13 +262,13 @@
     }
 
     /* 불릿 리스트 */
-    .keai-post-body .bullet-list {
+    .hangyeol-post-body .bullet-list {
         list-style: none;
         padding: 0;
         margin: 16px 0;
     }
 
-    .keai-post-body .bullet-list li {
+    .hangyeol-post-body .bullet-list li {
         position: relative;
         padding-left: 20px;
         margin-bottom: 10px;
@@ -276,7 +276,7 @@
         line-height: 1.6;
     }
 
-    .keai-post-body .bullet-list li::before {
+    .hangyeol-post-body .bullet-list li::before {
         content: '';
         position: absolute;
         left: 0;
@@ -288,7 +288,7 @@
     }
 
     /* 하위 항목 */
-    .keai-post-body .sub-item {
+    .hangyeol-post-body .sub-item {
         margin-left: 36px;
         padding: 4px 0;
         color: #6B7280;
@@ -297,7 +297,7 @@
         padding-left: 12px;
     }
 
-    .keai-post-body blockquote {
+    .hangyeol-post-body blockquote {
         margin: 24px 0;
         padding: 20px 25px;
         background: #F3F4F6;
@@ -307,13 +307,13 @@
         color: #4B5563;
     }
 
-    .keai-post-body strong {
+    .hangyeol-post-body strong {
         color: #0F4C81;
         font-weight: 600;
     }
 
     /* Post CTA Section */
-    .keai-post-cta-section {
+    .hangyeol-post-cta-section {
         margin-top: 40px;
         padding: 40px;
         background: linear-gradient(135deg, #0F4C81 0%, #1A73E8 100%);
@@ -321,7 +321,7 @@
         text-align: center;
     }
 
-    .keai-post-cta-icon {
+    .hangyeol-post-cta-icon {
         width: 60px;
         height: 60px;
         margin: 0 auto 20px;
@@ -332,20 +332,20 @@
         justify-content: center;
     }
 
-    .keai-post-cta-icon svg {
+    .hangyeol-post-cta-icon svg {
         width: 32px;
         height: 32px;
         fill: #FFFFFF;
     }
 
-    .keai-post-cta-title {
+    .hangyeol-post-cta-title {
         font-size: 24px;
         font-weight: 700;
         color: #FFFFFF;
         margin: 0 0 12px 0;
     }
 
-    .keai-post-cta-desc {
+    .hangyeol-post-cta-desc {
         font-size: 15px;
         color: rgba(255, 255, 255, 0.9);
         line-height: 1.7;
@@ -353,22 +353,22 @@
     }
 
     /* 데스크탑에서 모바일 전용 줄바꿈 숨김 */
-    .keai-post-cta-desc .mobile-br {
+    .hangyeol-post-cta-desc .mobile-br {
         display: none;
     }
 
-    .keai-post-cta-desc .desktop-hide {
+    .hangyeol-post-cta-desc .desktop-hide {
         display: inline;
     }
 
-    .keai-post-cta-buttons {
+    .hangyeol-post-cta-buttons {
         display: flex;
         justify-content: center;
         gap: 16px;
         flex-wrap: wrap;
     }
 
-    .keai-post-cta-phone {
+    .hangyeol-post-cta-phone {
         display: inline-flex;
         align-items: center;
         gap: 8px;
@@ -383,19 +383,19 @@
         transition: all 0.3s ease;
     }
 
-    .keai-post-cta-phone:hover {
+    .hangyeol-post-cta-phone:hover {
         background: rgba(255, 255, 255, 0.25);
         border-color: #FFFFFF;
         transform: translateY(-2px);
     }
 
-    .keai-post-cta-phone svg {
+    .hangyeol-post-cta-phone svg {
         width: 20px;
         height: 20px;
         fill: currentColor;
     }
 
-    .keai-post-cta-submit {
+    .hangyeol-post-cta-submit {
         display: inline-flex;
         align-items: center;
         gap: 8px;
@@ -410,59 +410,59 @@
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
-    .keai-post-cta-submit:hover {
+    .hangyeol-post-cta-submit:hover {
         transform: translateY(-2px);
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     }
 
-    .keai-post-cta-submit svg {
+    .hangyeol-post-cta-submit svg {
         width: 18px;
         height: 18px;
         fill: currentColor;
     }
 
     @media (max-width: 768px) {
-        .keai-post-cta-section {
+        .hangyeol-post-cta-section {
             margin-top: 30px;
             padding: 30px 20px;
         }
 
-        .keai-post-cta-icon {
+        .hangyeol-post-cta-icon {
             width: 50px;
             height: 50px;
             margin-bottom: 16px;
         }
 
-        .keai-post-cta-icon svg {
+        .hangyeol-post-cta-icon svg {
             width: 26px;
             height: 26px;
         }
 
-        .keai-post-cta-title {
+        .hangyeol-post-cta-title {
             font-size: 20px;
         }
 
-        .keai-post-cta-desc {
+        .hangyeol-post-cta-desc {
             font-size: 14px;
             margin-bottom: 24px;
         }
 
         /* 모바일에서 줄바꿈 표시 */
-        .keai-post-cta-desc .mobile-br {
+        .hangyeol-post-cta-desc .mobile-br {
             display: inline;
         }
 
-        .keai-post-cta-desc .desktop-hide {
+        .hangyeol-post-cta-desc .desktop-hide {
             display: none;
         }
 
-        .keai-post-cta-buttons {
+        .hangyeol-post-cta-buttons {
             flex-direction: column;
             gap: 12px;
         }
 
-        .keai-post-cta-phone,
-        .keai-post-cta-submit {
+        .hangyeol-post-cta-phone,
+        .hangyeol-post-cta-submit {
             width: 100%;
             justify-content: center;
             padding: 14px 24px;
@@ -470,7 +470,7 @@
     }
 
     /* Post Footer */
-    .keai-post-footer {
+    .hangyeol-post-footer {
         padding: 30px 40px;
         border-top: 1px solid #E5E7EB;
         display: flex;
@@ -480,7 +480,7 @@
         gap: 20px;
     }
 
-    .keai-post-back-btn {
+    .hangyeol-post-back-btn {
         display: inline-flex;
         align-items: center;
         gap: 8px;
@@ -495,18 +495,18 @@
         transition: all 0.3s ease;
     }
 
-    .keai-post-back-btn:hover {
+    .hangyeol-post-back-btn:hover {
         background: #0F4C81;
         color: #FFFFFF;
     }
 
-    .keai-post-back-btn svg {
+    .hangyeol-post-back-btn svg {
         width: 18px;
         height: 18px;
         fill: currentColor;
     }
 
-    .keai-post-cta-btn {
+    .hangyeol-post-cta-btn {
         display: inline-flex;
         align-items: center;
         gap: 8px;
@@ -522,34 +522,34 @@
         box-shadow: 0 4px 15px rgba(15, 76, 129, 0.3);
     }
 
-    .keai-post-cta-btn:hover {
+    .hangyeol-post-cta-btn:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(15, 76, 129, 0.4);
     }
 
-    .keai-post-cta-btn svg {
+    .hangyeol-post-cta-btn svg {
         width: 18px;
         height: 18px;
         fill: currentColor;
     }
 
     /* ===== 사이드바 ===== */
-    .keai-post-sidebar {
+    .hangyeol-post-sidebar {
         display: none;
     }
 
     @media (min-width: 1024px) {
-        .keai-post-sidebar {
+        .hangyeol-post-sidebar {
             display: block;
         }
     }
 
-    .keai-sidebar-sticky {
+    .hangyeol-sidebar-sticky {
         position: sticky;
         top: 100px;
     }
 
-    .keai-sidebar-card {
+    .hangyeol-sidebar-card {
         background: #FFFFFF;
         border-radius: 16px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -557,7 +557,7 @@
         margin-bottom: 20px;
     }
 
-    .keai-sidebar-title {
+    .hangyeol-sidebar-title {
         font-size: 14px;
         font-weight: 700;
         color: #0F4C81;
@@ -567,13 +567,13 @@
     }
 
     /* 글 정보 리스트 */
-    .keai-info-list {
+    .hangyeol-info-list {
         list-style: none;
         margin: 0;
         padding: 0;
     }
 
-    .keai-info-list li {
+    .hangyeol-info-list li {
         display: flex;
         justify-content: space-between;
         padding: 10px 0;
@@ -581,26 +581,26 @@
         font-size: 13px;
     }
 
-    .keai-info-list li:last-child {
+    .hangyeol-info-list li:last-child {
         border-bottom: none;
     }
 
-    .keai-info-label {
+    .hangyeol-info-label {
         color: #6B7280;
     }
 
-    .keai-info-value {
+    .hangyeol-info-value {
         color: #1F2937;
         font-weight: 600;
     }
 
     /* 공유 버튼 */
-    .keai-share-buttons {
+    .hangyeol-share-buttons {
         display: flex;
         gap: 10px;
     }
 
-    .keai-share-btn {
+    .hangyeol-share-btn {
         width: 44px;
         height: 44px;
         border-radius: 12px;
@@ -614,21 +614,21 @@
         transition: all 0.3s ease;
     }
 
-    .keai-share-btn:hover {
+    .hangyeol-share-btn:hover {
         background: #0F4C81;
         border-color: #0F4C81;
         color: #FFFFFF;
         transform: translateY(-2px);
     }
 
-    .keai-share-btn svg {
+    .hangyeol-share-btn svg {
         width: 20px;
         height: 20px;
         fill: currentColor;
     }
 
     /* 목록 버튼 */
-    .keai-sidebar-back {
+    .hangyeol-sidebar-back {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -645,54 +645,54 @@
         transition: all 0.3s ease;
     }
 
-    .keai-sidebar-back:hover {
+    .hangyeol-sidebar-back:hover {
         background: #0F4C81;
         color: #FFFFFF;
     }
 
-    .keai-sidebar-back svg {
+    .hangyeol-sidebar-back svg {
         width: 18px;
         height: 18px;
         fill: currentColor;
     }
 
     /* ===== 관련 게시글 ===== */
-    .keai-related-section {
+    .hangyeol-related-section {
         margin-top: 50px;
         padding-top: 40px;
         border-top: 2px solid #E5E7EB;
     }
 
-    .keai-related-title {
+    .hangyeol-related-title {
         font-size: 22px;
         font-weight: 700;
         color: #1F2937;
         margin: 0 0 24px 0;
     }
 
-    .keai-related-title span {
+    .hangyeol-related-title span {
         color: #0F4C81;
     }
 
-    .keai-related-grid {
+    .hangyeol-related-grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
     @media (min-width: 640px) {
-        .keai-related-grid {
+        .hangyeol-related-grid {
             grid-template-columns: repeat(2, 1fr);
         }
     }
 
     @media (min-width: 1024px) {
-        .keai-related-grid {
+        .hangyeol-related-grid {
             grid-template-columns: repeat(3, 1fr);
         }
     }
 
-    .keai-related-card {
+    .hangyeol-related-card {
         background: #FFFFFF;
         border-radius: 16px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -701,12 +701,12 @@
         transition: all 0.3s ease;
     }
 
-    .keai-related-card:hover {
+    .hangyeol-related-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     }
 
-    .keai-related-thumb {
+    .hangyeol-related-thumb {
         width: 100%;
         height: 140px;
         background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
@@ -716,23 +716,23 @@
         overflow: hidden;
     }
 
-    .keai-related-thumb img {
+    .hangyeol-related-thumb img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    .keai-related-thumb svg {
+    .hangyeol-related-thumb svg {
         width: 40px;
         height: 40px;
         fill: #93C5FD;
     }
 
-    .keai-related-content {
+    .hangyeol-related-content {
         padding: 16px;
     }
 
-    .keai-related-category {
+    .hangyeol-related-category {
         display: inline-block;
         padding: 4px 10px;
         background: linear-gradient(135deg, #0F4C81 0%, #1A73E8 100%);
@@ -743,7 +743,7 @@
         margin-bottom: 8px;
     }
 
-    .keai-related-card-title {
+    .hangyeol-related-card-title {
         font-size: 15px;
         font-weight: 600;
         color: #1F2937;
@@ -756,7 +756,7 @@
     }
 
     /* ===== 모바일 하단 바 ===== */
-    .keai-mobile-bar {
+    .hangyeol-mobile-bar {
         display: flex;
         position: fixed;
         bottom: 0;
@@ -771,12 +771,12 @@
     }
 
     @media (min-width: 1024px) {
-        .keai-mobile-bar {
+        .hangyeol-mobile-bar {
             display: none;
         }
     }
 
-    .keai-mobile-back-btn {
+    .hangyeol-mobile-back-btn {
         flex: 1;
         display: flex;
         align-items: center;
@@ -792,7 +792,7 @@
         text-decoration: none;
     }
 
-    .keai-mobile-share-btn {
+    .hangyeol-mobile-share-btn {
         width: 50px;
         display: flex;
         align-items: center;
@@ -804,26 +804,26 @@
         cursor: pointer;
     }
 
-    .keai-mobile-share-btn:hover {
+    .hangyeol-mobile-share-btn:hover {
         background: #0F4C81;
         border-color: #0F4C81;
         color: #FFFFFF;
     }
 
-    .keai-mobile-bar svg {
+    .hangyeol-mobile-bar svg {
         width: 18px;
         height: 18px;
         fill: currentColor;
     }
 
     /* Loading State */
-    .keai-post-loading {
+    .hangyeol-post-loading {
         text-align: center;
         padding: 100px 20px;
         color: #6B7280;
     }
 
-    .keai-post-loading .spinner {
+    .hangyeol-post-loading .spinner {
         width: 50px;
         height: 50px;
         border: 4px solid #E5E7EB;
@@ -838,32 +838,32 @@
     }
 
     /* Error State */
-    .keai-post-error {
+    .hangyeol-post-error {
         text-align: center;
         padding: 100px 20px;
         color: #6B7280;
     }
 
-    .keai-post-error svg {
+    .hangyeol-post-error svg {
         width: 80px;
         height: 80px;
         fill: #D1D5DB;
         margin-bottom: 20px;
     }
 
-    .keai-post-error h3 {
+    .hangyeol-post-error h3 {
         font-size: 24px;
         font-weight: 700;
         color: #1F2937;
         margin-bottom: 10px;
     }
 
-    .keai-post-error p {
+    .hangyeol-post-error p {
         margin-bottom: 30px;
     }
 
     /* Toast 알림 */
-    .keai-toast {
+    .hangyeol-toast {
         position: fixed;
         bottom: 100px;
         left: 50%;
@@ -881,7 +881,7 @@
         z-index: 2000;
     }
 
-    .keai-toast.show {
+    .hangyeol-toast.show {
         opacity: 1;
         visibility: visible;
         transform: translateX(-50%) translateY(0);
@@ -889,65 +889,65 @@
 
     /* Responsive */
     @media (max-width: 768px) {
-        .keai-post-section {
+        .hangyeol-post-section {
             padding: 20px 0 100px;
         }
 
-        .keai-post-layout {
+        .hangyeol-post-layout {
             padding: 0 16px;
         }
 
-        .keai-post-breadcrumb {
+        .hangyeol-post-breadcrumb {
             margin-bottom: 16px;
             font-size: 13px;
         }
 
-        .keai-post-header {
+        .hangyeol-post-header {
             padding: 24px 20px 20px;
         }
 
-        .keai-post-title {
+        .hangyeol-post-title {
             font-size: 22px;
         }
 
-        .keai-post-subtitle {
+        .hangyeol-post-subtitle {
             font-size: 14px;
             margin-bottom: 16px;
         }
 
-        .keai-post-meta {
+        .hangyeol-post-meta {
             flex-wrap: wrap;
             gap: 12px;
             font-size: 13px;
         }
 
-        .keai-post-content {
+        .hangyeol-post-content {
             padding: 24px 20px;
         }
 
-        .keai-post-body {
+        .hangyeol-post-body {
             font-size: 15px;
             line-height: 1.8;
         }
 
-        .keai-post-footer {
+        .hangyeol-post-footer {
             padding: 20px;
             flex-direction: column;
             gap: 12px;
         }
 
-        .keai-post-back-btn,
-        .keai-post-cta-btn {
+        .hangyeol-post-back-btn,
+        .hangyeol-post-cta-btn {
             width: 100%;
             justify-content: center;
         }
 
-        .keai-related-section {
+        .hangyeol-related-section {
             margin-top: 30px;
             padding-top: 30px;
         }
 
-        .keai-related-title {
+        .hangyeol-related-title {
             font-size: 18px;
         }
     }
@@ -958,87 +958,87 @@
 <!-- ================================================
      HEADER
      ================================================ -->
-<header class="keai-header">
-    <div class="keai-header-container">
-        <div class="keai-header-main">
-            <a href="index.html" class="keai-logo">
-                <img src="logo.png" alt="한결 한결 컨설팅" class="keai-logo-image" data-image-id="logo">
+<header class="hangyeol-header">
+    <div class="hangyeol-header-container">
+        <div class="hangyeol-header-main">
+            <a href="index.html" class="hangyeol-logo">
+                <img src="logo.png" alt="한결 한결 컨설팅" class="hangyeol-logo-image" data-image-id="logo">
             </a>
 
-            <nav class="keai-nav">
-                <ul class="keai-nav-list">
-                    <li class="keai-nav-item"><a href="index.html">홈</a></li>
-                    <li class="keai-nav-item"><a href="company.html">회사소개</a></li>
-                    <li class="keai-nav-item"><a href="process.html">진행과정</a></li>
-                    <li class="keai-nav-item"><a href="fund.html">자금상담</a></li>
-                    <li class="keai-nav-item"><a href="pro.html">전문서비스</a></li>
-                    <li class="keai-nav-item"><a href="mkt.html">온라인마케팅</a></li>
+            <nav class="hangyeol-nav">
+                <ul class="hangyeol-nav-list">
+                    <li class="hangyeol-nav-item"><a href="index.html">홈</a></li>
+                    <li class="hangyeol-nav-item"><a href="company.html">회사소개</a></li>
+                    <li class="hangyeol-nav-item"><a href="process.html">진행과정</a></li>
+                    <li class="hangyeol-nav-item"><a href="fund.html">자금상담</a></li>
+                    <li class="hangyeol-nav-item"><a href="pro.html">전문서비스</a></li>
+                    <li class="hangyeol-nav-item"><a href="mkt.html">온라인마케팅</a></li>
                 </ul>
             </nav>
 
-            <div class="keai-header-cta">
-                <a href="process.html#form" class="keai-btn-header-cta">
+            <div class="hangyeol-header-cta">
+                <a href="process.html#form" class="hangyeol-btn-header-cta">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                     <span>무료심사</span>
                 </a>
             </div>
 
-            <button class="keai-mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="메뉴 열기">
+            <button class="hangyeol-mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="메뉴 열기">
                 <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
             </button>
         </div>
     </div>
 
     <!-- Mobile Menu -->
-    <div class="keai-mobile-menu" id="keaiMobileMenu">
-        <div class="keai-mobile-menu-header">
-            <span class="keai-mobile-menu-title">메뉴</span>
-            <button class="keai-mobile-menu-close" onclick="toggleMobileMenu()" aria-label="메뉴 닫기">
+    <div class="hangyeol-mobile-menu" id="hangyeolMobileMenu">
+        <div class="hangyeol-mobile-menu-header">
+            <span class="hangyeol-mobile-menu-title">메뉴</span>
+            <button class="hangyeol-mobile-menu-close" onclick="toggleMobileMenu()" aria-label="메뉴 닫기">
                 <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
             </button>
         </div>
         <nav>
-            <ul class="keai-mobile-nav-list">
-                <li class="keai-mobile-nav-item"><a href="index.html" onclick="toggleMobileMenu()">홈</a></li>
-                <li class="keai-mobile-nav-item"><a href="company.html" onclick="toggleMobileMenu()">회사소개</a></li>
-                <li class="keai-mobile-nav-item"><a href="process.html" onclick="toggleMobileMenu()">진행과정</a></li>
-                <li class="keai-mobile-nav-item"><a href="fund.html" onclick="toggleMobileMenu()">자금상담</a></li>
-                <li class="keai-mobile-nav-item"><a href="pro.html" onclick="toggleMobileMenu()">전문서비스</a></li>
-                <li class="keai-mobile-nav-item"><a href="mkt.html" onclick="toggleMobileMenu()">온라인마케팅</a></li>
+            <ul class="hangyeol-mobile-nav-list">
+                <li class="hangyeol-mobile-nav-item"><a href="index.html" onclick="toggleMobileMenu()">홈</a></li>
+                <li class="hangyeol-mobile-nav-item"><a href="company.html" onclick="toggleMobileMenu()">회사소개</a></li>
+                <li class="hangyeol-mobile-nav-item"><a href="process.html" onclick="toggleMobileMenu()">진행과정</a></li>
+                <li class="hangyeol-mobile-nav-item"><a href="fund.html" onclick="toggleMobileMenu()">자금상담</a></li>
+                <li class="hangyeol-mobile-nav-item"><a href="pro.html" onclick="toggleMobileMenu()">전문서비스</a></li>
+                <li class="hangyeol-mobile-nav-item"><a href="mkt.html" onclick="toggleMobileMenu()">온라인마케팅</a></li>
             </ul>
         </nav>
     </div>
 
-    <div class="keai-mobile-overlay" id="keaiMobileOverlay" onclick="toggleMobileMenu()"></div>
+    <div class="hangyeol-mobile-overlay" id="hangyeolMobileOverlay" onclick="toggleMobileMenu()"></div>
 </header>
 
 <!-- ================================================
      POST DETAIL SECTION
      ================================================ -->
-<section class="keai-post-section">
+<section class="hangyeol-post-section">
     <!-- Loading State -->
-    <div class="keai-post-loading" id="post-loading">
+    <div class="hangyeol-post-loading" id="post-loading">
         <div class="spinner"></div>
         <p>게시글을 불러오는 중...</p>
     </div>
 
     <!-- Error State -->
-    <div class="keai-post-error" id="post-error" style="display: none;">
+    <div class="hangyeol-post-error" id="post-error" style="display: none;">
         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
         <h3>게시글을 찾을 수 없습니다</h3>
         <p>요청하신 게시글이 존재하지 않거나 삭제되었습니다.</p>
-        <a href="process.html#board" class="keai-post-back-btn">
+        <a href="process.html#board" class="hangyeol-post-back-btn">
             <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
             <span>목록으로 돌아가기</span>
         </a>
     </div>
 
     <!-- 2컬럼 레이아웃 -->
-    <div class="keai-post-layout" id="post-layout" style="display: none;">
+    <div class="hangyeol-post-layout" id="post-layout" style="display: none;">
         <!-- 메인 콘텐츠 -->
-        <main class="keai-post-main">
+        <main class="hangyeol-post-main">
             <!-- Breadcrumb -->
-            <div class="keai-post-breadcrumb">
+            <div class="hangyeol-post-breadcrumb">
                 <a href="index.html">홈</a>
                 <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
                 <a href="process.html#board">공지사항 & 뉴스</a>
@@ -1047,47 +1047,47 @@
             </div>
 
             <!-- Post Card -->
-            <article class="keai-post-card" id="post-card">
-                <div class="keai-post-header">
-                    <span class="keai-post-category" id="post-category">공지</span>
-                    <h1 class="keai-post-title" id="post-title">게시글 제목</h1>
-                    <p class="keai-post-subtitle" id="post-subtitle">게시글 요약이 여기에 표시됩니다.</p>
-                    <div class="keai-post-meta">
-                        <div class="keai-post-meta-item">
+            <article class="hangyeol-post-card" id="post-card">
+                <div class="hangyeol-post-header">
+                    <span class="hangyeol-post-category" id="post-category">공지</span>
+                    <h1 class="hangyeol-post-title" id="post-title">게시글 제목</h1>
+                    <p class="hangyeol-post-subtitle" id="post-subtitle">게시글 요약이 여기에 표시됩니다.</p>
+                    <div class="hangyeol-post-meta">
+                        <div class="hangyeol-post-meta-item">
                             <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                             <span>한결</span>
                         </div>
-                        <div class="keai-post-meta-item">
+                        <div class="hangyeol-post-meta-item">
                             <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
                             <span id="post-date">2025.01.01</span>
                         </div>
-                        <div class="keai-post-meta-item">
+                        <div class="hangyeol-post-meta-item">
                             <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
                             <span id="post-views">조회 0</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="keai-post-thumbnail-wrap" id="post-thumbnail-wrap" style="display: none;">
-                    <img class="keai-post-thumbnail" id="post-thumbnail" src="" alt="">
+                <div class="hangyeol-post-thumbnail-wrap" id="post-thumbnail-wrap" style="display: none;">
+                    <img class="hangyeol-post-thumbnail" id="post-thumbnail" src="" alt="">
                 </div>
 
-                <div class="keai-post-content">
-                    <div class="keai-post-body" id="post-body"></div>
+                <div class="hangyeol-post-content">
+                    <div class="hangyeol-post-body" id="post-body"></div>
 
                     <!-- 상담신청 CTA -->
-                    <div class="keai-post-cta-section">
-                        <div class="keai-post-cta-icon">
+                    <div class="hangyeol-post-cta-section">
+                        <div class="hangyeol-post-cta-icon">
                             <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                         </div>
-                        <h3 class="keai-post-cta-title">더 자세한 사항이 궁금하신가요?</h3>
-                        <p class="keai-post-cta-desc">한결 정책자금 전문가가 귀사에 맞는<br class="mobile-br"> 맞춤 컨설팅을 제공해드립니다.<br><br class="desktop-hide">무료심사 신청으로 자금확보<br class="mobile-br"> 가능성을 바로 확인해보세요.</p>
-                        <div class="keai-post-cta-buttons">
-                            <a href="tel:1688-7483" class="keai-post-cta-phone">
+                        <h3 class="hangyeol-post-cta-title">더 자세한 사항이 궁금하신가요?</h3>
+                        <p class="hangyeol-post-cta-desc">한결 정책자금 전문가가 귀사에 맞는<br class="mobile-br"> 맞춤 컨설팅을 제공해드립니다.<br><br class="desktop-hide">무료심사 신청으로 자금확보<br class="mobile-br"> 가능성을 바로 확인해보세요.</p>
+                        <div class="hangyeol-post-cta-buttons">
+                            <a href="tel:1688-7483" class="hangyeol-post-cta-phone">
                                 <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                                 <span>1688-7483</span>
                             </a>
-                            <a href="/#form" class="keai-post-cta-submit">
+                            <a href="/#form" class="hangyeol-post-cta-submit">
                                 <span>무료심사 신청</span>
                                 <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
                             </a>
@@ -1095,12 +1095,12 @@
                     </div>
                 </div>
 
-                <div class="keai-post-footer">
-                    <a href="process.html#board" class="keai-post-back-btn">
+                <div class="hangyeol-post-footer">
+                    <a href="process.html#board" class="hangyeol-post-back-btn">
                         <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
                         <span>목록으로</span>
                     </a>
-                    <a href="process.html#form" class="keai-post-cta-btn">
+                    <a href="process.html#form" class="hangyeol-post-cta-btn">
                         <span>무료심사 신청하기</span>
                         <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
                     </a>
@@ -1108,56 +1108,56 @@
             </article>
 
             <!-- 관련 게시글 -->
-            <section class="keai-related-section" id="related-section" style="display: none;">
-                <h2 class="keai-related-title"><span>관련</span> 게시글</h2>
-                <div class="keai-related-grid" id="related-grid"></div>
+            <section class="hangyeol-related-section" id="related-section" style="display: none;">
+                <h2 class="hangyeol-related-title"><span>관련</span> 게시글</h2>
+                <div class="hangyeol-related-grid" id="related-grid"></div>
             </section>
         </main>
 
         <!-- 사이드바 -->
-        <aside class="keai-post-sidebar">
-            <div class="keai-sidebar-sticky">
+        <aside class="hangyeol-post-sidebar">
+            <div class="hangyeol-sidebar-sticky">
                 <!-- 공유하기 -->
-                <div class="keai-sidebar-card">
-                    <h3 class="keai-sidebar-title">공유하기</h3>
-                    <div class="keai-share-buttons">
-                        <button class="keai-share-btn" onclick="shareFacebook()" title="페이스북 공유">
+                <div class="hangyeol-sidebar-card">
+                    <h3 class="hangyeol-sidebar-title">공유하기</h3>
+                    <div class="hangyeol-share-buttons">
+                        <button class="hangyeol-share-btn" onclick="shareFacebook()" title="페이스북 공유">
                             <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                         </button>
-                        <button class="keai-share-btn" onclick="shareTwitter()" title="트위터 공유">
+                        <button class="hangyeol-share-btn" onclick="shareTwitter()" title="트위터 공유">
                             <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
                         </button>
-                        <button class="keai-share-btn" onclick="copyLink()" title="링크 복사">
+                        <button class="hangyeol-share-btn" onclick="copyLink()" title="링크 복사">
                             <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
                         </button>
                     </div>
                 </div>
 
                 <!-- 글 정보 -->
-                <div class="keai-sidebar-card">
-                    <h3 class="keai-sidebar-title">글 정보</h3>
-                    <ul class="keai-info-list">
+                <div class="hangyeol-sidebar-card">
+                    <h3 class="hangyeol-sidebar-title">글 정보</h3>
+                    <ul class="hangyeol-info-list">
                         <li>
-                            <span class="keai-info-label">카테고리</span>
-                            <span class="keai-info-value" id="info-category">공지</span>
+                            <span class="hangyeol-info-label">카테고리</span>
+                            <span class="hangyeol-info-value" id="info-category">공지</span>
                         </li>
                         <li>
-                            <span class="keai-info-label">작성자</span>
-                            <span class="keai-info-value">한결</span>
+                            <span class="hangyeol-info-label">작성자</span>
+                            <span class="hangyeol-info-value">한결</span>
                         </li>
                         <li>
-                            <span class="keai-info-label">작성일</span>
-                            <span class="keai-info-value" id="info-date">2025.01.01</span>
+                            <span class="hangyeol-info-label">작성일</span>
+                            <span class="hangyeol-info-value" id="info-date">2025.01.01</span>
                         </li>
                         <li>
-                            <span class="keai-info-label">조회수</span>
-                            <span class="keai-info-value" id="info-views">0</span>
+                            <span class="hangyeol-info-label">조회수</span>
+                            <span class="hangyeol-info-value" id="info-views">0</span>
                         </li>
                     </ul>
                 </div>
 
                 <!-- 목록 버튼 -->
-                <a href="process.html#board" class="keai-sidebar-back">
+                <a href="process.html#board" class="hangyeol-sidebar-back">
                     <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
                     목록으로 돌아가기
                 </a>
@@ -1167,39 +1167,39 @@
 </section>
 
 <!-- 모바일 하단 바 -->
-<div class="keai-mobile-bar" id="mobile-bar" style="display: none;">
-    <a href="process.html#board" class="keai-mobile-back-btn">
+<div class="hangyeol-mobile-bar" id="mobile-bar" style="display: none;">
+    <a href="process.html#board" class="hangyeol-mobile-back-btn">
         <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
         목록으로
     </a>
-    <button class="keai-mobile-share-btn" onclick="shareNative()">
+    <button class="hangyeol-mobile-share-btn" onclick="shareNative()">
         <svg viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
     </button>
 </div>
 
 <!-- Toast 알림 -->
-<div class="keai-toast" id="toast">링크가 복사되었습니다</div>
+<div class="hangyeol-toast" id="toast">링크가 복사되었습니다</div>
 
 <!-- ================================================
      FOOTER
      ================================================ -->
-<footer class="keai-footer">
-    <div class="keai-footer-wrapper">
-        <div class="keai-footer-container">
-            <div class="keai-footer-top">
-                <div class="keai-footer-info">
-                    <div class="keai-footer-logo">
-                        <img src="white_logo.png" alt="한결 한결 컨설팅" class="keai-footer-logo-image" data-image-id="logo-white">
+<footer class="hangyeol-footer">
+    <div class="hangyeol-footer-wrapper">
+        <div class="hangyeol-footer-container">
+            <div class="hangyeol-footer-top">
+                <div class="hangyeol-footer-info">
+                    <div class="hangyeol-footer-logo">
+                        <img src="white_logo.png" alt="한결 한결 컨설팅" class="hangyeol-footer-logo-image" data-image-id="logo-white">
                     </div>
-                    <p class="keai-footer-desc">자금확보 전문 컨설팅 | 기업심사 전문가의 1:1 맞춤 컨설팅</p>
+                    <p class="hangyeol-footer-desc">자금확보 전문 컨설팅 | 기업심사 전문가의 1:1 맞춤 컨설팅</p>
                 </div>
             </div>
 
-            <div class="keai-footer-middle">
-                <div class="keai-footer-contact">
-                    <h4 class="keai-footer-title">Contact</h4>
+            <div class="hangyeol-footer-middle">
+                <div class="hangyeol-footer-contact">
+                    <h4 class="hangyeol-footer-title">Contact</h4>
 
-                    <div class="keai-contact-item">
+                    <div class="hangyeol-contact-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="10"></circle>
                             <path d="M16 12h-3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3v7z"></path>
@@ -1207,7 +1207,7 @@
                         <span>대표자: 김현구</span>
                     </div>
 
-                    <div class="keai-contact-item">
+                    <div class="hangyeol-contact-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                             <line x1="12" y1="8" x2="12" y2="16"></line>
@@ -1216,14 +1216,14 @@
                         <span>사업자등록번호: 252-18-02813</span>
                     </div>
 
-                    <div class="keai-contact-item">
+                    <div class="hangyeol-contact-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.35a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.75.34 1.54.57 2.35.7A2 2 0 0 1 22 16.92z"></path>
                         </svg>
                         <span>대표전화: 1688-7483</span>
                     </div>
 
-                    <div class="keai-contact-item">
+                    <div class="hangyeol-contact-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                             <path d="M12 12l8-5H4l8 5z"></path>
@@ -1231,7 +1231,7 @@
                         <span>이메일: khg471@naver.com</span>
                     </div>
 
-                    <div class="keai-contact-item">
+                    <div class="hangyeol-contact-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                             <circle cx="12" cy="10" r="3"></circle>
@@ -1239,7 +1239,7 @@
                         <span>주소: 경상북도 구미시 옥계북로 36, 802호 Room 5 (옥계동, 메디칼타워)</span>
                     </div>
 
-                    <div class="keai-contact-item">
+                    <div class="hangyeol-contact-item">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="10"></circle>
                             <polyline points="12 6 12 12 16 14"></polyline>
@@ -1248,9 +1248,9 @@
                     </div>
                 </div>
 
-                <div class="keai-footer-menu">
-                    <h4 class="keai-footer-title">Menu</h4>
-                    <ul class="keai-footer-list">
+                <div class="hangyeol-footer-menu">
+                    <h4 class="hangyeol-footer-title">Menu</h4>
+                    <ul class="hangyeol-footer-list">
                         <li><a href="index.html">홈</a></li>
                         <li><a href="company.html">회사소개</a></li>
                         <li><a href="process.html">진행과정</a></li>
@@ -1261,8 +1261,8 @@
                 </div>
             </div>
 
-            <div class="keai-footer-bottom">
-                <p class="keai-copyright">© 2025 한결 컨설팅 한결. All rights reserved.</p>
+            <div class="hangyeol-footer-bottom">
+                <p class="hangyeol-copyright">© 2025 한결 컨설팅 한결. All rights reserved.</p>
             </div>
         </div>
     </div>
@@ -1431,7 +1431,7 @@
         // 헤더
         const categoryEl = document.getElementById('post-category');
         categoryEl.textContent = currentPost.category;
-        categoryEl.className = 'keai-post-category ' + getCategoryClass(currentPost.category);
+        categoryEl.className = 'hangyeol-post-category ' + getCategoryClass(currentPost.category);
 
         document.getElementById('post-title').textContent = currentPost.title;
         document.getElementById('post-subtitle').textContent = currentPost.excerpt;
@@ -1473,16 +1473,16 @@
 
         relatedSection.style.display = 'block';
         relatedGrid.innerHTML = related.map(post => `
-            <a href="${post.slug ? `/p/${encodeURIComponent(post.slug)}` : `post.html?id=${post.id}`}" class="keai-related-card">
-                <div class="keai-related-thumb">
+            <a href="${post.slug ? `/p/${encodeURIComponent(post.slug)}` : `post.html?id=${post.id}`}" class="hangyeol-related-card">
+                <div class="hangyeol-related-thumb">
                     ${post.thumbnail
                         ? `<img src="${post.thumbnail}" alt="${post.title}" loading="lazy">`
                         : `<svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-7l-3 3.72L9 13l-3 4h12l-4-5z"/></svg>`
                     }
                 </div>
-                <div class="keai-related-content">
-                    <span class="keai-related-category">${post.category}</span>
-                    <h3 class="keai-related-card-title">${post.title}</h3>
+                <div class="hangyeol-related-content">
+                    <span class="hangyeol-related-category">${post.category}</span>
+                    <h3 class="hangyeol-related-card-title">${post.title}</h3>
                 </div>
             </a>
         `).join('');
@@ -1648,7 +1648,7 @@
     // SEO 메타태그 업데이트
     function updateMetaTags(post) {
         const url = window.location.href;
-        const image = post.thumbnail || 'https://www.k-eai.kr/og/og-home.png';
+        const image = post.thumbnail || 'https://biz-hangyeol.co.kr/og/og-home.png';
         const description = post.excerpt || post.title;
 
         updateMeta('description', description);
@@ -1684,14 +1684,14 @@
             "author": {
                 "@type": "Organization",
                 "name": "한결 컨설팅 한결",
-                "url": "https://www.k-eai.kr"
+                "url": "https://biz-hangyeol.co.kr"
             },
             "publisher": {
                 "@type": "Organization",
                 "name": "한결 컨설팅 한결",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "https://www.k-eai.kr/logo.png"
+                    "url": "https://biz-hangyeol.co.kr/logo.png"
                 }
             },
             "mainEntityOfPage": {

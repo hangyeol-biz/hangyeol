@@ -21,8 +21,8 @@ const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || '-1003394139746';
 const CRON_SECRET = process.env.CRON_SECRET;
 
 // Cloudflare R2 (이미지 저장 - S3 호환 API)
-const R2_ACCOUNT_ID = process.env.R2_ACCOUNT_ID || '75123333ef4e1c6368873dd55fca00ab';
-const R2_BUCKET_NAME = process.env.R2_BUCKET_NAME || 'keai';
+const R2_ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID || process.env.R2_ACCOUNT_ID;
+const R2_BUCKET_NAME = process.env.R2_BUCKET_NAME || 'hangyeol';
 const R2_ACCESS_KEY_ID = process.env.R2_ACCESS_KEY_ID;
 const R2_SECRET_ACCESS_KEY = process.env.R2_SECRET_ACCESS_KEY;
 const R2_ENDPOINT = process.env.R2_ENDPOINT || `https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com`;
@@ -963,7 +963,7 @@ async function refreshBoardCache() {
     // 내부 API 호출로 캐시 갱신
     const baseUrl = process.env.VERCEL_URL
       ? `https://${process.env.VERCEL_URL}`
-      : 'https://keai-three.vercel.app';
+      : process.env.BASE_URL || '';
 
     const response = await fetch(`${baseUrl}/api/board?refresh=true`, {
       method: 'GET',

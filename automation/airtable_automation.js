@@ -1,5 +1,5 @@
 // ================================================
-// KEAI 한국기업심사원 - Airtable Automation 스크립트
+// 한결컨설팅 - Airtable Automation 스크립트
 // 트리거: 새 레코드 생성 시 (Meta 리드)
 // 동작: Worker 호출 → 텔레그램/이메일/SMS 발송
 // ================================================
@@ -10,8 +10,8 @@
 // 3. Action: Run a script
 // 4. 아래 코드 붙여넣기
 
-// Worker URL
-const WORKER_URL = 'https://keai-meta.lkh1000712.workers.dev';
+// Worker URL (환경변수 CLOUDFLARE_WORKER_URL 참조)
+const WORKER_URL = 'https://hangyeol.khg471.workers.dev';
 
 // 입력 변수 설정 (Airtable에서 설정)
 let inputConfig = input.config();
