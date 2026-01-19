@@ -371,7 +371,7 @@ img {
 .keai-hero {
     position: relative;
     width: 100%;
-    background: url('https://cdn.imweb.me/upload/S20251117ed7f35ec2bb5b/623f54c4be1c1.png') center/cover no-repeat;
+    background: url('../cdn-images-webp/623f54c4be1c1.webp') center/cover no-repeat;
     margin-top: 80px;
 }
 
@@ -1943,7 +1943,7 @@ textarea.keai-form-control {
 .keai-about-hero {
     position: relative;
     width: 100%;
-    background: url('https://cdn.imweb.me/upload/S20251117ed7f35ec2bb5b/623f54c4be1c1.png') center/cover no-repeat;
+    background: url('../cdn-images-webp/623f54c4be1c1.webp') center/cover no-repeat;
     margin-top: 80px;
 }
 
