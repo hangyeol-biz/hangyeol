@@ -31,7 +31,6 @@
     { "source": "/mkt", "destination": "/mkt.html" },
     { "source": "/p/:slug", "destination": "/api/p/:slug" },
     { "source": "/dashboard", "destination": "/dashboard/index.html" },
-    { "source": "/dashboard/images", "destination": "/dashboard/images.html" },
     { "source": "/dashboard/board", "destination": "/dashboard/board.html" },
     { "source": "/dashboard/leads", "destination": "/dashboard/leads.html" },
     { "source": "/dashboard/analytics", "destination": "/dashboard/analytics.html" },

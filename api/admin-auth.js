@@ -7,7 +7,7 @@ export default function handler(req, res) {
   const { password } = req.body;
 
   // 환경변수에서 비밀번호 가져오기 (없으면 기본값 사용)
-  const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'Dlrkdgml0712#';
+  const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
   if (password === ADMIN_PASSWORD) {
     // 인증 성공 - 쿠키 설정 (7일 유효)
