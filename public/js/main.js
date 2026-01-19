@@ -363,7 +363,7 @@
         </div>
         <div style="background: #f8f9fa; padding: 25px 30px; border-top: 1px solid #eee;">
             <div style="text-align: center;">
-                <img src="${BRAND_INFO.logo}" alt="${BRAND_INFO.name}" style="height: 35px; margin-bottom: 20px;">
+                <img src="${BRAND_INFO.logo}" alt="${BRAND_INFO.name}" style="height: 80px; margin-bottom: 20px;">
             </div>
             <div style="background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
                 <table style="width: 100%; font-size: 13px; color: #555;">
