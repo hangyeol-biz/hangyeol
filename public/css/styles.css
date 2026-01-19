@@ -148,7 +148,7 @@ img {
 }
 
 .keai-logo-image {
-    height: 70px;
+    height: 50px;
     width: auto;
 }
 
@@ -371,7 +371,7 @@ img {
 .keai-hero {
     position: relative;
     width: 100%;
-    background: url('https://pub-e4b5b5d1dd6444d0bcea69a72ac64a2e.r2.dev/images/623f54c4be1c1.webp') center/cover no-repeat;
+    background: url('../cdn-images-webp/623f54c4be1c1.webp') center/cover no-repeat;
     margin-top: 80px;
 }
 
@@ -1102,7 +1102,7 @@ img {
     max-width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-    background: url('https://pub-e4b5b5d1dd6444d0bcea69a72ac64a2e.r2.dev/images/22449daa5656a.webp') center/cover no-repeat;
+    background: url('https://cdn.imweb.me/upload/S20251117ed7f35ec2bb5b/22449daa5656a.png') center/cover no-repeat;
 }
 
 .keai-service::before {
@@ -1298,8 +1298,8 @@ img {
     width: 120%;
     height: 120%;
     object-fit: cover;
-    object-position: center top;
-    transform: scale(1.2) translateY(-15%);
+    object-position: center 20%;
+    transform: scale(1.1) translateY(0);
 }
 
 .keai-form-image-overlay {
@@ -1943,7 +1943,7 @@ textarea.keai-form-control {
 .keai-about-hero {
     position: relative;
     width: 100%;
-    background: url('https://pub-e4b5b5d1dd6444d0bcea69a72ac64a2e.r2.dev/images/623f54c4be1c1.webp') center/cover no-repeat;
+    background: url('../cdn-images-webp/623f54c4be1c1.webp') center/cover no-repeat;
     margin-top: 80px;
 }
 

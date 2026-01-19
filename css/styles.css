@@ -1298,8 +1298,8 @@ img {
     width: 120%;
     height: 120%;
     object-fit: cover;
-    object-position: center top;
-    transform: scale(1.2) translateY(-15%);
+    object-position: center 20%;
+    transform: scale(1.1) translateY(0);
 }
 
 .keai-form-image-overlay {
