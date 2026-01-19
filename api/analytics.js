@@ -16,8 +16,8 @@ const ANALYTICS_TABLE_ID = 'tblZDJlggjmMzEbJj'; // Analytics 테이블 ID (한�
 async function getAnalyticsFromAirtable(startDate, endDate) {
     const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${ANALYTICS_TABLE_ID}`;
 
-    // 날짜 범위 필터 (IS_SAME_OR_AFTER, IS_SAME_OR_BEFORE로 해당 날짜 포함)
-    const filterFormula = `AND(IS_SAME_OR_AFTER({date}, '${startDate}'), IS_SAME_OR_BEFORE({date}, '${endDate}'))`;
+    // 날짜 범위 필터 (비교 연산자로 해당 날짜 포함)
+    const filterFormula = `AND({date}>='${startDate}',{date}<='${endDate}')`;
     const params = new URLSearchParams({
         'filterByFormula': filterFormula,
         'sort[0][field]': 'date',
