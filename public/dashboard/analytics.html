@@ -1325,7 +1325,15 @@
     // 비교 데이터 로드
     function loadCompareData() {
       const data = analyticsData || [];
-      if (data.length < 2) return;
+
+      // 데이터 부족 시 메시지 표시
+      if (data.length < 2) {
+        const noDataMsg = '<div class="compare-row"><span class="compare-label" style="color:var(--neutral-400)">비교할 데이터가 부족합니다</span></div>';
+        document.getElementById('compare-daily').innerHTML = noDataMsg;
+        document.getElementById('compare-weekly').innerHTML = noDataMsg;
+        document.getElementById('compare-monthly').innerHTML = noDataMsg;
+        return;
+      }
 
       const sortedData = [...data].sort((a, b) => b.date.localeCompare(a.date));
 
