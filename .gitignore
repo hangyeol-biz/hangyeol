@@ -58,3 +58,5 @@ og/
 
 #Ignore vscode AI rules
 .github\instructions\codacy.instructions.md
+.env.prod
+.env.vercel
