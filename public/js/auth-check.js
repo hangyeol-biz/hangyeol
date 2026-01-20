@@ -3,6 +3,12 @@
 // ========================================
 
 (function() {
+  // www 도메인으로 통일
+  if (window.location.hostname === 'biz-hangyeol.co.kr') {
+    window.location.href = 'https://www.biz-hangyeol.co.kr' + window.location.pathname + window.location.search;
+    return;
+  }
+
   // 쿠키에서 인증 상태 확인
   function getCookie(name) {
     const value = `; ${document.cookie}`;
