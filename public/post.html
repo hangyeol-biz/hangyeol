@@ -760,14 +760,19 @@
         display: flex;
         position: fixed;
         bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.95);
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 32px);
+        max-width: 600px;
+        background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(10px);
-        border-top: 1px solid #E5E7EB;
+        border: 1px solid #E5E7EB;
+        border-bottom: none;
+        border-radius: 16px 16px 0 0;
         padding: 12px 20px;
         z-index: 1000;
         gap: 12px;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
     }
 
     @media (min-width: 1024px) {
@@ -885,6 +890,26 @@
         opacity: 1;
         visibility: visible;
         transform: translateX(-50%) translateY(0);
+    }
+
+    /* ===== 인라인 레이아웃 지원 ===== */
+    /* Grid/Flex 컨테이너 내의 빈 p 태그 숨기기 */
+    .hangyeol-post-body [style*="display:grid"] > p:empty,
+    .hangyeol-post-body [style*="display: grid"] > p:empty,
+    .hangyeol-post-body [style*="display:flex"] > p:empty,
+    .hangyeol-post-body [style*="display: flex"] > p:empty,
+    .hangyeol-post-body [style*="grid-template-columns"] > p:empty {
+        display: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 0 !important;
+        line-height: 0 !important;
+    }
+
+    /* 중첩된 컨테이너 내의 빈 p 태그도 처리 */
+    .hangyeol-post-body [style*="display:grid"] [style*="display:flex"] > p:empty,
+    .hangyeol-post-body [style*="display:flex"] [style*="display:flex"] > p:empty {
+        display: none !important;
     }
 
     /* Responsive */
@@ -1448,7 +1473,11 @@
         }
 
         // 본문
-        document.getElementById('post-body').innerHTML = formatContent(currentPost.content);
+        const formattedContent = formatContent(currentPost.content);
+        document.getElementById('post-body').innerHTML = formattedContent;
+
+        // Grid/Flex 컨테이너 내의 빈 p 태그 제거 (레이아웃 깨짐 방지)
+        cleanEmptyParagraphs();
 
         // 사이드바 정보
         document.getElementById('info-category').textContent = currentPost.category;
@@ -1504,6 +1533,34 @@
         const month = String(date.getMonth() + 1).padStart(2, '0');
         const day = String(date.getDate()).padStart(2, '0');
         return `${year}.${month}.${day}`;
+    }
+
+    // Grid/Flex 컨테이너 내의 빈 p 태그 제거
+    function cleanEmptyParagraphs() {
+        const postBody = document.getElementById('post-body');
+        if (!postBody) return;
+
+        // Grid/Flex 스타일을 가진 모든 컨테이너 찾기
+        const containers = postBody.querySelectorAll('[style*="display:grid"], [style*="display: grid"], [style*="display:flex"], [style*="display: flex"], [style*="grid-template-columns"]');
+
+        containers.forEach(container => {
+            // 직접 자식 p 태그 중 빈 것 찾기
+            const emptyParagraphs = Array.from(container.children).filter(child => {
+                return child.tagName === 'P' && (!child.textContent || child.textContent.trim() === '');
+            });
+
+            // 빈 p 태그 제거
+            emptyParagraphs.forEach(p => p.remove());
+
+            // 중첩된 컨테이너도 처리
+            const nestedContainers = container.querySelectorAll('[style*="display:flex"], [style*="display: flex"]');
+            nestedContainers.forEach(nested => {
+                const nestedEmpty = Array.from(nested.children).filter(child => {
+                    return child.tagName === 'P' && (!child.textContent || child.textContent.trim() === '');
+                });
+                nestedEmpty.forEach(p => p.remove());
+            });
+        });
     }
 
     // 콘텐츠 포맷팅
