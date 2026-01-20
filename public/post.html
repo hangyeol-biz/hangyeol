@@ -533,6 +533,16 @@
         fill: currentColor;
     }
 
+    /* PC에서 본문 하단 목록으로 버튼 숨김 (사이드바에 있음) */
+    @media (min-width: 1024px) {
+        .hangyeol-post-footer .hangyeol-post-back-btn {
+            display: none;
+        }
+        .hangyeol-post-footer {
+            justify-content: flex-end;
+        }
+    }
+
     /* ===== 사이드바 ===== */
     .hangyeol-post-sidebar {
         display: none;
