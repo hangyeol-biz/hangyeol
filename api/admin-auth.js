@@ -1,4 +1,23 @@
 export default function handler(req, res) {
+  // CORS 헤더 설정
+  const allowedOrigins = [
+    'https://biz-hangyeol.co.kr',
+    'https://www.biz-hangyeol.co.kr',
+    'https://admin.biz-hangyeol.co.kr'
+  ];
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+
+  // OPTIONS 요청 처리 (preflight)
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   // POST 요청만 허용
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
