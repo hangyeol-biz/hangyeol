@@ -11,22 +11,30 @@ function getEnv(key, defaultValue = '') {
     return value.trim().replace(/[\r\n]/g, '');
 }
 
-// 환경 변수
-const R2_ACCOUNT_ID = getEnv('R2_ACCOUNT_ID');
+// 환경 변수 (R2_ACCOUNT_ID 또는 CLOUDFLARE_ACCOUNT_ID 사용)
+const R2_ACCOUNT_ID = getEnv('R2_ACCOUNT_ID') || getEnv('CLOUDFLARE_ACCOUNT_ID');
 const R2_ACCESS_KEY_ID = getEnv('R2_ACCESS_KEY_ID');
 const R2_SECRET_ACCESS_KEY = getEnv('R2_SECRET_ACCESS_KEY');
 const R2_BUCKET_NAME = getEnv('R2_BUCKET_NAME', 'hangyeol');
+const R2_ENDPOINT = getEnv('R2_S3_ENDPOINT') || `https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com`;
 const R2_PUBLIC_URL = getEnv('R2_PUBLIC_URL') || `https://pub-${R2_ACCOUNT_ID}.r2.dev`;
 
 // S3 클라이언트 생성 (R2 호환)
 function getS3Client() {
-    if (!R2_ACCOUNT_ID || !R2_ACCESS_KEY_ID || !R2_SECRET_ACCESS_KEY) {
-        throw new Error('R2 credentials not configured');
+    const missing = [];
+    if (!R2_ACCESS_KEY_ID) missing.push('R2_ACCESS_KEY_ID');
+    if (!R2_SECRET_ACCESS_KEY) missing.push('R2_SECRET_ACCESS_KEY');
+    if (!R2_ENDPOINT) missing.push('R2_S3_ENDPOINT or CLOUDFLARE_ACCOUNT_ID');
+
+    if (missing.length > 0) {
+        throw new Error(`R2 credentials not configured. Missing: ${missing.join(', ')}`);
     }
+
+    console.log('R2 Client Config:', { endpoint: R2_ENDPOINT, bucket: R2_BUCKET_NAME });
 
     return new S3Client({
         region: 'auto',
-        endpoint: `https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com`,
+        endpoint: R2_ENDPOINT,
         credentials: {
             accessKeyId: R2_ACCESS_KEY_ID,
             secretAccessKey: R2_SECRET_ACCESS_KEY

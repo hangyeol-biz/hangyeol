@@ -781,8 +781,8 @@
             status.className = 'upload-status uploading';
 
             try {
-                // 이미지 압축
-                const compressedImage = await compressImage(file, 800, 0.8);
+                // 이미지 압축 (10~30KB 목표)
+                const compressedImage = await compressImage(file, 800, 10, 30);
 
                 // 서버에 업로드
                 const response = await fetch('/api/upload-thumbnail', {
@@ -823,8 +823,8 @@
             e.target.value = '';
         }
 
-        // 이미지 압축 (Canvas 사용)
-        function compressImage(file, maxWidth, quality) {
+        // 이미지 압축 (Canvas 사용) - 목표 용량: 10~30KB
+        function compressImage(file, maxWidth = 800, targetMinKB = 10, targetMaxKB = 30) {
             return new Promise((resolve, reject) => {
                 const reader = new FileReader();
                 reader.onload = function(e) {
@@ -846,14 +846,35 @@
                         const ctx = canvas.getContext('2d');
                         ctx.drawImage(img, 0, 0, width, height);
 
-                        // WebP로 압축 (지원하지 않으면 JPEG)
-                        let dataUrl;
-                        if (canvas.toDataURL('image/webp').startsWith('data:image/webp')) {
-                            dataUrl = canvas.toDataURL('image/webp', quality);
-                        } else {
-                            dataUrl = canvas.toDataURL('image/jpeg', quality);
+                        // WebP 지원 여부 확인
+                        const supportsWebP = canvas.toDataURL('image/webp').startsWith('data:image/webp');
+                        const format = supportsWebP ? 'image/webp' : 'image/jpeg';
+
+                        // 목표 용량(10~30KB)에 맞게 품질 조정
+                        let quality = 0.8;
+                        let dataUrl = canvas.toDataURL(format, quality);
+                        let sizeKB = Math.round((dataUrl.length * 3) / 4 / 1024); // Base64 → 실제 크기
+
+                        // 용량이 30KB 초과시 품질을 낮춤 (최소 0.2까지)
+                        while (sizeKB > targetMaxKB && quality > 0.2) {
+                            quality -= 0.1;
+                            dataUrl = canvas.toDataURL(format, quality);
+                            sizeKB = Math.round((dataUrl.length * 3) / 4 / 1024);
                         }
 
+                        // 여전히 30KB 초과시 리사이즈
+                        let currentWidth = width;
+                        while (sizeKB > targetMaxKB && currentWidth > 200) {
+                            currentWidth = Math.round(currentWidth * 0.8);
+                            const newHeight = Math.round(height * (currentWidth / width));
+                            canvas.width = currentWidth;
+                            canvas.height = newHeight;
+                            ctx.drawImage(img, 0, 0, currentWidth, newHeight);
+                            dataUrl = canvas.toDataURL(format, quality);
+                            sizeKB = Math.round((dataUrl.length * 3) / 4 / 1024);
+                        }
+
+                        console.log(`✅ 이미지 압축 완료: ${sizeKB}KB (품질: ${quality.toFixed(1)}, ${currentWidth}x${canvas.height})`);
                         resolve(dataUrl);
                     };
                     img.onerror = reject;
