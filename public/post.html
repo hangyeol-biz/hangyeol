@@ -1452,7 +1452,7 @@
     function renderPost() {
         loadingEl.style.display = 'none';
         layoutEl.style.display = 'grid';
-        mobileBarEl.style.display = 'flex';
+        mobileBarEl.style.display = '';  // CSS 미디어 쿼리가 처리하도록
 
         // SEO 메타태그 업데이트
         updateMetaTags(currentPost);
