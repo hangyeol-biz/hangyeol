@@ -33,7 +33,7 @@ export default function handler(req, res) {
     const expires = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toUTCString();
 
     res.setHeader('Set-Cookie', [
-      `admin_auth=authenticated; Path=/; Domain=.biz-hangyeol.co.kr; HttpOnly; SameSite=Lax; Expires=${expires}`,
+      `admin_auth=authenticated; Path=/; Domain=.biz-hangyeol.co.kr; SameSite=Lax; Expires=${expires}`,
     ]);
 
     return res.status(200).json({ success: true });
