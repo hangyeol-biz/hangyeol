@@ -1317,7 +1317,7 @@
       list.innerHTML = referrers.slice(0, 5).map(ref => `
         <li class="data-list-item">
           <span class="data-list-label">🔗 ${ref.source}</span>
-          <span class="data-list-value">${ref.sessions}회</span>
+          <span class="data-list-value">${ref.sessions || ref.users || 0}회</span>
         </li>
       `).join('');
     }
