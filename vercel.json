@@ -5,6 +5,12 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.biz-hangyeol.co.kr" }],
+      "destination": "https://biz-hangyeol.co.kr/:path*",
+      "permanent": true
+    },
+    {
       "source": "/",
       "has": [{ "type": "host", "value": "admin.biz-hangyeol.co.kr" }],
       "destination": "/dashboard",
